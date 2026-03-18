@@ -1,2 +1,2 @@
 # SohblitzMobil
-Web Site für eine Reinigungsfirma 
+Web Site für ein Reinigungsunternehmen
