@@ -1,0 +1,57 @@
+"use client"
+
+import { useTranslations } from "@/lib/TranslationProvider"
+import { motion } from "framer-motion"
+
+export default function AgbSection() {
+
+  const t = useTranslations()
+  const data = t?.agbPage
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 80 },
+    visible: { opacity: 1, y: 0 }
+  }
+
+  return (
+    <section className="bg-gray-50 py-20">
+
+      <div className="max-w-5xl mx-auto px-6">
+
+        <div className="space-y-12">
+
+          {data?.sections?.map((section:any,index:number)=>(
+            
+            <motion.div
+              key={index}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="bg-white rounded-2xl shadow-md border border-gray-100 p-8"
+            >
+
+              <h2 className="text-xl font-semibold text-slate-800 mb-5">
+                § {index + 1} {section.title}
+              </h2>
+
+              <div className="space-y-3 text-gray-600">
+
+                {section.content.map((text:string,i:number)=>(
+                  <p key={i}>{text}</p>
+                ))}
+
+              </div>
+
+            </motion.div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+  )
+}

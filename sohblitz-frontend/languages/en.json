@@ -1,0 +1,263 @@
+{
+  "navbar": {
+    "home": "Home",
+    "contact": "Contact",
+    "impressum": "Imprint",
+    "privacy": "Privacy Policy",
+    "about": "About us",
+     "agb":"T&C"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "addService": "Add service"
+  },
+  "contactPageHeaderInfos": {
+    "title": "Contact us \n for professional \n cleaning",
+    "subtitle": "Your reliable partner for cleanliness"
+  },
+  "aboutPageHeaderInfos": {
+    "title": "Learn more \n about our \n company",
+    "subtitle": "Your partner for professional cleaning"
+  },
+  "impressumPageHeaderInfos": {
+    "title": "Legal \n Information",
+    "subtitle": "Company legal notice"
+  },
+  "datenschutzPageHeaderInfos": {
+    "title": "Privacy \n and Security",
+    "subtitle": "Information about the protection of your data"
+  },
+  "agbPageHeaderInfos": {
+    "title": "General \n Terms and Conditions",
+    "subtitle": "Our terms for cleaning services"
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "intro": "Sohblitz-Mobil takes the protection of your personal data very seriously. Your data is processed confidentially and in accordance with the GDPR and applicable data protection laws.",
+    "lastUpdate": "Last update: March 2026",
+    "sections": [
+      {
+        "title": "Data Controller",
+        "content": [
+          "Emerant dass Kuietche soh",
+          "Sohblitz-Mobil",
+          "Heinrich-Büssing-Ring 22",
+          "38102 Braunschweig",
+          "Phone: 0176 48082448",
+          "Email: sohblitz.mobil@web.de"
+        ]
+      },
+      {
+        "title": "Collection and Use of Data",
+        "content": [
+          "We collect personal data only when necessary to provide our services.",
+          "This may include cleaning services such as building cleaning or window cleaning.",
+          "Typical collected data includes name, address, phone number and email address from inquiries or contracts.",
+          "Legal basis: Article 6(1)(b) GDPR (contract performance) and Article 6(1)(f) GDPR (legitimate interest)."
+        ]
+      },
+      {
+        "title": "Website Usage",
+        "content": [
+          "Server log files temporarily store anonymized data such as IP address, browser type and date for a maximum of 7 days.",
+          "This data is used only to ensure the security of the website.",
+          "Requests sent via contact form or email are stored only for processing purposes.",
+          "The data is deleted after the request has been completed (maximum 2 years in case of warranty claims)."
+        ]
+      },
+      {
+        "title": "Cookies and Tracking",
+        "content": [
+          "This website currently does not use cookies or tracking tools.",
+          "If analytics tools are added in the future, this privacy policy will be updated accordingly."
+        ]
+      },
+      {
+        "title": "Data Sharing",
+        "content": [
+          "Your personal data will not be shared with third parties.",
+          "Exceptions may apply for technical service providers such as hosting companies under a data processing agreement.",
+          "No data transfer to third countries takes place."
+        ]
+      },
+      {
+        "title": "Your Rights",
+        "content": [
+          "You have the right to access, rectify, delete and restrict the processing of your data.",
+          "You also have the right to data portability.",
+          "You may object to the processing of your data at any time.",
+          "Any consent given may be withdrawn at any time."
+        ]
+      },
+      {
+        "title": "Data Deletion",
+        "content": [
+          "Your data will be deleted as soon as it is no longer required for the purpose for which it was collected.",
+          "Legal retention obligations remain unaffected (for example 6 to 10 years for invoices)."
+        ]
+      },
+      {
+        "title": "Data Security",
+        "content": [
+          "We implement technical and organizational measures to protect your data.",
+          "This includes SSL encryption, password protection and access restrictions."
+        ]
+      }
+    ]
+  },
+  "impressumPage": {
+    "title": "Legal Notice",
+    "sections": [
+      {
+        "title": "Information according to §5 TMG",
+        "content": [
+          "Owner: Emerant dass Kuietche soh",
+          "Sohblitz-Mobil"
+        ]
+      },
+      {
+        "title": "Company Services",
+        "content": [
+          "Building cleaning",
+          "Upholstery cleaning (sofa, armchair, mattress, office chairs)",
+          "Car interior cleaning",
+          "Carpet cleaning",
+          "Post-construction cleaning",
+          "Office and practice cleaning",
+          "Window and glass cleaning",
+          "Blind and shutter cleaning"
+        ]
+      },
+      {
+        "title": "Address",
+        "content": [
+          "Heinrich-Büssing-Ring 22",
+          "38102 Braunschweig"
+        ]
+      },
+      {
+        "title": "Contact",
+        "content": [
+          "Phone: 0176 48082448",
+          "Email: sohblitz.mobil@web.de"
+        ]
+      },
+      {
+        "title": "VAT Identification Number",
+        "content": [
+          "VAT identification number according to §27a German VAT Act",
+          "DE458350919"
+        ]
+      },
+      {
+        "title": "Professional Title",
+        "content": [
+          "Building cleaner",
+          "Responsible chamber: Chamber of Crafts Braunschweig-Lüneburg-Stade",
+          "Burgplatz 2",
+          "38100 Braunschweig"
+        ]
+      },
+      {
+        "title": "Responsible for content according to §18(2) MStV",
+        "content": [
+          "Emerant dass Kuietche soh",
+          "Heinrich-Büssing-Ring 22",
+          "38102 Braunschweig"
+        ]
+      },
+      {
+        "title": "Dispute Resolution",
+        "content": [
+          "The European Commission provides a platform for online dispute resolution:",
+          "https://ec.europa.eu/consumers/odr",
+          "We are not obliged or willing to participate in dispute resolution proceedings before a consumer arbitration board."
+        ]
+      }
+    ]
+  },
+  "agbPage": {
+    "title": "Terms and Conditions",
+    "sections": [
+      {
+        "title": "Scope",
+        "content": [
+          "These Terms and Conditions apply to all contracts for cleaning services between Sohblitz-Mobil and the customer.",
+          "This includes building cleaning, upholstery cleaning, carpet cleaning, car interior cleaning, post-construction cleaning, office and practice cleaning, as well as window, glass, blind and shutter cleaning.",
+          "Any deviating conditions require written confirmation."
+        ]
+      },
+      {
+        "title": "Service Description and Customer Obligations",
+        "content": [
+          "The scope of services results from the offer or booking.",
+          "The customer provides water, electricity, access and waste containers free of charge.",
+          "The rooms must be accessible and cleared.",
+          "Sohblitz-Mobil uses professional cleaning products and equipment."
+        ]
+      },
+      {
+        "title": "Prices and Payment",
+        "content": [
+          "All prices are net plus 19% VAT.",
+          "VAT ID: DE458350919.",
+          "Payment must be made within 7 days after invoicing by bank transfer.",
+          "Reminder fee: €5.",
+          "Minimum order value: €50.",
+          "Travel costs within Braunschweig: €0.50 per km.",
+          "Travel costs outside Braunschweig: €0.75 per km."
+        ]
+      },
+      {
+        "title": "Appointments and Cancellations",
+        "content": [
+          "Appointments are binding.",
+          "Cancellations less than 24 hours before the appointment result in a 50% fee.",
+          "Customer delays extend the invoiced working time.",
+          "In case of payment delay, the obligation to provide services is suspended."
+        ]
+      },
+      {
+        "title": "Defects and Complaints",
+        "content": [
+          "Visible defects must be reported immediately.",
+          "Sohblitz-Mobil will remedy them within 48 hours.",
+          "The correction is free of charge.",
+          "If correction fails, price reduction or contract withdrawal is possible."
+        ]
+      },
+      {
+        "title": "Liability",
+        "content": [
+          "Liability only exists in cases of intent or gross negligence.",
+          "Damage must be reported within 48 hours.",
+          "No liability is assumed for dirt caused by the customer or force majeure."
+        ]
+      },
+      {
+        "title": "Data Protection",
+        "content": [
+          "Personal data is used exclusively for order processing.",
+          "Further information can be found in our privacy policy."
+        ]
+      },
+      {
+        "title": "Termination and Contract Duration",
+        "content": [
+          "One-time orders end automatically after the service is completed.",
+          "Ongoing contracts can be terminated with two weeks notice to the end of the month.",
+          "Place of jurisdiction is Braunschweig.",
+          "Changes to these terms and conditions are reserved.",
+          "By placing an order, the customer accepts these Terms and Conditions."
+        ]
+      }
+    ]
+  },
+  "aboutSection": {
+  "title": "About Sohblitz-Mobil",
+  "subtitle": "Professional cleaning with passion",
+  "text1": "Sohblitz-Mobil is a modern cleaning company based in Braunschweig. Our mission is to provide clean, hygienic and comfortable spaces for our customers, whether at home, in offices or in commercial environments.",
+  "text2": "We offer a wide range of professional cleaning services including building cleaning, upholstery cleaning, carpet cleaning, car interior cleaning as well as window and glass cleaning.",
+  "text3": "Using professional equipment, high-quality products and a dedicated team, we ensure reliable service and high customer satisfaction."
+}
+}
