@@ -1,0 +1,270 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "contact": "Kontakt",
+    "impressum": "Impressum",
+    "privacy": "Datenschutz",
+    "about": "Über Uns",
+    "agb":"AGB"
+  },
+
+  "dashboard": {
+    "title": "Dashboard",
+    "addService": "Service hinzufügen"
+  },
+
+  "contactPageHeaderInfos": {
+    "title": "Kontaktieren Sie uns \n   für eine professionelle \n  Reinigung",
+    "subtitle": "Ihr zuverlässiger Partner für Sauberkeit"
+  },
+  "aboutPageHeaderInfos": {
+    "title": "Erfahren Sie mehr \n über unser \n Unternehmen",
+    "subtitle": "Ihr Partner für professionelle Reinigung"
+  },
+  "impressumPageHeaderInfos": {
+    "title": "Rechtliche \n Informationen",
+    "subtitle": "Impressum unseres Unternehmens"
+  },
+  "datenschutzPageHeaderInfos": {
+    "title": "Datenschutz \n und Sicherheit",
+    "subtitle": "Informationen zum Schutz Ihrer Daten"
+  },
+  "agbPageHeaderInfos": {
+  "title": "Allgemeine \n Geschäftsbedingungen",
+  "subtitle": "Unsere Vertragsbedingungen für Dienstleistungen"
+},
+
+  "privacyPage": {
+    "title": "Datenschutzerklärung",
+    "intro": "Sohblitz-Mobil nimmt den Schutz Ihrer personenbezogenen Daten sehr ernst. Ihre Daten werden vertraulich und gemäß DSGVO sowie BDSG verarbeitet.",
+    
+    "sections": [
+      {
+        "title": "1. Verantwortlicher",
+        "content": [
+          "Emerant dass Kuietche soh",
+          "Sohblitz-Mobil",
+          "Heinrich-Büssing-Ring 22",
+          "38102 Braunschweig",
+          "Telefon: 0176 48082448",
+          "E-Mail: sohblitz.mobil@web.de"
+        ]
+      },
+      {
+        "title": "2. Erhebung und Verwendung von Daten",
+        "content": [
+          "Wir erheben personenbezogene Daten nur, soweit dies zur Auftragserfüllung erforderlich ist, z. B. für Reinigungsleistungen wie Gebäudereinigung oder Fensterreinigung.",
+          "Typische Daten sind Name, Adresse, Telefonnummer oder E-Mail-Adresse aus Anfragen oder Verträgen.",
+          "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) sowie lit. f DSGVO (berechtigtes Interesse an Kundenkommunikation).",
+          "Es findet keine automatisierte Entscheidungsfindung oder Profiling statt."
+        ]
+      },
+      {
+        "title": "3. Website-Nutzung",
+        "content": [
+          "Server-Logfiles: Bei jedem Zugriff auf unsere Website werden anonymisierte Daten wie IP-Adresse, Browsertyp oder Datum temporär gespeichert (maximal 7 Tage) zur Gewährleistung der Sicherheit.",
+          "Kontaktformular oder E-Mail: Anfragen werden ausschließlich zur Bearbeitung gespeichert und nach Abschluss gelöscht (maximal 2 Jahre bei Garantieansprüchen).",
+          "Rechtsgrundlage: Art. 6 Abs. 1 lit. b und f DSGVO."
+        ]
+      },
+      {
+        "title": "4. Cookies und Tracking",
+        "content": [
+          "Diese Website verwendet derzeit keine Cookies oder Tracking-Tools.",
+          "Sollten künftig Analyse-Tools (z. B. Google Analytics) eingesetzt werden, wird diese Datenschutzerklärung entsprechend aktualisiert."
+        ]
+      },
+      {
+        "title": "5. Weitergabe von Daten",
+        "content": [
+          "Personenbezogene Daten werden nicht an Dritte weitergegeben.",
+          "Ausnahme sind Auftragsverarbeiter (z. B. Hosting-Provider), mit denen ein Auftragsverarbeitungsvertrag (AVV) besteht.",
+          "Es erfolgt keine Datenübermittlung in Drittländer."
+        ]
+      },
+      {
+        "title": "6. Ihre Rechte",
+        "content": [
+          "Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung (Art. 15-18 DSGVO).",
+          "Außerdem haben Sie das Recht auf Datenübertragbarkeit (Art. 20 DSGVO).",
+          "Sie können jederzeit Widerspruch gegen die Verarbeitung einlegen (Art. 21 DSGVO).",
+          "Eine erteilte Einwilligung kann jederzeit widerrufen werden (Art. 7 Abs. 3 DSGVO).",
+          "Bei Beschwerden können Sie sich an den Landesbeauftragten für Datenschutz Niedersachsen wenden."
+        ]
+      },
+      {
+        "title": "7. Datenlöschung",
+        "content": [
+          "Ihre Daten werden gelöscht, sobald sie für den jeweiligen Zweck nicht mehr erforderlich sind.",
+          "Gesetzliche Aufbewahrungspflichten bleiben unberührt (z. B. 6-10 Jahre für Rechnungen gemäß §257 HGB und §147 AO)."
+        ]
+      },
+      {
+        "title": "8. Datensicherheit",
+        "content": [
+          "Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten zu schützen (Art. 32 DSGVO).",
+          "Dazu gehören unter anderem SSL-Verschlüsselung, Passwortschutz und Zugriffsbeschränkungen."
+        ]
+      }
+    ],
+
+    "footer": "Letzte Aktualisierung: März 2026"
+  },
+  "impressumPage": {
+    "title": "Impressum",
+    "sections": [
+      {
+        "title": "Angaben gemäß § 5 TMG",
+        "content": [
+          "Inhaber: Emerant dass Kuietche soh",
+          "Sohblitz-Mobil"
+        ]
+      },
+      {
+        "title": "Unternehmensleistungen",
+        "content": [
+          "Gebäudereinigung",
+          "Polsterreinigung (Sofa, Sessel, Matratze, Bürostühle)",
+          "Autoinnenreinigung",
+          "Teppichreinigung",
+          "Bauendreinigung",
+          "Büro- und Praxisreinigung",
+          "Fenster- und Glasreinigung",
+          "Raffstore- und Jalousiereinigung"
+        ]
+      },
+      {
+        "title": "Adresse",
+        "content": [
+          "Heinrich-Büssing-Ring 22",
+          "38102 Braunschweig"
+        ]
+      },
+      {
+        "title": "Kontakt",
+        "content": [
+          "Telefon: 0176 48082448",
+          "E-Mail: sohblitz.mobil@web.de"
+        ]
+      },
+      {
+        "title": "Umsatzsteuer-ID",
+        "content": [
+          "Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz",
+          "DE458350919"
+        ]
+      },
+      {
+        "title": "Berufsbezeichnung",
+        "content": [
+          "Gebäudereiniger",
+          "Zuständige Kammer: Handwerkskammer Braunschweig-Lüneburg-Stade",
+          "Burgplatz 2",
+          "38100 Braunschweig"
+        ]
+      },
+      {
+        "title": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+        "content": [
+          "Emerant dass Kuietche soh",
+          "Heinrich-Büssing-Ring 22",
+          "38102 Braunschweig"
+        ]
+      },
+      {
+        "title": "Streitschlichtung",
+        "content": [
+          "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:",
+          "https://ec.europa.eu/consumers/odr",
+          "Wir sind nicht verpflichtet oder bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+        ]
+      }
+    ]
+  },
+
+  "agbPage": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "sections": [
+      {
+        "title": "Geltungsbereich",
+        "content": [
+          "Diese AGB gelten für alle Verträge über Reinigungsdienste zwischen Sohblitz-Mobil und dem Kunden.",
+          "Dies umfasst Gebäudereinigung, Polsterreinigung, Teppichreinigung, Autoinnenreinigung, Bauendreinigung, Büro- und Praxisreinigung sowie Fenster-, Glas-, Raffstore- und Jalousiereinigung.",
+          "Abweichende Bedingungen bedürfen der Schriftform."
+        ]
+      },
+      {
+        "title": "Leistungsbeschreibung und Kundenpflichten",
+        "content": [
+          "Der Leistungsumfang ergibt sich aus dem Angebot oder der Buchung.",
+          "Der Kunde stellt kostenlos Wasser, Strom, Zugang und Abfallbehälter zur Verfügung.",
+          "Die Räume müssen zugänglich und freigeräumt sein.",
+          "Sohblitz-Mobil verwendet professionelle Reinigungsmittel und Geräte."
+        ]
+      },
+      {
+        "title": "Preise und Zahlung",
+        "content": [
+          "Alle Preise verstehen sich netto zuzüglich 19 % Mehrwertsteuer.",
+          "USt-ID: DE458350919.",
+          "Die Zahlung erfolgt innerhalb von 7 Tagen nach Rechnung per Überweisung.",
+          "Mahngebühr: 5 €.",
+          "Mindestbestellwert: 50 €.",
+          "Fahrtkosten innerhalb Braunschweig: 0,50 €/km.",
+          "Fahrtkosten außerhalb Braunschweig: 0,75 €/km."
+        ]
+      },
+      {
+        "title": "Termine und Absagen",
+        "content": [
+          "Vereinbarte Termine sind verbindlich.",
+          "Absagen weniger als 24 Stunden vorher führen zu einer Gebühr von 50 %.",
+          "Verspätungen durch den Kunden verlängern die Rechnungszeit.",
+          "Bei Zahlungsverzug ruht die Leistungspflicht."
+        ]
+      },
+      {
+        "title": "Mängel und Reklamationen",
+        "content": [
+          "Sichtbare Mängel müssen sofort gemeldet werden.",
+          "Sohblitz-Mobil behebt diese innerhalb von 48 Stunden.",
+          "Die Nachbesserung erfolgt kostenlos.",
+          "Bei erfolgloser Nachbesserung sind Preisminderung oder Rücktritt möglich."
+        ]
+      },
+      {
+        "title": "Haftung",
+        "content": [
+          "Die Haftung besteht nur bei Vorsatz oder grober Fahrlässigkeit.",
+          "Schäden müssen innerhalb von 48 Stunden gemeldet werden.",
+          "Keine Haftung für Verschmutzungen durch den Kunden oder höhere Gewalt."
+        ]
+      },
+      {
+        "title": "Datenschutz",
+        "content": [
+          "Personenbezogene Daten werden ausschließlich für die Auftragsabwicklung verwendet.",
+          "Weitere Informationen finden Sie in unserer Datenschutzerklärung."
+        ]
+      },
+      {
+        "title": "Kündigung und Vertragsdauer",
+        "content": [
+          "Einmalige Aufträge enden automatisch nach der Leistungserbringung.",
+          "Dauerverträge können mit einer Frist von zwei Wochen zum Monatsende gekündigt werden.",
+          "Gerichtsstand ist Braunschweig.",
+          "Änderungen der AGB bleiben vorbehalten.",
+          "Mit der Auftragserteilung akzeptiert der Kunde diese AGB."
+        ]
+      }
+    ]
+  },
+  "aboutSection": {
+  "title": "Über Sohblitz-Mobil",
+  "subtitle": "Professionelle Reinigung mit Leidenschaft",
+  "text1": "Sohblitz-Mobil ist ein modernes Reinigungsunternehmen mit Sitz in Braunschweig. Unser Ziel ist es, unseren Kunden saubere, hygienische und angenehme Räume zu bieten – egal ob Zuhause, im Büro oder im Unternehmen.",
+  "text2": "Wir bieten eine Vielzahl professioneller Reinigungsdienstleistungen an, darunter Gebäudereinigung, Polsterreinigung, Teppichreinigung, Autoinnenreinigung sowie Fenster- und Glasreinigung.",
+  "text3": "Mit professionellen Geräten, hochwertigen Reinigungsmitteln und einem engagierten Team sorgen wir für zuverlässige Ergebnisse und höchste Kundenzufriedenheit."
+}
+
+}

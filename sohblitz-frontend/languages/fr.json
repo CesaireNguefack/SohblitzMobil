@@ -1,0 +1,263 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "contact": "Contact",
+    "impressum": "Impressum",
+    "privacy": "Politique de confidentialité",
+    "about": "Apropos de nous",
+    "agb":"CGV"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "addService": "Ajouter un service"
+  },
+  "contactPageHeaderInfos": {
+    "title": "Contactez-nous \n pour un nettoyage \n professionnel",
+    "subtitle": "Votre partenaire fiable pour la propreté"
+  },
+  "aboutPageHeaderInfos": {
+    "title": "En savoir plus \n sur notre \n entreprise",
+    "subtitle": "Votre partenaire pour un nettoyage professionnel"
+  },
+  "impressumPageHeaderInfos": {
+    "title": "Informations \n légales",
+    "subtitle": "Mentions légales de notre entreprise"
+  },
+  "datenschutzPageHeaderInfos": {
+    "title": "Protection des \n données",
+    "subtitle": "Informations sur la protection de vos données"
+  },
+  "agbPageHeaderInfos": {
+    "title": "Conditions générales \n de service",
+    "subtitle": "Nos conditions pour les prestations de nettoyage"
+  },
+  "privacyPage": {
+    "title": "Politique de confidentialité",
+    "intro": "Sohblitz-Mobil accorde une grande importance à la protection de vos données personnelles. Vos informations sont traitées de manière confidentielle et conformément au RGPD ainsi qu'aux lois applicables en matière de protection des données.",
+    "lastUpdate": "Dernière mise à jour : Mars 2026",
+    "sections": [
+      {
+        "title": "Responsable du traitement",
+        "content": [
+          "Emerant dass Kuietche soh",
+          "Sohblitz-Mobil",
+          "Heinrich-Büssing-Ring 22",
+          "38102 Braunschweig",
+          "Téléphone : 0176 48082448",
+          "Email : sohblitz.mobil@web.de"
+        ]
+      },
+      {
+        "title": "Collecte et utilisation des données",
+        "content": [
+          "Nous collectons des données personnelles uniquement lorsque cela est nécessaire à l'exécution de nos services.",
+          "Cela inclut par exemple les services de nettoyage tels que le nettoyage de bâtiments ou de fenêtres.",
+          "Les données typiques collectées sont le nom, l'adresse, le numéro de téléphone et l'adresse e-mail provenant de demandes ou de contrats.",
+          "Base légale : article 6 paragraphe 1 b du RGPD (exécution d'un contrat) et article 6 paragraphe 1 f du RGPD (intérêt légitime)."
+        ]
+      },
+      {
+        "title": "Utilisation du site web",
+        "content": [
+          "Les fichiers journaux du serveur enregistrent temporairement des données anonymisées telles que l'adresse IP, le type de navigateur et la date pendant un maximum de 7 jours.",
+          "Ces données sont utilisées uniquement pour garantir la sécurité du site.",
+          "Les demandes envoyées via formulaire ou e-mail sont conservées uniquement pour leur traitement.",
+          "Les données sont supprimées après la finalisation de la demande (maximum 2 ans en cas de garantie)."
+        ]
+      },
+      {
+        "title": "Cookies et outils de suivi",
+        "content": [
+          "Ce site web n'utilise actuellement aucun cookie ni outil de suivi.",
+          "Si des outils d'analyse sont ajoutés à l'avenir, cette politique de confidentialité sera mise à jour en conséquence."
+        ]
+      },
+      {
+        "title": "Transmission des données",
+        "content": [
+          "Vos données personnelles ne sont pas transmises à des tiers.",
+          "Une exception peut être faite pour des prestataires techniques tels que l'hébergement, dans le cadre d'un contrat de traitement des données.",
+          "Aucun transfert de données vers des pays tiers n'est effectué."
+        ]
+      },
+      {
+        "title": "Vos droits",
+        "content": [
+          "Vous avez le droit d'accès, de rectification, de suppression et de limitation du traitement de vos données.",
+          "Vous disposez également du droit à la portabilité des données.",
+          "Vous pouvez vous opposer à tout moment au traitement de vos données.",
+          "Toute autorisation donnée peut être retirée à tout moment."
+        ]
+      },
+      {
+        "title": "Suppression des données",
+        "content": [
+          "Vos données sont supprimées dès qu'elles ne sont plus nécessaires à la finalité pour laquelle elles ont été collectées.",
+          "Les obligations légales de conservation restent applicables (par exemple 6 à 10 ans pour les factures)."
+        ]
+      },
+      {
+        "title": "Sécurité des données",
+        "content": [
+          "Nous utilisons des mesures techniques et organisationnelles pour protéger vos données.",
+          "Cela inclut notamment le chiffrement SSL, la protection par mot de passe et des restrictions d'accès."
+        ]
+      }
+    ]
+  },
+  "impressumPage": {
+    "title": "Mentions légales",
+    "sections": [
+      {
+        "title": "Informations conformément au §5 TMG",
+        "content": [
+          "Propriétaire : Emerant dass Kuietche soh",
+          "Sohblitz-Mobil"
+        ]
+      },
+      {
+        "title": "Services de l'entreprise",
+        "content": [
+          "Nettoyage de bâtiments",
+          "Nettoyage de tissus d’ameublement (canapé, fauteuil, matelas, chaises de bureau)",
+          "Nettoyage intérieur de voiture",
+          "Nettoyage de tapis",
+          "Nettoyage après chantier",
+          "Nettoyage de bureaux et cabinets",
+          "Nettoyage de fenêtres et vitrages",
+          "Nettoyage de stores et jalousies"
+        ]
+      },
+      {
+        "title": "Adresse",
+        "content": [
+          "Heinrich-Büssing-Ring 22",
+          "38102 Braunschweig"
+        ]
+      },
+      {
+        "title": "Contact",
+        "content": [
+          "Téléphone : 0176 48082448",
+          "Email : sohblitz.mobil@web.de"
+        ]
+      },
+      {
+        "title": "Numéro de TVA",
+        "content": [
+          "Numéro d'identification TVA conformément au §27a de la loi allemande sur la TVA",
+          "DE458350919"
+        ]
+      },
+      {
+        "title": "Profession",
+        "content": [
+          "Agent de nettoyage de bâtiments",
+          "Chambre compétente : Chambre des métiers Braunschweig-Lüneburg-Stade",
+          "Burgplatz 2",
+          "38100 Braunschweig"
+        ]
+      },
+      {
+        "title": "Responsable du contenu",
+        "content": [
+          "Emerant dass Kuietche soh",
+          "Heinrich-Büssing-Ring 22",
+          "38102 Braunschweig"
+        ]
+      },
+      {
+        "title": "Règlement des litiges",
+        "content": [
+          "La Commission européenne met à disposition une plateforme de règlement des litiges en ligne :",
+          "https://ec.europa.eu/consumers/odr",
+          "Nous ne sommes ni obligés ni disposés à participer à une procédure de règlement des litiges devant un organisme de médiation des consommateurs."
+        ]
+      }
+    ]
+  },
+  "agbPage": {
+    "title": "Conditions générales de service",
+    "sections": [
+      {
+        "title": "Champ d'application",
+        "content": [
+          "Les présentes conditions générales s'appliquent à tous les contrats de services de nettoyage entre Sohblitz-Mobil et le client.",
+          "Cela inclut le nettoyage de bâtiments, le nettoyage de tissus d’ameublement, de tapis, l'intérieur de voiture, le nettoyage après chantier, le nettoyage de bureaux et cabinets ainsi que le nettoyage de vitres, stores et jalousies.",
+          "Toute condition différente doit être confirmée par écrit."
+        ]
+      },
+      {
+        "title": "Description des prestations et obligations du client",
+        "content": [
+          "L'étendue des prestations est définie dans l'offre ou la réservation.",
+          "Le client met gratuitement à disposition l'eau, l'électricité, l'accès aux locaux et les conteneurs à déchets.",
+          "Les pièces doivent être accessibles et dégagées.",
+          "Sohblitz-Mobil utilise des produits et équipements professionnels."
+        ]
+      },
+      {
+        "title": "Prix et paiement",
+        "content": [
+          "Tous les prix sont hors taxes et soumis à une TVA de 19%.",
+          "Numéro de TVA : DE458350919.",
+          "Le paiement doit être effectué dans un délai de 7 jours après réception de la facture par virement bancaire.",
+          "Frais de rappel : 5 €.",
+          "Montant minimum de commande : 50 €.",
+          "Frais de déplacement à Braunschweig : 0,50 €/km.",
+          "Frais de déplacement hors Braunschweig : 0,75 €/km."
+        ]
+      },
+      {
+        "title": "Rendez-vous et annulations",
+        "content": [
+          "Les rendez-vous convenus sont contraignants.",
+          "Les annulations moins de 24 heures avant entraînent des frais de 50%.",
+          "Les retards du client prolongent la durée facturée.",
+          "En cas de retard de paiement, l'obligation de prestation est suspendue."
+        ]
+      },
+      {
+        "title": "Défauts et réclamations",
+        "content": [
+          "Les défauts visibles doivent être signalés immédiatement.",
+          "Sohblitz-Mobil corrigera les défauts dans un délai de 48 heures.",
+          "La correction est gratuite.",
+          "Si la correction échoue, une réduction de prix ou une résiliation est possible."
+        ]
+      },
+      {
+        "title": "Responsabilité",
+        "content": [
+          "La responsabilité s'applique uniquement en cas de faute intentionnelle ou de négligence grave.",
+          "Les dommages doivent être signalés dans les 48 heures.",
+          "Aucune responsabilité n'est assumée pour les salissures causées par le client ou par des cas de force majeure."
+        ]
+      },
+      {
+        "title": "Protection des données",
+        "content": [
+          "Les données personnelles sont utilisées uniquement pour le traitement des commandes.",
+          "Pour plus d'informations, veuillez consulter notre politique de confidentialité."
+        ]
+      },
+      {
+        "title": "Résiliation et durée du contrat",
+        "content": [
+          "Les commandes uniques se terminent automatiquement après l'exécution du service.",
+          "Les contrats à long terme peuvent être résiliés avec un préavis de deux semaines à la fin du mois.",
+          "Le tribunal compétent est Braunschweig.",
+          "Les modifications des conditions générales sont réservées.",
+          "En passant commande, le client accepte ces conditions générales."
+        ]
+      }
+    ]
+  },
+  "aboutSection": {
+  "title": "À propos de Sohblitz-Mobil",
+  "subtitle": "Le nettoyage professionnel avec passion",
+  "text1": "Sohblitz-Mobil est une entreprise moderne de nettoyage basée à Braunschweig. Notre objectif est d'offrir à nos clients des espaces propres, hygiéniques et agréables, que ce soit à domicile, au bureau ou dans les locaux professionnels.",
+  "text2": "Nous proposons une large gamme de services de nettoyage professionnels : nettoyage de bâtiments, nettoyage de tissus d’ameublement, nettoyage de tapis, nettoyage intérieur de voiture ainsi que nettoyage de vitres et surfaces vitrées.",
+  "text3": "Grâce à des équipements professionnels, des produits de qualité et une équipe engagée, nous garantissons un service fiable et une grande satisfaction client."
+}
+}

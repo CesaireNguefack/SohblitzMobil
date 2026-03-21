@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum ReservationStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  DONE
+}
+
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Service {
+  id            Int           @id @default(autoincrement())
+  titre         String
+  description   String
+  price         Float
+  dateCreation  DateTime      @default(now())
+
+  reservations  Reservation[]
+}
+
+model Reservation {
+  id        Int      @id @default(autoincrement())
+
+  idService Int
+  service   Service  @relation(fields: [idService], references: [id])
+
+  name      String
+  email     String
+  phone     String?
+
+  message   String?
+  street    String
+  zipcode   String
+  city      String
+
+  date      DateTime
+  status    ReservationStatus   @default(PENDING)
+
+  createdAt DateTime @default(now())
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  titre     String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
+}
