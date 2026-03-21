@@ -20,10 +20,12 @@ services:
   db:
     image: postgres:15
     restart: always
+    environment:
+      POSTGRES_USER: cesaire
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: sohblitz
     volumes:
       - db_data:/var/lib/postgresql/data
-    env_file:
-      - .env
 
 volumes:
   db_data:
