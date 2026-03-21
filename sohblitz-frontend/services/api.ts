@@ -1,6 +1,8 @@
-const API_URL = "http://localhost:3001"
+//const API_URL = "http://localhost:3001" // on local
+const API_URL = "http://localhost:8080/api"  // on docker
 
 export async function getServices(){
+  console.log("fetching services...")
     const res = await fetch(`${API_URL}/service`)
     return res.json()
 }

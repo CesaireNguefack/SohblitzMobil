@@ -4,7 +4,7 @@ import getPort from 'get-port'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const port = await getPort({port:[3000,3001]})
+  const port = await getPort({port:[3001,3002]})
 
    app.enableCors({
     origin: "http://localhost:3000",
