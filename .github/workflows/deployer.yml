@@ -76,4 +76,3 @@ jobs:
       
             docker image prune -f
           EOF
-
