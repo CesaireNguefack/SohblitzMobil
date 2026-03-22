@@ -67,7 +67,8 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no $VPS_USER@$VPS_IP << EOF
             set -e
-            cd /var/www/SohblitzMobil   
+            cd /var/www/SohblitzMobil 
+            git pull  
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u cesairenguefack --password-stdin
       
             docker compose -f docker-compose.prod.yml pull
