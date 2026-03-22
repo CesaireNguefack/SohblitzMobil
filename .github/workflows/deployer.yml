@@ -10,7 +10,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_BACKEND: ghcr.io/cesairenguefack/sohblitz-backend
   IMAGE_FRONTEND: ghcr.io/cesairenguefack/sohblitz-frontend
-  VPS_IP: 51.65.75.254
+  VPS_IP: 51.75.65.254
   VPS_USER: sublime
 
 jobs:
@@ -63,4 +63,16 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H $VPS_IP >> ~/.ssh/known_hosts
           
+      - name: Deploy on VPS
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no $VPS_USER@$VPS_IP << EOF
+            set -e
+      
+            echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u CesaireNguefack --password-stdin
+      
+            docker compose -f docker-compose.prod.yml pull
+            docker compose -f docker-compose.prod.yml up -d --remove-orphans
+      
+            docker image prune -f
+          EOF
 
