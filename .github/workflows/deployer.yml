@@ -8,8 +8,8 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_BACKEND: ghcr.io/CesaireNguefack/sohblitz-backend
-  IMAGE_FRONTEND: ghcr.io/CesaireNguefack/sohblitz-frontend
+  IMAGE_BACKEND: ghcr.io/cesairenguefack/sohblitz-backend
+  IMAGE_FRONTEND: ghcr.io/cesairenguefack/sohblitz-frontend
   VPS_IP: 51.65.75.254
   VPS_USER: sublime
 
