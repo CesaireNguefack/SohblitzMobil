@@ -7,7 +7,10 @@ async function bootstrap() {
   const port = await getPort({port:[3001,3002]})
 
    app.enableCors({
-    origin: "http://localhost:3000",
+    origin: [
+                'http://localhost:3000',
+                'http://51.75.65.254:3000'
+              ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
     credentials: true
   });
