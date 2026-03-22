@@ -4,6 +4,8 @@ services:
     restart: always
     ports:
       - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://51.75.65.254:3001
     depends_on:
       - backend
 
@@ -13,7 +15,19 @@ services:
     env_file:
       - .env
     ports:
-      - "3001:3000"
+      - "3001:3001"
+    command: >
+      sh -c "
+        until nc -z db 5432;
+        do
+          echo 'Waiting for database...';
+          sleep 2;
+        done &&
+        echo 'Running migrations...' &&
+        npx prisma migrate deploy &&
+        echo 'Starting app...' &&
+        node dist/src/main.js
+      "
     depends_on:
       - db
 
