@@ -32,7 +32,7 @@ export default function Navbar({ navState }: Props) {
       `}
     >
 
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-10">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-10">
 
         <div className="text-xl font-semibold text-slate-800">
           SOHBLITZ Mobil

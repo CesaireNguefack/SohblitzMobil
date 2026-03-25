@@ -2,10 +2,10 @@ import ContactSection from "@/app/[locale]/HomePage/Contact"
 import Image from "next/image"
 
 
-export default function Hero(){
+export default function Hero() {
   return (
     <section
-      className="relative overflow-visible pt-40 pb-32 z-10"
+      className="relative   pt-32 md:pt-40 pb-20 md:pb-32 z-10"
       style={{
         background: "linear-gradient(135deg, #d7e8f2 0%, #a9c9e4 50%, #6fa6d8 100%)"
       }}
@@ -17,16 +17,16 @@ export default function Hero(){
         viewBox="0 0 800 800"
         fill="none"
       >
-        <circle cx="650" cy="200" r="250" stroke="white" strokeWidth="2"/>
-        <circle cx="650" cy="200" r="350" stroke="white" strokeWidth="1"/>
-        <circle cx="650" cy="200" r="450" stroke="white" strokeWidth="1"/>
+        <circle cx="650" cy="200" r="250" stroke="white" strokeWidth="2" />
+        <circle cx="650" cy="200" r="350" stroke="white" strokeWidth="1" />
+        <circle cx="650" cy="200" r="450" stroke="white" strokeWidth="1" />
       </svg>
 
 
-      <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 items-center px-10">
+      <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 items-center px-4 md:px-10">
 
         {/* LEFT */}
-         {/* LEFT  
+        {/* LEFT  
         <div>
         <h1 className="text-primary text-6xl font-bold leading-tight">
           Professionelle Reinigung <br />
@@ -44,36 +44,37 @@ export default function Hero(){
 
       </div>
       */}
-      <div>
-        <h1 className="text-primary text-6xl font-bold leading-tight">
-          Sauberkeit,<br />
-          auf die Sie sich verlassen können
-        </h1>
+        <div>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
+            Sauberkeit,<br />
+            auf die Sie sich verlassen können
+          </h1>
 
-        <p className="mt-6 text-gray-600 max-w-md">
-          Sohblitz-Mobil bietet schnelle, zuverlässige und gründliche Reinigungsdienste direkt vor Ort in Braunschweig und Umgebung
-        </p>
+          <p className="mt-6 text-gray-600 max-w-md">
+            Sohblitz-Mobil bietet schnelle, zuverlässige und gründliche Reinigungsdienste direkt vor Ort in Braunschweig und Umgebung
+          </p>
 
-      </div>
+        </div>
 
 
         {/* RIGHT IMAGE */}
-        <div className="flex justify-end">
+        <div className="flex justify-center md:justify-end mt-10 md:mt-0">
 
-        <Image
+          <Image
             src="/images/hero1.png"
             alt="Cleaning"
-            width={350}
-            height={350}
+            width={250}
+            height={250}
+            className="w-[150px] sm:w-[200px] md:w-[300px]"
           />
 
           <Image
             src="/images/heroo.png"
             alt="Cleaning"
-            width={350}
-            height={350}
+            width={250}
+            height={250}
+            className="w-[150px] sm:w-[200px] md:w-[300px]"
           />
-
         </div>
 
       </div>

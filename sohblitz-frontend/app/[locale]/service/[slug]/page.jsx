@@ -1,10 +1,11 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import HeaderPages from "@/componenten/headerPages";
+import Navbar from "@/componenten/Navbar";
 import Image from "next/image";
 import ButtonReservation from "@/componenten/Cards/KontaktButton";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
+import SplitSection from "@/componenten/SplitSection";
 
 
 
@@ -119,194 +120,220 @@ export default function ServiceDetail() {
         return <div className="p-20 text-center">Service not found</div>;
     }
 
-    
+
     return (
         <main>
-            <HeaderPages
-                  title="privacyPage.title"
-                  headerTitle="datenschutzPageHeaderInfos.title"
-                  subtitle="datenschutzPageHeaderInfos.subtitle"
-                   image="privacy.png"
-                />
-
-            <section className="pt-22 pb-14 bg-[#f7f8fb] min-h-screen">
-                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-
-                    {/* 🖼️ LEFT IMAGE */}
+            <Navbar navState="gradient" />
+            <br />
+            <SplitSection
+                reverse
+                left={
                     <ServiceCarousel service={service} />
-
-                    {/* 📝 RIGHT CONTENT */}
-                    <div>
-
-                        {/* Title */}
-                        <h1 className="text-4xl font-bold text-primary mb-6">
-                            {service.title}
-                        </h1>
-
-                        {/* Description */}
-                        <p className="text-gray-600 mb-8 leading-relaxed">
-                            {service.description || "Professionelle Reinigung mit modernen und nachhaltigen Methoden."}
-                        </p>
-
-                        {/* Tags */}
-                        {service.tags && (
-                            <div className="flex flex-wrap gap-2 mb-8">
-                                {service.tags.map((tag, i) => (
-                                    <span
-                                        key={i}
-                                        className="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        )}
-
-                        {/* Pricing */}
-                        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-                            <h3 className="text-xl font-semibold mb-4 text-gray-800">
-                                Preise
-                            </h3>
-
-                            <ul className="space-y-3 text-gray-600">
-                                {service.pricing.map((item, i) => (
-                                    <li key={i} className="flex gap-2 items-start">
-                                        <span className="text-primary mt-1">✔</span>
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* CTA */}
-                        <div className="flex gap-4">
-                            <ButtonReservation />
-
-
-                            <button className="border border-primary text-primary px-6 py-3 rounded-xl hover:bg-primary hover:text-white transition">
-                                Kontakt
-                            </button>
-
-                        </div>
-
-                        {/* Extra info */}
-                        <p className="mt-8 text-sm text-gray-500">
-                            Wir sind in Braunschweig und Umgebung verfügbar – schnell, zuverlässig und 100% chemiefrei.
-                        </p>
-
-                    </div>
-                </div>
-            </section>
+                }
+                right={
+                    <ServiceDescription service={service} />
+                }
+            />
         </main>
     );
 }
 
-const images = [
-  "/images/appointment0.png",
-  "/images/price-background.png",
-  "/images/doctor-main1.jpg"
-];
 
-export  function ServiceCarousel({ service }) {
-  const images = service.images || [
+export function ServiceDescription({ service }) {
+    return (
+        <div className="w-full max-w-xl mx-auto md:mx-0">
+
+            {/* TITLE */}
+            <h1 className="
+        text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+        font-bold text-primary
+        mb-4 md:mb-6
+        leading-tight
+      ">
+                {service.title}
+            </h1>
+
+            {/* DESCRIPTION */}
+            <p className="
+        text-sm sm:text-base md:text-lg
+        text-gray-600
+        mb-6 md:mb-8
+        leading-relaxed
+      ">
+                {service.description || "Professionelle Reinigung mit modernen und nachhaltigen Methoden."}
+            </p>
+
+            {/* TAGS */}
+            {service.tags && (
+                <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
+                    {service.tags.map((tag, i) => (
+                        <span
+                            key={i}
+                            className="
+                bg-primary/10 text-primary
+                text-xs sm:text-sm
+                px-3 py-1
+                rounded-full
+                whitespace-nowrap
+              "
+                        >
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+            )}
+
+            {/* PRICING */}
+            <div className="
+        bg-white
+        rounded-2xl
+        shadow-md md:shadow-lg
+        p-4 sm:p-5 md:p-6
+        mb-6 md:mb-8
+      ">
+                <h3 className="
+          text-lg sm:text-xl md:text-2xl
+          font-semibold
+          mb-3 md:mb-4
+          text-gray-800
+        ">
+                    Preise
+                </h3>
+
+                <ul className="space-y-2 md:space-y-3 text-gray-600">
+                    {service.pricing.map((item, i) => (
+                        <li key={i} className="flex gap-2 items-start">
+                            <span className="text-primary mt-1 text-sm md:text-base">✔</span>
+
+                            <span className="
+                text-sm sm:text-base
+                break-words
+              ">
+                                {item}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            {/* CTA */}
+            <div className="
+        flex flex-col sm:flex-row
+        gap-3 sm:gap-4
+      ">
+                <ButtonReservation />
+
+                <button className="
+          w-full sm:w-auto
+          border border-primary text-primary
+          px-5 py-3
+          rounded-xl
+          text-sm sm:text-base
+          hover:bg-primary hover:text-white
+          transition
+        ">
+                    Kontakt
+                </button>
+            </div>
+
+            {/* EXTRA INFO */}
+            <p className="
+        mt-6 md:mt-8
+        text-xs sm:text-sm
+        text-gray-500
+        leading-relaxed
+      ">
+                Wir sind in Braunschweig und Umgebung verfügbar – schnell, zuverlässig und 100% chemiefrei.
+            </p>
+
+        </div>
+    )
+}
+const images = [
     "/images/appointment0.png",
     "/images/price-background.png",
     "/images/doctor-main1.jpg"
-  ];
+];
 
-  const [current, setCurrent] = useState(0);
+export function ServiceCarousel({ service }) {
+    const images = service.images || [
+        "/images/appointment0.png",
+        "/images/price-background.png",
+        "/images/doctor-main1.jpg"
+    ];
 
-  // 🔥 AUTO SLIDE
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) =>
-        prev === images.length - 1 ? 0 : prev + 1
-      );
-    }, 3000); // 3 secondes
+    const [current, setCurrent] = useState(0);
 
-    return () => clearInterval(interval);
-  }, [images.length]);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) =>
+                prev === images.length - 1 ? 0 : prev + 1
+            );
+        }, 3000);
 
-  const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? images.length - 1 : prev - 1
+        return () => clearInterval(interval);
+    }, [images.length]);
+
+    return (
+        <div className="relative flex flex-col items-center md:items-start">
+
+            {/* MAIN IMAGE */}
+            <div className="relative w-full max-w-[420px] aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                    src={images[current]}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                />
+
+                {/* BUTTONS */}
+                <button
+                    onClick={() => setCurrent(current === 0 ? images.length - 1 : current - 1)}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full"
+                >
+                    ‹
+                </button>
+
+                <button
+                    onClick={() => setCurrent(current === images.length - 1 ? 0 : current + 1)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full"
+                >
+                    ›
+                </button>
+            </div>
+
+            {/* BADGE */}
+            <div className="absolute top-4 right-4 bg-white shadow-lg rounded-full w-16 h-16 flex items-center justify-center text-xs text-gray-500">
+                Premium
+            </div>
+
+            {/* THUMBNAILS */}
+            <div className="mt-4 flex gap-3 flex-wrap justify-center">
+                {images.map((img, i) => (
+                    <div
+                        key={i}
+                        onClick={() => setCurrent(i)}
+                        className={`w-14 h-14 rounded-lg overflow-hidden cursor-pointer border-2 ${
+                            current === i ? "border-primary" : "border-transparent"
+                        }`}
+                    >
+                        <Image src={img} alt="thumb" width={56} height={56} />
+                    </div>
+                ))}
+            </div>
+
+            {/* DOTS */}
+            <div className="mt-3 flex gap-2">
+                {images.map((_, i) => (
+                    <div
+                        key={i}
+                        onClick={() => setCurrent(i)}
+                        className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
+                            current === i ? "bg-primary" : "bg-gray-300"
+                        }`}
+                    />
+                ))}
+            </div>
+        </div>
     );
-  };
-
-  const nextSlide = () => {
-    setCurrent((prev) =>
-      prev === images.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  return (
-    <div className="relative flex justify-center md:justify-start">
-
-      {/* MAIN IMAGE */}
-      <div className="relative rounded-3xl overflow-hidden shadow-2xl w-[420px] h-[420px]">
-
-        <Image
-          src={images[current]}
-          alt={service.title}
-          fill
-          className="object-cover transition duration-700"
-        />
-
-        {/* LEFT BUTTON */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur p-2 rounded-full shadow hover:bg-white transition"
-        >
-          ‹
-        </button>
-
-        {/* RIGHT BUTTON */}
-        <button
-          onClick={nextSlide}
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur p-2 rounded-full shadow hover:bg-white transition"
-        >
-          ›
-        </button>
-      </div>
-
-      {/* BADGE */}
-      <div className="absolute -top-6 left-[300px] bg-white shadow-lg rounded-full w-20 h-20 flex items-center justify-center text-xs text-gray-500">
-        Premium
-      </div>
-
-      {/* THUMBNAILS */}
-      <div className="absolute -bottom-16 flex gap-3">
-        {images.map((img, i) => (
-          <div
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-16 h-16 rounded-lg overflow-hidden cursor-pointer border-2 ${
-              current === i ? "border-primary" : "border-transparent"
-            }`}
-          >
-            <Image
-              src={img}
-              alt="thumb"
-              width={64}
-              height={64}
-              className="object-cover"
-            />
-          </div>
-        ))}
-      </div>
-
-      {/* DOTS */}
-      <div className="absolute -bottom-28 flex gap-2">
-        {images.map((_, i) => (
-          <div
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
-              current === i ? "bg-primary" : "bg-gray-300"
-            }`}
-          />
-        ))}
-      </div>
-    </div>
-  );
 }

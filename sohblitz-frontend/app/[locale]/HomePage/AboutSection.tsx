@@ -1,5 +1,6 @@
 import ButtonContact from "@/componenten/Cards/KontaktButton";
 import Image from "next/image";
+import SplitSection from "@/componenten/SplitSection";
 
 const services = [
   "Gebäudereinigung – Regelmäßige Unterhalts- oder Grundreinigung für Häuser und Wohnungen.",
@@ -12,32 +13,31 @@ const services = [
   "Raffstore- und Jalousiereinigung."
 ]
 
+
 export default function AboutSection() {
   return (
-    <section className="pt-36 w-full py-24 bg-[#f7f8fb]">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-
-        {/* Images */}
+    <SplitSection
+      left={
         <div className="relative flex justify-center md:justify-start">
 
           {/* Image principale */}
-          <div className="relative rounded-2xl overflow-hidden shadow-xl w-[420px]">
+          <div className="relative rounded-2xl overflow-hidden shadow-xl w-full max-w-[420px]">
             <Image
               src="/images/doctor-main1.jpg"
               alt="doctor consultation"
               width={420}
               height={420}
-              className="object-cover"
+              className="w-full h-auto object-cover"
             />
           </div>
 
-          {/* Badge qualité */}
-          <div className="absolute -top-6 left-[300px] bg-white shadow-md rounded-full w-20 h-20 flex items-center justify-center text-xs text-gray-500">
+          {/* Badge */}
+          <div className="hidden md:flex absolute -top-6 left-[300px] bg-white shadow-md rounded-full w-20 h-20 items-center justify-center text-xs text-gray-500">
             High Quality
           </div>
 
-          {/* Petite image flottante */}
-          <div className="absolute -bottom-10 left-[220px] bg-white rounded-2xl shadow-lg overflow-hidden">
+          {/* Image flottante */}
+          <div className="hidden md:block absolute -bottom-10 left-[220px] bg-white rounded-2xl shadow-lg overflow-hidden">
             <Image
               src="/images/appointment0.png"
               alt="doctor"
@@ -47,11 +47,10 @@ export default function AboutSection() {
             />
           </div>
         </div>
-
-        {/* Texte */}
+      }
+      right={
         <div>
-
-          <h2 className="text-4xl font-bold text-primary mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-6">
             Wer wir sind
           </h2>
 
@@ -61,34 +60,25 @@ export default function AboutSection() {
             oder gewerblich.
           </p>
 
-          <h3 className="text-2xl font-semibold mb-4">
+          <h3 className="text-xl md:text-2xl font-semibold mb-4">
             Unsere Leistungen
           </h3>
 
-          {/* Liste des services */}
           <ul className="space-y-3">
-
             {services.map((service, index) => (
               <li key={index} className="flex gap-3 text-gray-700">
-
                 <span className="text-primary font-bold">✓</span>
-
                 <span>{service}</span>
-
               </li>
             ))}
-
           </ul>
 
           <p className="mt-6 text-gray-600">
             Wir kommen mobil zu dir in <b>Braunschweig, Wolfsburg,
-              Salzgitter, Gifhorn</b> und Umgebung.
-          </p> <br />
-
-          
-
+            Salzgitter, Gifhorn</b> und Umgebung.
+          </p>
         </div>
-      </div>
-    </section>
+      }
+    />
   );
 }
