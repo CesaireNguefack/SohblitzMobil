@@ -24,7 +24,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body>
+      <body className="overflow-x-hidden">
 
         <TranslationProvider messages={messages}>
           {children}

@@ -32,9 +32,9 @@ export default function ImpressumSection() {
               className="bg-white rounded-2xl shadow-md border border-gray-100 p-8"
             >
 
-              <h2 className="text-xl font-semibold text-slate-800 mb-5">
-                {section.title}
-              </h2>
+            <h2 className="font-semibold text-slate-800 mb-5 text-[clamp(1.1rem,2.5vw,1.5rem)]">
+              {section.title}
+            </h2>
 
               <div className="space-y-3 text-gray-600">
 
