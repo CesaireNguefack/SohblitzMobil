@@ -17,10 +17,37 @@ export default function Navbar({ navState }: Props) {
 
   const locale = pathname.split("/")[1] || "de"
 
+  // ✅ FIX ACTIVE LINK (important)
+  const isActive = (path: string) => {
+    if (path === "") return pathname === `/${locale}`
+    return pathname === `/${locale}${path}`
+  }
+
   const linkClass = (path: string) =>
-    `transition ${pathname === path
-      ? "text-blue-600 font-semibold"
-      : "hover:text-blue-500"
+    `transition ${
+      isActive(path)
+        ? "text-blue-600 font-semibold"
+        : "hover:text-blue-500"
+    }`
+
+  // ✅ LANGUAGE SWITCH (stay on same page)
+  const getLocalizedPath = (newLocale: string) => {
+    const segments = pathname.split("/")
+
+    if (!["de", "en", "fr"].includes(segments[1])) {
+      return `/${newLocale}`
+    }
+
+    segments[1] = newLocale
+    return segments.join("/")
+  }
+
+  // ✅ LANGUAGE ACTIVE STYLE
+  const langClass = (lang: string) =>
+    `transition cursor-pointer ${
+      locale === lang
+        ? "scale-125 ring-2   "
+        : "opacity-60 hover:opacity-100"
     }`
 
   return (
@@ -34,6 +61,7 @@ export default function Navbar({ navState }: Props) {
 
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-10">
 
+        {/* LOGO */}
         <div className="text-xl font-semibold text-slate-800">
           SOHBLITZ Mobil
         </div>
@@ -67,14 +95,36 @@ export default function Navbar({ navState }: Props) {
 
         </nav>
 
-        {/* LANGUES */}
+        {/* LANGUAGES DESKTOP */}
         <div className="hidden md:flex gap-4 items-center text-xl">
-          <Link href="/de">🇩🇪</Link>
-          <Link href="/en">🇬🇧</Link>
-          <Link href="/fr">🇫🇷</Link>
+
+          <Link
+            href={getLocalizedPath("de")}
+            className={langClass("de")}
+            aria-current={locale === "de"}
+          >
+            🇩🇪
+          </Link>
+
+          <Link
+            href={getLocalizedPath("en")}
+            className={langClass("en")}
+            aria-current={locale === "en"}
+          >
+            🇬🇧
+          </Link>
+
+          <Link
+            href={getLocalizedPath("fr")}
+            className={langClass("fr")}
+            aria-current={locale === "fr"}
+          >
+            🇫🇷
+          </Link>
+
         </div>
 
-        {/* BURGER MOBILE */}
+        {/* BURGER */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-2xl"
@@ -84,7 +134,7 @@ export default function Navbar({ navState }: Props) {
 
       </div>
 
-      {/* MENU MOBILE */}
+      {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-white shadow-lg flex flex-col items-center gap-6 py-6 text-lg">
 
@@ -108,10 +158,33 @@ export default function Navbar({ navState }: Props) {
             {t.navbar.contact}
           </Link>
 
+          {/* LANG MOBILE */}
           <div className="flex gap-4 text-xl">
-            <Link href="/de">🇩🇪</Link>
-            <Link href="/en">🇬🇧</Link>
-            <Link href="/fr">🇫🇷</Link>
+
+            <Link
+              href={getLocalizedPath("de")}
+              className={langClass("de")}
+              onClick={() => setOpen(false)}
+            >
+              🇩🇪
+            </Link>
+
+            <Link
+              href={getLocalizedPath("en")}
+              className={langClass("en")}
+              onClick={() => setOpen(false)}
+            >
+              🇬🇧
+            </Link>
+
+            <Link
+              href={getLocalizedPath("fr")}
+              className={langClass("fr")}
+              onClick={() => setOpen(false)}
+            >
+              🇫🇷
+            </Link>
+
           </div>
 
         </div>
