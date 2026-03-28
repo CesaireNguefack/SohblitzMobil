@@ -1,10 +1,10 @@
-type Props = {
-  image: string
-  date: string
-  title: string
-  description?: string
-  onClick?: () => void
-}
+  type Props = {
+    image: string
+    date: string
+    title: string
+    description?: string
+    onClick?: () => void
+  }
 
 export default function ServiceCard({
   image,

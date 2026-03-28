@@ -5,7 +5,14 @@
     "impressum": "Imprint",
     "privacy": "Privacy Policy",
     "about": "About us",
-     "agb":"T&C"
+    "agb":"T&C"
+  },
+  "adminNavbar": {
+    "dashboard": "Dashboard",
+    "reservations": "Reservations",
+    "services": "Services",
+    "contact": "Messages",
+    "logout": "Logout"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -254,10 +261,10 @@
     ]
   },
   "aboutSection": {
-  "title": "About Sohblitz-Mobil",
-  "subtitle": "Professional cleaning with passion",
-  "text1": "Sohblitz-Mobil is a modern cleaning company based in Braunschweig. Our mission is to provide clean, hygienic and comfortable spaces for our customers, whether at home, in offices or in commercial environments.",
-  "text2": "We offer a wide range of professional cleaning services including building cleaning, upholstery cleaning, carpet cleaning, car interior cleaning as well as window and glass cleaning.",
-  "text3": "Using professional equipment, high-quality products and a dedicated team, we ensure reliable service and high customer satisfaction."
-}
+    "title": "About Sohblitz-Mobil",
+    "subtitle": "Professional cleaning with passion",
+    "text1": "Sohblitz-Mobil is a modern cleaning company based in Braunschweig. Our mission is to provide clean, hygienic and comfortable spaces for our customers, whether at home, in offices or in commercial environments.",
+    "text2": "We offer a wide range of professional cleaning services including building cleaning, upholstery cleaning, carpet cleaning, car interior cleaning as well as window and glass cleaning.",
+    "text3": "Using professional equipment, high-quality products and a dedicated team, we ensure reliable service and high customer satisfaction."
+  }
 }

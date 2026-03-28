@@ -1,117 +1,17 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import Navbar from "@/componenten/Navbar";
 import Image from "next/image";
-import ButtonReservation from "@/componenten/Cards/KontaktButton";
+import {ButtonReservation} from "@/componenten/Cards/KontaktButton";
 import { useState, useEffect } from "react";
 import SplitSection from "@/componenten/SplitSection";
-
-
-
-const services = [
-    {
-        id: 1,
-        title: "Gebäudereinigung",
-        description:
-            "100% chemiefreie Gebäudereinigung mit Dampftechnologie. Ideal für Haushalte, AirBnB und Ferienwohnungen.",
-        pricing: ["25€ – 35€ pro Stunde"],
-        tags: ["Dampfreinigung", "Allergikerfreundlich", "Hygienisch"]
-    },
-    {
-        id: 2,
-        title: "Büro und Praxisreinigung",
-        description:
-            "Professionelle Reinigung für Büros und Praxen für ein gesundes Arbeitsklima. Desinfektion ohne Chemie.",
-        pricing: ["30€ – 40€ pro Stunde"],
-        tags: ["Desinfektion", "Arbeitsplatzhygiene"]
-    },
-    {
-        id: 3,
-        title: "Bauendreinigung",
-        description:
-            "Gründliche Reinigung nach Bau oder Renovierung. Entfernt Baustaub, Fett und Verschmutzungen.",
-        pricing: [
-            "Grobreinigung: 4€ – 9€ / m²",
-            "Feinreinigung: 5€ – 9.50€ / m²",
-            "Sanitär, Geräte und Möbel werden extra berechnet"
-        ],
-        tags: ["Neubau", "Renovierung"]
-    },
-    {
-        id: 4,
-        title: "Fenster und Glasreinigung",
-        description:
-            "Streifenfreie Glas- und Fensterreinigung für private Haushalte, Büros und Geschäfte.",
-        pricing: [
-            "4€ – 8€ / m² (innen & außen)",
-            "Rahmen: +1.45€ pro Fenster",
-            "Verschmutzungsgrad / Höhe: +20% – 50%"
-        ],
-        tags: ["Streifenfrei", "Professionell"]
-    },
-    {
-        id: 5,
-        title: "Autoinnenreinigung",
-        description:
-            "Dampfreinigung des Fahrzeuginnenraums ohne Chemie. Entfernt Gerüche, Keime und Schmutz.",
-        pricing: [
-            "Basisreinigung: 40€ – 130€",
-            "Intensivreinigung: 130€ – 250€",
-            "Ozon Reinigung inklusive",
-            "Geruchsbeseitigung: 50€ – 80€"
-        ],
-        tags: ["Auto", "Desinfektion"]
-    },
-    {
-        id: 6,
-        title: "Polster Reinigung",
-        description:
-            "Tiefenreinigung von Sofas und Polstern. Entfernt Milben, Flecken und Bakterien.",
-        pricing: [
-            "Sofa: 20€ – 40€ pro Sitz",
-            "Sessel: 25€ – 40€",
-            "Bürostuhl: 9€ – 20€"
-        ],
-        tags: ["Milbenentfernung", "Tiefenreinigung"]
-    },
-    {
-        id: 7,
-        title: "Teppichreinigung",
-        description:
-            "Dampfreinigung von Teppichen für hygienische Sauberkeit und frische Stoffe.",
-        pricing: ["6€ – 9€ pro m²"],
-        tags: ["Allergikerfreundlich"]
-    },
-    {
-        id: 8,
-        title: "Raffstore & Jalousie Reinigung",
-        description:
-            "Reinigung von Jalousien und Raffstores mit schonender Dampftechnologie.",
-        pricing: [
-            "20€ – 55€ pro Stück",
-            "Je nach Verschmutzung & Höhe: +10% – 45%"
-        ],
-        tags: ["Sonnenschutz"]
-    },
-
-    // 🆕 NOUVEAU SERVICE
-    {
-        id: 9,
-        title: "Stein-, Fassaden- und Dachreinigung",
-        description:
-            "Entfernung von Moos, Algen und Verschmutzungen auf Terrassen, Fassaden und Dächern mit Hochdruck-Dampf.",
-        pricing: [
-            "Steinreinigung: 6€ – 16€ / m²",
-            "Mit Imprägnierung: 8€ – 12€ / m²",
-            "Dachreinigung: 8€ – 30€ / m²"
-        ],
-        tags: ["Terrasse", "Fassade", "Dach", "Moosentfernung"]
-    }
-];
+import { services, Service } from "@/app/data";
 
 export default function ServiceDetail() {
-    const { slug } = useParams();
+    
+    const params = useParams();
+    const slug = params.slug as string;
 
     const id = slug.split("-")[0];
     const service = services.find((s) => s.id === parseInt(id));
@@ -119,7 +19,6 @@ export default function ServiceDetail() {
     if (!service) {
         return <div className="p-20 text-center">Service not found</div>;
     }
-
 
     return (
         <main>
@@ -137,9 +36,20 @@ export default function ServiceDetail() {
         </main>
     );
 }
+ 
+
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "");
 
 
-export function ServiceDescription({ service }) {
+export function ServiceDescription({ service }: { service: Service }) {
+        const slug = `${service.id}-${slugify(service.title)}`;
+        const pathname = usePathname()
+       const locale = pathname.split("/")[1] || "de"
+        const router = useRouter()
     return (
         <div className="w-full max-w-xl mx-auto md:mx-0">
 
@@ -160,7 +70,8 @@ export function ServiceDescription({ service }) {
         mb-6 md:mb-8
         leading-relaxed
       ">
-                {service.description || "Professionelle Reinigung mit modernen und nachhaltigen Methoden."}
+                {service.description1} <br />
+                {service.description}
             </p>
 
             {/* TAGS */}
@@ -221,19 +132,7 @@ export function ServiceDescription({ service }) {
         flex flex-col sm:flex-row
         gap-3 sm:gap-4
       ">
-                <ButtonReservation />
-
-                <button className="
-          w-full sm:w-auto
-          border border-primary text-primary
-          px-5 py-3
-          rounded-xl
-          text-sm sm:text-base
-          hover:bg-primary hover:text-white
-          transition
-        ">
-                    Kontakt
-                </button>
+                <ButtonReservation onClick={() => router.push(`/${locale}/reservation/${slug}`)} />
             </div>
 
             {/* EXTRA INFO */}
@@ -249,13 +148,14 @@ export function ServiceDescription({ service }) {
         </div>
     )
 }
+
 const images = [
     "/images/appointment0.png",
     "/images/price-background.png",
     "/images/doctor-main1.jpg"
 ];
 
-export function ServiceCarousel({ service }) {
+export function ServiceCarousel({ service }: { service: Service }) {
     const images = service.images || [
         "/images/appointment0.png",
         "/images/price-background.png",
@@ -313,9 +213,8 @@ export function ServiceCarousel({ service }) {
                     <div
                         key={i}
                         onClick={() => setCurrent(i)}
-                        className={`w-14 h-14 rounded-lg overflow-hidden cursor-pointer border-2 ${
-                            current === i ? "border-primary" : "border-transparent"
-                        }`}
+                        className={`w-14 h-14 rounded-lg overflow-hidden cursor-pointer border-2 ${current === i ? "border-primary" : "border-transparent"
+                            }`}
                     >
                         <Image src={img} alt="thumb" width={56} height={56} />
                     </div>
@@ -328,9 +227,8 @@ export function ServiceCarousel({ service }) {
                     <div
                         key={i}
                         onClick={() => setCurrent(i)}
-                        className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
-                            current === i ? "bg-primary" : "bg-gray-300"
-                        }`}
+                        className={`w-2.5 h-2.5 rounded-full cursor-pointer ${current === i ? "bg-primary" : "bg-gray-300"
+                            }`}
                     />
                 ))}
             </div>

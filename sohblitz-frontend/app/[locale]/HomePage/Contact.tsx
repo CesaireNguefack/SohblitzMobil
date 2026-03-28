@@ -1,6 +1,6 @@
 "use client"
 
-import ButtonContact from "@/componenten/Cards/KontaktButton";
+import {ButtonContact} from "@/componenten/Cards/KontaktButton";
 import IconCard from "../../../componenten/Cards/IconCard";
 import { usePathname } from "next/navigation";
 
