@@ -5,7 +5,14 @@
     "impressum": "Impressum",
     "privacy": "Politique de confidentialité",
     "about": "Apropos de nous",
-    "agb":"CGV"
+    "agb": "CGV"
+  },
+  "adminNavbar": {
+    "dashboard": "Tableau de bord",
+    "reservations": "Réservations",
+    "services": "Services",
+    "contact": "Messages",  
+    "logout": "Déconnexion"
   },
   "dashboard": {
     "title": "Tableau de bord",
@@ -254,10 +261,10 @@
     ]
   },
   "aboutSection": {
-  "title": "À propos de Sohblitz-Mobil",
-  "subtitle": "Le nettoyage professionnel avec passion",
-  "text1": "Sohblitz-Mobil est une entreprise moderne de nettoyage basée à Braunschweig. Notre objectif est d'offrir à nos clients des espaces propres, hygiéniques et agréables, que ce soit à domicile, au bureau ou dans les locaux professionnels.",
-  "text2": "Nous proposons une large gamme de services de nettoyage professionnels : nettoyage de bâtiments, nettoyage de tissus d’ameublement, nettoyage de tapis, nettoyage intérieur de voiture ainsi que nettoyage de vitres et surfaces vitrées.",
-  "text3": "Grâce à des équipements professionnels, des produits de qualité et une équipe engagée, nous garantissons un service fiable et une grande satisfaction client."
-}
+    "title": "À propos de Sohblitz-Mobil",
+    "subtitle": "Le nettoyage professionnel avec passion",
+    "text1": "Sohblitz-Mobil est une entreprise moderne de nettoyage basée à Braunschweig. Notre objectif est d'offrir à nos clients des espaces propres, hygiéniques et agréables, que ce soit à domicile, au bureau ou dans les locaux professionnels.",
+    "text2": "Nous proposons une large gamme de services de nettoyage professionnels : nettoyage de bâtiments, nettoyage de tissus d’ameublement, nettoyage de tapis, nettoyage intérieur de voiture ainsi que nettoyage de vitres et surfaces vitrées.",
+    "text3": "Grâce à des équipements professionnels, des produits de qualité et une équipe engagée, nous garantissons un service fiable et une grande satisfaction client."
+  }
 }

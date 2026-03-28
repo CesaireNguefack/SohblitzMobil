@@ -8,6 +8,14 @@
     "agb":"AGB"
   },
 
+  "adminNavbar": {
+    "dashboard": "Dashboard",
+    "reservations": "Reservierungen",
+    "services": "Services",
+    "contact": "Nachrichten",
+    "logout": "Abmelden"
+  },
+
   "dashboard": {
     "title": "Dashboard",
     "addService": "Service hinzufügen"

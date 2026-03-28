@@ -146,66 +146,67 @@ export default function Prices() {
           {services.map((service) => {
             const slug = `${service.id}-${slugify(service.title)}`;
             return (
-              <Link
-                key={service.id}
-                href={`/${locale}/service/${slug}`}
-                className="block"
-              >
-                <div className="group relative bg-white/90 backdrop-blur rounded-2xl shadow-xl overflow-hidden cursor-pointer transform transition duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl">
+                <Link
+                  key={service.id}
+                  href={`/${locale}/service/${slug}`}
+                  className="block"
+                >
+                  <div className="group relative bg-white/90 backdrop-blur rounded-2xl shadow-xl overflow-hidden cursor-pointer transform transition duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl">
 
-                  {/* Gradient hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#8fb0c8] to-[#6f95b2] opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    {/* Gradient hover */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#8fb0c8] to-[#6f95b2] opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
-                  {/* Content */}
-                  <div className="relative z-10">
+                    {/* Content */}
+                    <div className="relative z-10">
 
-                    {/* image */}
-                    <div className="overflow-hidden">
-                      <img
-                        src="/images/appointment0.png"
-                        alt={service.title}
-                        className="w-full h-52 object-cover transition duration-500 group-hover:scale-110"
-                      />
-                    </div>
+                      {/* image */}
+                      <div className="overflow-hidden">
+                        <img
+                          src="/images/appointment0.png"
+                          alt={service.title}
+                          className="w-full h-52 object-cover transition duration-500 group-hover:scale-110"
+                        />
+                      </div>
 
-                    {/* text */}
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-4 text-primary group-hover:text-white transition">
-                        {service.title}
-                      </h3>
+                      {/* text */}
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold mb-4 text-primary group-hover:text-white transition">
+                          {service.title}
+                        </h3>
 
-                      <ul className="space-y-2 text-gray-700 text-sm group-hover:text-white/90 transition">
-                        {service.pricing.map((item, i) => (
-                          <li key={i} className="flex gap-2">
-                            <span className="text-primary group-hover:text-white">✔</span>
-                            {item}
-                          </li>
+                        <ul className="space-y-2 text-gray-700 text-sm group-hover:text-white/90 transition">
+                          {service.pricing.map((item, i) => (
+                            <li key={i} className="flex gap-2">
+                              <span className="text-primary group-hover:text-white">✔</span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="flex flex-wrap gap-2 mt-3">
+                        {service.tags?.map((tag, i) => (
+                          <span key={i} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
+                            {tag}
+                          </span>
                         ))}
-                      </ul>
-                    </div>
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {service.tags?.map((tag, i) => (
-                        <span key={i} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                      </div>
 
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
             );
           })}
-
+                    
         </div>
+     
       </div>
-      <section>
-        <div className="mt-16 text-center text-sm text-gray-600 max-w-3xl mx-auto space-y-2">
-          <p><b>Sohblitz-Mobil:</b> 100% chemiefrei & hygienisch</p>
-          <p>Preise variieren je nach Fläche, Verschmutzung und Zugänglichkeit.</p>
-          <p>Zusatzleistungen wie Imprägnierung oder Fugenreinigung möglich.</p>
-        </div>
-      </section>
+       <section>
+                            <div className="mt-16 text-center text-sm text-gray-600 max-w-3xl mx-auto space-y-2">
+                            <p><b>Sohblitz-Mobil:</b> 100% chemiefrei & hygienisch</p>
+                            <p>Preise variieren je nach Fläche, Verschmutzung und Zugänglichkeit.</p>
+                            <p>Zusatzleistungen wie Imprägnierung oder Fugenreinigung möglich.</p>
+                          </div>
+                      </section>
     </section>
   );
 }

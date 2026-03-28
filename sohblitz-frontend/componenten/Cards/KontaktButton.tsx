@@ -1,7 +1,7 @@
 import { usePathname } from "next/navigation"
 import { useRouter } from "next/navigation"
 
-export default function ButtonContact(){
+export   function ButtonContact(){
         const pathname = usePathname()
     
        const locale = pathname.split("/")[1] || "de"
@@ -9,7 +9,7 @@ export default function ButtonContact(){
     
     return (
         <button  onClick={() => router.push(`/${locale}/contact`)}
-            className="text-white px-8 py-3 rounded-full shadow-lg 
+            className="text-white px-5 py-3 rounded-xl shadow-lg 
              cursor-pointer hover:scale-105  "
             style={{
               background: "linear-gradient(135deg, #b0dbf4 0%, #a9c9e4 50%, #6fa6d8 100%)"
@@ -20,21 +20,36 @@ export default function ButtonContact(){
     )
 }
 
-export   function ButtonReservation(){
-        const pathname = usePathname()
-    
-       const locale = pathname.split("/")[1] || "de"
-        const router = useRouter()
-    
+type Props = {
+  onClick?: () => void,
+  onClickSubmit?: () => void,
+  loading?: boolean
+}
+
+export   function ButtonReservation({onClick}:Props){
     return (
-        <button  onClick={() => router.push(`/${locale}/contact`)}
-            className="text-white px-8 py-3 rounded-full shadow-lg 
+        <button  onClick={onClick}
+            className="text-white px-5 py-3 rounded-xl shadow-lg 
              cursor-pointer hover:scale-105  "
             style={{
               background: "linear-gradient(135deg, #b0dbf4 0%, #a9c9e4 50%, #6fa6d8 100%)"
             }}
           >
             Buchen →
+          </button>
+    )
+}
+
+export   function ButtonSubmit({onClickSubmit,loading}:Props){
+    return (
+        <button  onClick={onClickSubmit}
+            className="text-white px-5 py-3 rounded-xl shadow-lg 
+             cursor-pointer hover:scale-105  "
+            style={{
+              background: "linear-gradient(135deg, #b0dbf4 0%, #a9c9e4 50%, #6fa6d8 100%)"
+            }}
+          >
+           {loading ? "Sending..." : "Submit →"} 
           </button>
     )
 }

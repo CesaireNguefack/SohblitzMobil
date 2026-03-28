@@ -1,70 +1,8 @@
-import ButtonContact, { ButtonReservation } from "@/componenten/Cards/KontaktButton";
+import  { ButtonContact,ButtonReservation } from "@/componenten/Cards/KontaktButton";
 import ServiceCard from "@/componenten/Cards/ServiceCard";
-import { getServices } from "@/services/api"
+import { desc } from "framer-motion/client";
 import { useEffect, useState } from "react";
-
-const services = [
-  {
-    id: 1,
-    title: "Gebäudereinigung",
-    pricing: ["25€ – 35€ pro Stunde"]
-  },
-  {
-    id: 2,
-    title: "Büro und Praxisreinigung",
-    pricing: ["30€ – 40€ pro Stunde"]
-  },
-  {
-    id: 3,
-    title: "Bauendreinigung",
-    pricing: [
-      "Grobreinigung: 4€ – 9€ / m²",
-      "Feinreinigung: 5€ – 9.50€ / m²",
-      "Sanitär, Geräte und Möbel werden extra berechnet"
-    ]
-  },
-  {
-    id: 4,
-    title: "Fenster und Glasreinigung",
-    pricing: [
-      "4€ – 8€ / m² (innen & außen)",
-      "Rahmen: +1.45€ pro Fenster",
-      "Verschmutzungsgrad / Höhe: +20% – 50%"
-    ]
-  },
-  {
-    id: 5,
-    title: "Autoinnenreinigung",
-    pricing: [
-      "Basisreinigung: 40€ – 130€",
-      "Intensivreinigung: 130€ – 250€",
-      "Ozon Reinigung inklusive",
-      "Geruchsbeseitigung: 50€ – 80€"
-    ]
-  },
-  {
-    id: 6,
-    title: "Polster Reinigung",
-    pricing: [
-      "Sofa: 20€ – 40€ pro Sitz",
-      "Sessel: 25€ – 40€",
-      "Bürostuhl: 9€ – 20€"
-    ]
-  },
-  {
-    id: 7,
-    title: "Teppichreinigung",
-    pricing: ["6€ – 9€ pro m²"]
-  },
-  {
-    id: 8,
-    title: "Raffstore & Jalousie Reinigung",
-    pricing: [
-      "20€ – 55€ pro Stück",
-      "Je nach Verschmutzung & Höhe: +10% – 45%"
-    ]
-  }
-]
+import { services } from "@/app/data";
 
 export default function Services(){
 
