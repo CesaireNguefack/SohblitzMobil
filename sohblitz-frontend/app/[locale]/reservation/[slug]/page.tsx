@@ -26,13 +26,6 @@ export default function ReservationPage() {
 
 }
 
-const slugify = (text: string) =>
-  text
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w-]+/g, "");
-
-
 export function ReservationForm() {
    const params = useParams();
   const slug = params.slug as string;
@@ -124,7 +117,8 @@ export function ReservationForm() {
         time: "",
       })
     } catch (err) {
-      setError("Something went wrong")
+      setError("Something went wrong+" + (err as Error).message)
+      alert("Fehler bei der Reservierung: " + (err as Error).message)
     } finally {
       setLoading(false)
     }
