@@ -4,6 +4,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { ServiceModule } from './service/service.module';
 import { UserModule } from './user/user.module';
 import { ReservationModule } from './reservation/reservation.module';
+import { MailModule } from './mail/email.module';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { ReservationModule } from './reservation/reservation.module';
       PrismaModule,
       ServiceModule,
       ReservationModule,
-      UserModule
+      UserModule,
+      MailModule
   ],
  // providers: [PrismaService],
   

@@ -2,7 +2,7 @@
 import HeaderPages from "@/componenten/headerPages";
 import Navbar from "@/componenten/Navbar";
 import SplitSection from "@/componenten/SplitSection";
-
+import { usePathname } from "next/navigation"
 import { ContactCalendar } from "../../HomePage/ContactSectionForm";
 import { useState } from "react";
 import { ButtonSubmit } from "@/componenten/Cards/KontaktButton";
@@ -29,6 +29,12 @@ export default function ReservationPage() {
 export function ReservationForm() {
    const params = useParams();
   const slug = params.slug as string;
+  const allowedLangs = ['fr', 'en', 'de'];
+  const pathname = usePathname()
+const locale = allowedLangs.includes(pathname.split('/')[1])
+  ? pathname.split('/')[1]
+  : 'en';
+
 
   const id = slug.split("-")[0];
   const service = services.find((s) => s.id === parseInt(id));
@@ -47,6 +53,7 @@ export function ReservationForm() {
     city: "",
     date: "",
     time: "",
+    lang:locale
   })
 
   const [loading, setLoading] = useState(false)
@@ -93,6 +100,7 @@ export function ReservationForm() {
       city: form.city,
       date: isoDate,
       status: "PENDING",
+      lang:locale
     }
 
     try {
@@ -115,10 +123,10 @@ export function ReservationForm() {
         city: "",
         date: "",
         time: "",
+        lang:locale
       })
     } catch (err) {
       setError("Something went wrong+" + (err as Error).message)
-      alert("Fehler bei der Reservierung: " + (err as Error).message)
     } finally {
       setLoading(false)
     }

@@ -18,6 +18,8 @@ services:
     build: ./sohblitz-backend
     container_name: backend
     restart: always
+    env_file:
+      - ./sohblitz-backend/.env
     environment:
       NODE_ENV: docker_sublime_prod
       DATABASE_URL: postgresql://cesaire:changeme@db:5432/sohblitz
