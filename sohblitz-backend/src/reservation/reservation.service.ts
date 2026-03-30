@@ -24,7 +24,7 @@ export class ReservationService {
             include: {
                 service: true
             },
-            orderBy: {createdAt: "desc"}
+            orderBy: { createdAt: "desc" }
         })
     }
 
@@ -32,8 +32,8 @@ export class ReservationService {
         try {
             const updated = await this.prisma.reservation.update({
                 where: { id },
-                data: { status:status }
-            }) 
+                data: { status: status }
+            })
 
             return {
                 status: "success",
@@ -50,6 +50,36 @@ export class ReservationService {
         }
     }
 
+    async findById(id: number) {
+        try {
+            const reservation = await this.prisma.reservation.findUnique({
+                where: { id },
+                include: { service: true }
+            });
+
+            if (!reservation) {
+                return {
+                    status: "error",
+                    message: `Reservation with id ${id} not found`,
+                    data: null,
+                };
+            }
+
+            return {
+                status: "success",
+                message: "Reservation found",
+                data: reservation,
+            };
+        } catch (err) {
+            console.error(err);
+            return {
+                status: "error",
+                message: "Failed: " + err.message,
+                data: null,
+            };
+        }
+    }
+
     async deleteReservation(id: number) {
         const reservation = await this.prisma.reservation.findUnique({
             where: { id },
@@ -59,7 +89,7 @@ export class ReservationService {
             return {
                 status: "error",
                 message: "Reservation not found",
-                data: null, 
+                data: null,
             }
         }
 

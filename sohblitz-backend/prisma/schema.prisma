@@ -41,7 +41,7 @@ model Reservation {
   name      String
   email     String
   phone     String?
-
+  lang      String   @default("de")
   message   String?
   street    String
   zipcode   String

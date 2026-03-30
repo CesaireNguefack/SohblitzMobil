@@ -1,8 +1,4 @@
-//const API_URL = "http://localhost:3001" // on local
-//const API_URL = "http://localhost:8080/api"  // in docker on local machine
-const API_URL = process.env.NEXT_PUBLIC_API_URL;  //  global variable defined in .env.production and injected by docker-compose.prod.yml
-//const API_URL = "http://51.75.65.254:3001" // on vps in production
-
+ const API_URL = process.env.NEXT_PUBLIC_API_URL;  
 
 export async function getServices(){
   console.log(process.env.NEXT_PUBLIC_API_URL)
