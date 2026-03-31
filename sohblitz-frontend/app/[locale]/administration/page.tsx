@@ -29,7 +29,7 @@ export default function AdminLogin() {
        document.cookie = `token=${data.access_token}; path=/`
        
 
-      // redirection
+      // redirection. 
       router.push(`/${locale}/administration/dashboard`)
 
     } catch (err: any) {
