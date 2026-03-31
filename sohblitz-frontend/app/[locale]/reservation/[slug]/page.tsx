@@ -9,6 +9,7 @@ import { ButtonSubmit } from "@/componenten/Cards/KontaktButton";
 import { useParams } from "next/navigation";
 import { createReservation } from "@/services/reservationApi";
 import { services } from "@/app/data";
+import { getCurentLanguage } from "@/languages/getcurentlanguage";
 
 export default function ReservationPage() {
   return <main className="bg-white">
@@ -27,14 +28,9 @@ export default function ReservationPage() {
 }
 
 export function ReservationForm() {
-   const params = useParams();
+  const params = useParams();
   const slug = params.slug as string;
-  const allowedLangs = ['fr', 'en', 'de'];
-  const pathname = usePathname()
-const locale = allowedLangs.includes(pathname.split('/')[1])
-  ? pathname.split('/')[1]
-  : 'en';
-
+  const locale = getCurentLanguage()
 
   const id = slug.split("-")[0];
   const service = services.find((s) => s.id === parseInt(id));
@@ -53,7 +49,7 @@ const locale = allowedLangs.includes(pathname.split('/')[1])
     city: "",
     date: "",
     time: "",
-    lang:locale
+    lang: locale
   })
 
   const [loading, setLoading] = useState(false)
@@ -100,15 +96,13 @@ const locale = allowedLangs.includes(pathname.split('/')[1])
       city: form.city,
       date: isoDate,
       status: "PENDING",
-      lang:locale
+      lang: locale
     }
 
     try {
       setLoading(true)
-         console.log(payload)
-       const res =  await createReservation(payload)
-     
- 
+      console.log(payload)
+      const res = await createReservation(payload)
       if (!res.ok) throw new Error("Failed to submit")
 
       setSuccess(true)
@@ -123,7 +117,7 @@ const locale = allowedLangs.includes(pathname.split('/')[1])
         city: "",
         date: "",
         time: "",
-        lang:locale
+        lang: locale
       })
     } catch (err) {
       setError("Something went wrong+" + (err as Error).message)

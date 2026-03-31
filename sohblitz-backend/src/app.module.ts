@@ -5,6 +5,7 @@ import { ServiceModule } from './service/service.module';
 import { UserModule } from './user/user.module';
 import { ReservationModule } from './reservation/reservation.module';
 import { MailModule } from './mail/email.module';
+import { ContactModule } from './contact/contact.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { MailModule } from './mail/email.module';
       PrismaModule,
       ServiceModule,
       ReservationModule,
+      ContactModule,
       UserModule,
       MailModule
   ],
