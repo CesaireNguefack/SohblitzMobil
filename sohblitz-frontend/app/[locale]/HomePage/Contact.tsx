@@ -22,8 +22,7 @@ export default function ContactSection() {
         mt-10 md:mt-0
       "
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 items-start text-center">
-
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 items-start text-left md:text-center">
         <IconCard
           icon="📞"
           title="Hotline"

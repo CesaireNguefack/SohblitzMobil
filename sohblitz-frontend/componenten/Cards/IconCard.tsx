@@ -14,7 +14,7 @@ export default function IconCard({
   return (
     <div
       onClick={onClick}
-      className="flex flex-col md:items-center gap-3 cursor-pointer"
+      className="flex flex-col items-start md:items-center gap-3 cursor-pointer"
     >
       {/* TOP ROW (mobile) */}
       <div className="flex items-center gap-3   md:gap-2">

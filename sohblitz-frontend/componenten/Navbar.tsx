@@ -47,7 +47,7 @@ export default function Navbar({ navState }: Props) {
     `transition cursor-pointer ${
       locale === lang
         ? "scale-125 ring-2   "
-        : "opacity-60 hover:opacity-100"
+        : "opacity-60 hover:opacity-100 text-primary"
     }`
 
   return (

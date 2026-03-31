@@ -45,7 +45,7 @@ export default function Hero() {
       </div>
       */}
         <div>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-primary">
             Sauberkeit,<br />
             auf die Sie sich verlassen können
           </h1>
@@ -53,7 +53,6 @@ export default function Hero() {
           <p className="mt-6 text-gray-600 max-w-md">
             Sohblitz-Mobil bietet schnelle, zuverlässige und gründliche Reinigungsdienste direkt vor Ort in Braunschweig und Umgebung
           </p>
-
         </div>
 
 
