@@ -55,191 +55,161 @@ export default function Page() {
 
 
 export function ReservationList() {
-    const [reservations, setReservations] = useState<Reservation[]>([])
-    const [loading, setLoading] = useState(true)
+  const [reservations, setReservations] = useState<Reservation[]>([])
+  const [loading, setLoading] = useState(true)
 
-    const fetchReservations = async () => {
-        try {
-            const data = await getReservation()
-
-            setReservations(data)
-        } catch (err) {
-            console.error(err)
-        } finally {
-            setLoading(false)
-        }
+  const fetchReservations = async () => {
+    try {
+      const data = await getReservation()
+      setReservations(data)
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setLoading(false)
     }
+  }
 
-    useEffect(() => {
+  useEffect(() => {
+    fetchReservations()
+  }, [])
 
-
-        fetchReservations()
-    }, [])
-
-    const handleConfirmation = async (id: number) => {
-        try {
-
-            const result = await confirmReservation(id)
-
-            if (result.status === "error") {
-                throw new Error(result.message)
-            }
-
-            fetchReservations()
-        } catch (err) {
-            console.error(err)
-            alert("Erreur confirmation")
-        }
+  const handleConfirmation = async (id: number) => {
+    try {
+      const result = await confirmReservation(id)
+      if (result.status === "error") throw new Error(result.message)
+      fetchReservations()
+    } catch (err) {
+      console.error(err)
+      alert("Erreur confirmation")
     }
+  }
 
-    const handleCancellation = async (id: number) => {
-        try {
-
-            const result = await cancelReservation(id)
-
-            if (result.status === "error") {
-                throw new Error(result.message)
-            }
-
-            fetchReservations()
-        } catch (err) {
-            console.error(err)
-            alert("Erreur confirmation")
-        }
+  const handleCancellation = async (id: number) => {
+    try {
+      const result = await cancelReservation(id)
+      if (result.status === "error") throw new Error(result.message)
+      fetchReservations()
+    } catch (err) {
+      console.error(err)
+      alert("Erreur annulation")
     }
+  }
 
-    const handleDelete = async (id: number) => {
-        try {
-
-            const result = await deleteReservation(id)
-
-            fetchReservations()
-        } catch (err) {
-            console.error(err)
-            alert("Erreur suppression")
-        }
+  const handleDelete = async (id: number) => {
+    try {
+      await deleteReservation(id)
+      fetchReservations()
+    } catch (err) {
+      console.error(err)
+      alert("Erreur suppression")
     }
+  }
 
-    const status = (r: Reservation) => {
-        return statusConfig[r.status as keyof typeof statusConfig]
-    }
+  const status = (r: Reservation) => {
+    return statusConfig[r.status as keyof typeof statusConfig]
+  }
 
-    if (loading) return <p className="p-10 text-center">Loading...</p>
+  if (loading) return <p className="p-10 text-center">Loading...</p>
 
-      function ReservationCard({ r }: { r: Reservation }) {  
+  function ReservationCard({ r }: { r: Reservation }) {
     return (
-        <main>  
-                <div className="max-w-md mx-auto px-3">
-                        <div
-                            key={r.id}
-                            className="bg-white shadow-lg rounded-2xl p-5 border w-full max-w-full overflow-hidden"
-                        >
-                            {/* HEADER */}
-                            <div className="flex justify-between items-center mb-3 gap-2">
-                                <h2 className="text-xl font-semibold break-words">
-                                    {r.name}
-                                </h2>
+      <div className="bg-white shadow-lg rounded-2xl p-5 border w-full overflow-hidden">
+        
+        {/* HEADER */}
+        <div className="flex justify-between items-center mb-3 gap-2">
+          <h2 className="text-lg sm:text-xl font-semibold break-words">
+            {r.name}
+          </h2>
 
-                                <span
-                                    className={`text-sm ${status(r).className} px-3 py-1 rounded-full whitespace-nowrap`}
-                                >
-                                    {status(r).label}
-                                </span>
-                            </div>
-
-                            {/* SERVICE */}
-                            <p className="text-blue-600 font-medium mb-2 break-words">
-                                {r.service.titre} - {r.service.price}€
-                            </p>
-
-                            {/* INFO */}
-                            <div className="text-gray-600 text-sm space-y-1 break-words">
-                                <p>📧 {r.email}</p>
-                                {r.phone && <p>📞 {r.phone}</p>}
-                                <p>
-                                    📍 {r.street}, {r.zipcode} {r.city}
-                                </p>
-                            </div>
-
-                            {/* MESSAGE */}
-                            {r.message && (
-                                <p className="mt-3 text-gray-700 italic break-words">
-                                    "{r.message}"
-                                </p>
-                            )}
-
-                            {/* DATE */}
-                            <div className="mt-4 text-sm text-gray-500">
-                                <p>
-                                    📅 {new Date(r.date).toLocaleDateString()} à{" "}
-                                    {new Date(r.date).toLocaleTimeString([], {
-                                        hour: "2-digit",
-                                        minute: "2-digit",
-                                    })}
-                                </p>
-
-                                <p>
-                                    Créé le{" "}
-                                    {new Date(r.createdAt).toLocaleDateString()}
-                                </p>
-                            </div>
-
-                            {/* ACTIONS 🔥 */}
-                            <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                                {/* CONFIRM */}
-                                <button
-                                    onClick={() => handleConfirmation(r.id)}
-                                    disabled={r.status === "CONFIRMED"}
-                                    className={`w-full sm:w-auto px-4 py-2 rounded-lg text-white transition ${r.status === "CONFIRMED"
-                                            ? "bg-gray-400 cursor-not-allowed"
-                                            : "bg-green-600 hover:scale-105"
-                                        }`}
-                                >
-                                    Confirm
-                                </button>
-
-                                {/* CANCEL */}
-                                <button
-                                    onClick={() => handleCancellation(r.id)}
-                                    disabled={r.status === "CANCELED"}
-                                    className={`w-full sm:w-auto px-4 py-2 rounded-lg text-white transition ${r.status === "CANCELED"
-                                            ? "bg-gray-400 cursor-not-allowed"
-                                            : "bg-yellow-600 hover:scale-105"
-                                        }`}
-                                >
-                                    Cancel
-                                </button>
-
-                                {/* DELETE */}
-                                <button
-                                    onClick={() => handleDelete(r.id)}
-                                    className="w-full sm:w-auto px-4 py-2 bg-red-600 text-white rounded-lg hover:scale-105 transition"
-                                >
-                                    Delete
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-        </main>
-    ) 
-}  
-
-    return (
-        <div className="px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden">
-
-            <h1 className="text-3xl font-bold mb-6">Reservations</h1>
-
-            <div className="grid gap-6">
-
-                {reservations.map((r) => (
-                    <ReservationCard key={r.id} r={r} />
-                ))}
-
-            </div>
+          <span
+            className={`text-xs sm:text-sm ${status(r).className} px-3 py-1 rounded-full whitespace-nowrap`}
+          >
+            {status(r).label}
+          </span>
         </div>
+
+        {/* SERVICE */}
+        <p className="text-blue-600 font-medium mb-2 break-words">
+          {r.service.titre} - {r.service.price}€
+        </p>
+
+        {/* INFO */}
+        <div className="text-gray-600 text-sm space-y-1 break-words">
+          <p>📧 {r.email}</p>
+          {r.phone && <p>📞 {r.phone}</p>}
+          <p>📍 {r.street}, {r.zipcode} {r.city}</p>
+        </div>
+
+        {/* MESSAGE */}
+        {r.message && (
+          <p className="mt-3 text-gray-700 italic break-words">
+            "{r.message}"
+          </p>
+        )}
+
+        {/* DATE */}
+        <div className="mt-4 text-sm text-gray-500">
+          <p>
+            📅 {new Date(r.date).toLocaleDateString()} à{" "}
+            {new Date(r.date).toLocaleTimeString([], {
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
+          </p>
+
+          <p>
+            Créé le {new Date(r.createdAt).toLocaleDateString()}
+          </p>
+        </div>
+
+        {/* ACTIONS */}
+        <div className="mt-4 flex flex-col sm:flex-row gap-3">
+          <button
+            onClick={() => handleConfirmation(r.id)}
+            disabled={r.status === "CONFIRMED"}
+            className={`w-full sm:w-auto px-4 py-2 rounded-lg text-white transition ${
+              r.status === "CONFIRMED"
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-green-600 hover:scale-105"
+            }`}
+          >
+            Confirm
+          </button>
+
+          <button
+            onClick={() => handleCancellation(r.id)}
+            disabled={r.status === "CANCELED"}
+            className={`w-full sm:w-auto px-4 py-2 rounded-lg text-white transition ${
+              r.status === "CANCELED"
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-yellow-600 hover:scale-105"
+            }`}
+          >
+            Cancel
+          </button>
+
+          <button
+            onClick={() => handleDelete(r.id)}
+            className="w-full sm:w-auto px-4 py-2 bg-red-600 text-white rounded-lg hover:scale-105 transition"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
     )
+  }
 
+  return (
+    <div className="px-4 sm:px-6 max-w-7xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6">Reservations</h1>
 
+      {/* GRID RESPONSIVE 🔥 */}
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {reservations.map((r) => (
+          <ReservationCard key={r.id} r={r} />
+        ))}
+      </div>
+    </div>
+  )
 }
-
 
