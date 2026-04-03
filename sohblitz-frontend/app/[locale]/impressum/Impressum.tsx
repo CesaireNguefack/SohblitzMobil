@@ -2,8 +2,8 @@
 
 import { useTranslations } from "@/lib/TranslationProvider"
 import { motion } from "framer-motion"
-
-export default function ImpressumSection() {
+ 
+  export default function ImpressumSection() {
 
   const t = useTranslations()
   const data = t?.impressumPage
@@ -25,23 +25,29 @@ export default function ImpressumSection() {
             <motion.div
               key={index}
               variants={fadeUp}
-              initial="hidden"
+              
+              // 👇 les 2 premiers visibles direct
+              initial={index < 2 ? "visible" : "hidden"}
               whileInView="visible"
+              
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
+              transition={{ 
+                duration: 0.6, 
+                ease: "easeOut",
+                delay: index * 0.1
+              }}
+              
               className="bg-white rounded-2xl shadow-md border border-gray-100 p-8"
             >
 
-            <h2 className="font-semibold text-slate-800 mb-5 text-[clamp(1.1rem,2.5vw,1.5rem)]">
-              {section.title}
-            </h2>
+              <h2 className="font-semibold text-slate-800 mb-5 text-[clamp(1.1rem,2.5vw,1.5rem)]">
+                {section.title}
+              </h2>
 
               <div className="space-y-3 text-gray-600">
-
                 {section.content.map((text:string,i:number)=>(
                   <p key={i}>{text}</p>
                 ))}
-
               </div>
 
             </motion.div>

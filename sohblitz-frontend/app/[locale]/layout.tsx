@@ -1,7 +1,7 @@
 import { getTranslations } from "@/lib/translation";
 import { TranslationProvider } from "@/lib/TranslationProvider";
 import "../globals.css";
-import { notFound } from "next/navigation";
+import { notFound } from "next/navigation"; 
 
 const locales = ["en", "de", "fr"];
 

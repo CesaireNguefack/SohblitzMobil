@@ -2,11 +2,10 @@
 
 import {ButtonContact} from "@/componenten/Cards/KontaktButton";
 import IconCard from "../../../componenten/Cards/IconCard";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "@/lib/TranslationProvider"
 
 export default function ContactSection() {
-  const pathname = usePathname();
-  const locale = pathname.split("/")[1] || "de";
+    const t = useTranslations()
 
   return (
     <div
@@ -37,7 +36,7 @@ export default function ContactSection() {
 
         <IconCard
           icon="📍"
-          title="User Standort"
+          title= {t.contact.iconLocation}
           description="Heinrich-Büssing-Ring 22, 38102 Braunschweig"
         />
 

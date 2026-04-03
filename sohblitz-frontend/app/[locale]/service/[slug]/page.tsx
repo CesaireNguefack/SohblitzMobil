@@ -6,37 +6,69 @@ import Image from "next/image";
 import {ButtonReservation} from "@/componenten/Cards/KontaktButton";
 import { useState, useEffect } from "react";
 import SplitSection from "@/componenten/SplitSection";
-import { services, Service } from "@/app/data";
+ 
+import { Lang, getCurentLanguage } from "@/languages/getcurentlanguage";
+import { getServiceById,Service, API_URL } from "@/services/dienstApi";
+
 
 export default function ServiceDetail() {
-    
-    const params = useParams();
-    const slug = params.slug as string;
+  const params = useParams()
 
-    const id = slug.split("-")[0];
-    const service = services.find((s) => s.id === parseInt(id));
+  const slug = params.slug as string
+const lang = getCurentLanguage()  
 
-    if (!service) {
-        return <div className="p-20 text-center">Service not found</div>;
+  const [service, setService] = useState<Service | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function loadService() {
+      const id = parseInt(slug.split("-")[0])
+
+      const data = await getServiceById(id, lang as Lang)
+      setService(data)
+      setLoading(false)
     }
 
-    return (
-        <main>
-            <Navbar navState="gradient" />
-            <br />
-            <SplitSection
-                reverse
-                left={
-                    <ServiceCarousel service={service} />
-                }
-                right={
-                    <ServiceDescription service={service} />
-                }
-            />
-        </main>
-    );
+    loadService()
+  }, [slug, lang])
+
+  // ⏳ Loading state
+  if (loading) {
+    
+     return (
+    <main>
+      <Navbar navState="gradient" showLogo={true} />
+      <br />
+       <div className="p-20 text-center">Loading ...</div>
+    </main>
+  )
+  }
+
+  // ❌ Not found
+  if (!service) {
+
+     return (
+    <main>
+      <Navbar navState="gradient"  showLogo={true}/>
+      <br />
+       <div className="p-20 text-center">Service not found</div>
+    </main>
+  )
+  }
+
+  // ✅ Render
+  return (
+    <main>
+      <Navbar navState="gradient" showLogo={true} />
+      <br />
+      <SplitSection
+        reverse
+        left={<ServiceCarousel service={service} />}
+        right={<ServiceDescription service={service} />}
+      />
+    </main>
+  )
 }
- 
 
 const slugify = (text: string) =>
   text
@@ -149,89 +181,109 @@ export function ServiceDescription({ service }: { service: Service }) {
     )
 }
 
-const images = [
-    "/images/appointment0.png",
-    "/images/price-background.png",
-    "/images/doctor-main1.jpg"
-];
+ 
+ 
 
 export function ServiceCarousel({ service }: { service: Service }) {
-    const images = service.images || [
-        "/images/appointment0.png",
-        "/images/price-background.png",
-        "/images/doctor-main1.jpg"
-    ];
+  
+  const images = service.images && service.images.length > 0
+    ? service.images
+    : ["/images/appointment0.png"]
 
-    const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0)
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrent((prev) =>
-                prev === images.length - 1 ? 0 : prev + 1
-            );
-        }, 3000);
+  // 🔁 Auto slide
+  useEffect(() => {
+    if (images.length <= 1) return
 
-        return () => clearInterval(interval);
-    }, [images.length]);
+    const interval = setInterval(() => {
+      setCurrent(prev => (prev === images.length - 1 ? 0 : prev + 1))
+    }, 3000)
 
-    return (
-        <div className="relative flex flex-col items-center md:items-start">
+    return () => clearInterval(interval)
+  }, [images.length])
 
-            {/* MAIN IMAGE */}
-            <div className="relative w-full max-w-[420px] aspect-square rounded-3xl overflow-hidden shadow-2xl">
-                <Image
-                    src={images[current]}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                />
+  // 🔒 Sécurité index
+  const currentImage = images[current] || images[0]
 
-                {/* BUTTONS */}
-                <button
-                    onClick={() => setCurrent(current === 0 ? images.length - 1 : current - 1)}
-                    className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full"
-                >
-                    ‹
-                </button>
+  const getFullUrl = (path: string) => {
+    if (path.startsWith("http") || path.startsWith("/images")) return path
+    return `${API_URL}${path}`
+  }
 
-                <button
-                    onClick={() => setCurrent(current === images.length - 1 ? 0 : current + 1)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full"
-                >
-                    ›
-                </button>
-            </div>
+  return (
+    <div className="relative flex flex-col items-center md:items-start">
 
-            {/* BADGE */}
-            <div className="absolute top-4 right-4 bg-white shadow-lg rounded-full w-16 h-16 flex items-center justify-center text-xs text-gray-500">
-                Premium
-            </div>
+      {/* MAIN IMAGE */}
+      <div className="relative w-full max-w-[420px] aspect-square rounded-3xl overflow-hidden shadow-2xl">
+        <Image
+          src={getFullUrl(currentImage)}
+          alt={service.title}
+          fill
+           
+          className="object-cover"
+        />
 
-            {/* THUMBNAILS */}
-            <div className="mt-4 flex gap-3 flex-wrap justify-center">
-                {images.map((img, i) => (
-                    <div
-                        key={i}
-                        onClick={() => setCurrent(i)}
-                        className={`w-14 h-14 rounded-lg overflow-hidden cursor-pointer border-2 ${current === i ? "border-primary" : "border-transparent"
-                            }`}
-                    >
-                        <Image src={img} alt="thumb" width={56} height={56} />
-                    </div>
-                ))}
-            </div>
+        {/* BUTTONS */}
+        {images.length > 1 && (
+          <>
+            <button
+              onClick={() =>
+                setCurrent(current === 0 ? images.length - 1 : current - 1)
+              }
+              className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full"
+            >
+              ‹
+            </button>
 
-            {/* DOTS */}
-            <div className="mt-3 flex gap-2">
-                {images.map((_, i) => (
-                    <div
-                        key={i}
-                        onClick={() => setCurrent(i)}
-                        className={`w-2.5 h-2.5 rounded-full cursor-pointer ${current === i ? "bg-primary" : "bg-gray-300"
-                            }`}
-                    />
-                ))}
-            </div>
+            <button
+              onClick={() =>
+                setCurrent(current === images.length - 1 ? 0 : current + 1)
+              }
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full"
+            >
+              ›
+            </button>
+          </>
+        )}
+      </div>
+
+      {/* THUMBNAILS */}
+      <div className="mt-4 flex gap-3 flex-wrap justify-center">
+        {images.map((img, i) => (
+          <div
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-14 h-14 rounded-lg overflow-hidden cursor-pointer border-2 ${
+              current === i ? "border-primary" : "border-transparent"
+            }`}
+          >
+            <Image
+              src={getFullUrl(img)}
+              alt="thumb"
+              width={56}
+              height={56}
+               
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* DOTS */}
+      {images.length > 1 && (
+        <div className="mt-3 flex gap-2">
+          {images.map((_, i) => (
+            <div
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
+                current === i ? "bg-primary" : "bg-gray-300"
+              }`}
+            />
+          ))}
         </div>
-    );
+      )}
+    </div>
+  )
 }

@@ -6,18 +6,20 @@ import Calendar from "react-calendar"
 import "react-calendar/dist/Calendar.css"
 import { createContact } from "@/services/contactApi"
 import { getCurentLanguage } from "@/languages/getcurentlanguage"
+import { useTranslations } from "@/lib/TranslationProvider"
+import {ButtonSubmit} from "@/componenten/Cards/KontaktButton"
 
-export default function ContactSectionForm() {
+export default function ContactFormBody() {
   return (
     <SplitSection
-      reverse
+       
       left={<ContactForm />}
       right={<ContactCalendar />}
     />
   )
 }
 
-function ContactForm() {
+export function ContactForm() {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -30,6 +32,7 @@ function ContactForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
+  const t = useTranslations()
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -99,25 +102,22 @@ function ContactForm() {
 
   return (
     <div className="w-full max-w-xl mx-auto md:mx-0 px-4 sm:px-0">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-        Kontakt Form
-      </h2>
 
-      <p className="text-blue-400 font-semibold mb-6">
-        Termin nehmen
-      </p>
+      <h2 className="text-[var(--foreground2) font-semibold mb-6">
+        {t.contact.formtitle}
+      </h2>
 
       <form className="space-y-5" onSubmit={handleSubmit}>
 
         {/* NAME */}
         <div>
-          <label className="block text-gray-600 mb-2">Name</label>
+          <label className="block text-gray-600 mb-2">{t.contact.name}</label>
           <input
             name="name"
             value={form.name}
             onChange={handleChange}
             type="text"
-            placeholder="Ihr Name"
+            placeholder={t.contact.ihr  + " " + t.contact.name}
             className="w-full border border-gray-300 rounded-lg px-4 py-3"
           />
         </div>
@@ -130,14 +130,14 @@ function ContactForm() {
             value={form.email}
             onChange={handleChange}
             type="email"
-            placeholder="Ihre Email"
+            placeholder= {t.contact.ihre  + " Email" }
             className="w-full border border-gray-300 rounded-lg px-4 py-3"
           />
         </div>
 
         {/* PHONE */}
         <div>
-          <label className="block text-gray-600 mb-2">Telefon</label>
+          <label className="block text-gray-600 mb-2">{t.contact.phone}</label>
           <input
             name="phone"
             value={form.phone}
@@ -150,13 +150,13 @@ function ContactForm() {
 
         {/* MESSAGE */}
         <div>
-          <label className="block text-gray-600 mb-2">Nachricht</label>
+          <label className="block text-gray-600 mb-2">{t.contact.message}</label>
           <textarea
             name="message"
             value={form.message}
             onChange={handleChange}
             rows={4}
-            placeholder="Ihre Nachricht..."
+            placeholder= {t.contact.ihre  + " " + t.contact.message+"..."}
             className="w-full border border-gray-300 rounded-lg px-4 py-3 resize-none"
           />
         </div>
@@ -170,7 +170,7 @@ function ContactForm() {
             onChange={handleChange}
           />
           <label className="text-sm text-gray-600">
-            Ich bin kein Roboter
+           {t.contact.robochek}
           </label>
         </div>
 
@@ -185,36 +185,82 @@ function ContactForm() {
         )}
 
         {/* BUTTON */}
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full sm:w-auto text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition"
-          style={{
-            background:
-              "linear-gradient(135deg, #e7e9e1 0%, #b4c9da 30%, #2078cb 100%)",
-          }}
-        >
-          {loading ? "Sending..." : "Submit →"}
-        </button>
+        <ButtonSubmit loading = {loading}  />
+        
       </form>
     </div>
   )
 }
 
+
 export function ContactCalendar() {
   const [date, setDate] = useState(new Date())
+    const locale = getCurentLanguage()
+  const t = useTranslations()
 
   return (
-    <div className="w-full max-w-md mx-auto md:mx-0 bg-white p-6 rounded-2xl shadow-xl">
-      <h2 className="text-2xl font-bold mb-4 text-primary">
-        Verfügbarkeit
-      </h2>
+    <div className="w-full max-w-xl mx-auto md:mx-0 px-4 sm:px-0">
 
-      <Calendar
-        value={date}
-        onChange={(value: any) => setDate(value)}
-        className="border-none w-full"
+      <IconCardForm
+        icon="📞"
+        title="0176 48082448"
       />
+
+      <IconCardForm
+        icon="📧"
+        title="sohblitz.mobil@web.de"
+
+      />
+
+      <IconCardForm
+        icon="📍"
+        title="Heinrich-Büssing-Ring 22, 38102 Braunschweig"
+      /> <br></br>
+
+      <div className="w-full max-w-md mx-auto md:mx-0 bg-white p-6 rounded-2xl shadow-xl">
+        <h2 className="text-2xl font-bold mb-4 text-primary">
+        {t.contact.availability}
+        </h2>
+
+        <Calendar
+          value={date}
+          locale={locale}
+          onChange={(value: any) => setDate(value)}
+          className="border-none w-full"
+        />
+      </div>
     </div>
   )
 }
+
+
+export function IconCardForm({
+  icon,
+  title,
+}: Props) {
+  return (
+    <div className="flex flex-col items-start gap-3 cursor-pointer py-3">
+
+      {/* TOP ROW */}
+      <div className="flex items-center gap-3">
+
+        {/* ICON */}
+        <div className="w-10 h-10 md:w-12 md:h-12 min-w-[2.5rem] md:min-w-[3rem] flex items-center justify-center rounded-full bg-blue-100 text-lg md:text-xl shadow">
+          {icon}
+        </div>
+
+        {/* TITLE */}
+        <label className="text-sm md:text-base font-medium text-gray-700">
+          {title}
+        </label>
+
+      </div>
+
+    </div>
+  );
+}
+
+type Props = {
+  icon: string;
+  title: string;
+};

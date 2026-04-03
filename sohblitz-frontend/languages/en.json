@@ -5,7 +5,60 @@
     "impressum": "Imprint",
     "privacy": "Privacy Policy",
     "about": "About us",
-    "agb":"T&C"
+    "agb": "T&C"
+  },
+  "hero": {
+    "title": "Cleanliness \n you can rely on",
+    "subtitle": "Fast, reliable, and high-quality cleaning services delivered on-site in Braunschweig and the surrounding area"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We are available 24/7. Get in touch with us to discuss your needs!",
+    "iconLocation": "Our location",
+    "contactbtn": "Contact us →",
+    "reserve": "Book →",
+    "sending": "Sending...",
+    "submit": "Submit →",
+    "formtitle": "Get in Touch",
+    "name": "Name",
+    "ihr": "Your",
+    "ihre": "Your",
+    "phone": "Phone",
+    "message": "Message",
+    "robochek": "I am not a robot",
+    "availability": "Availability"
+  },
+  "about": {
+    "quality": "High Quality",
+    "title": "Who we are",
+    "description": "As the owner, \nEmerant Dass Kuietche Soh\n based in Braunschweig, I personally ensure spotless results – whether for private or commercial clients.",
+    "subtitle": "Our Service Area",
+    "subdescription": "We come directly to you in \nBraunschweig, Wolfsburg, Salzgitter, Gifhorn\n and surrounding areas."
+  },
+  "service": {
+    "title": "Our Services and Prices",
+    "subtitle1": "Travel costs within Braunschweig:",
+    "subtitle2": "0.35€ / km.",
+    "subtitle22": "Outside Braunschweig:",
+    "subtitle3": "0.65€ / km.",
+    "subtitle4": "Minimum order value:",
+    "subtitle5": "50€.",
+    "subtitle6": "Discounts available for long-term contracts.",
+    "footer0": "Sohblitz-Mobil:",
+    "footer": "100% chemical-free & hygienic  \n Prices vary depending on surface area, level of dirt, and accessibility. \n Additional services such as impregnation or joint cleaning are available."
+  },
+  "teamsection": {
+    "title": "Professional Cleaning for Your Home",
+    "description": "We provide reliable and thorough cleaning services for apartments, offices, and windows – so you can focus on what matters most."
+  },
+  "reviewsection": {
+    "title": "Some Reviews",
+    "subtitle": "OF OUR CLIENTS",
+    "seemore": "See More"
+  },
+  "demosection": {
+    "title": "Professional Cleaning for Your Home",
+    "subtitle": "We ensure cleanliness in apartments, offices, and shops."
   },
   "adminNavbar": {
     "dashboard": "Dashboard",

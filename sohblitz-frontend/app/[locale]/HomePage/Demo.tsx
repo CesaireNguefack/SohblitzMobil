@@ -1,5 +1,9 @@
 
+import { useTranslations } from "@/lib/TranslationProvider"
+import {ButtonContact} from "@/componenten/Cards/KontaktButton";
+
 export default function Demo() {
+     const t = useTranslations()
     return (
         <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
 
@@ -21,23 +25,13 @@ export default function Demo() {
             <div className="relative z-10 text-center text-white max-w-3xl px-6">
 
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                    Professionelle Reinigung für Ihr Zuhause
+                   {t.demosection.title}
                 </h2>
 
                 <p className="text-lg md:text-xl mb-8">
-                    Wir sorgen für Sauberkeit in Wohnungen, Büros und Geschäften.
+                    {t.demosection.subtitle}
                 </p>
-
-                <button
-                    className="text-white px-8 py-3 rounded-full shadow-lg hover:scale-105 transition"
-                    style={{
-                        background:
-                            "linear-gradient(135deg, #b0dbf4 0%, #a9c9e4 50%, #6fa6d8 100%)"
-                    }}
-                >
-                    Kontaktieren →
-                </button>
-
+                 <ButtonContact />  
             </div>
 
         </section>

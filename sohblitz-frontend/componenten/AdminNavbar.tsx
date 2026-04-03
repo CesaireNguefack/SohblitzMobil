@@ -10,11 +10,6 @@ type Props = {
   navState: "transparent" | "gradient" | "white"
 }
 
-
-const changeLanguage = (lang: String) => {
-  console.log("Change language to:", lang);
-};
-
 export default function AdminNavbar({ navState }: Props) {
   const router = useRouter()
   const t = useTranslations()

@@ -2,7 +2,10 @@
 
 :root {
   --background: #274760;
-  --foreground: #274760;
+  --foreground: #1a486c;
+  --foreground2: #2d6794;
+  --textcolor: #4B5563;
+  --gradient-primary: linear-gradient(135deg, #b0dbf4 0%, #a9c9e4 50%, #6fa6d8 100%);
 }
 
 @theme inline {
@@ -11,13 +14,13 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
+ 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0a0a0a; 
     --foreground: #274760;
-  }
-}
+  }  
+} 
 
 body {
   background: var(--background);
@@ -30,9 +33,15 @@ h1 {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
+
 a {
   color: var(--foreground);
 }
+
 link {
   color: var(--foreground);
+}
+
+label{
+  color: var(--textcolor)
 }

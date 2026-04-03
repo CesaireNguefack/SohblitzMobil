@@ -1,9 +1,10 @@
 import { usePathname } from "next/navigation"
 import { useRouter } from "next/navigation"
+import { useTranslations } from "@/lib/TranslationProvider"
 
 export   function ButtonContact(){
         const pathname = usePathname()
-    
+        const t = useTranslations()
        const locale = pathname.split("/")[1] || "de"
         const router = useRouter()
     
@@ -11,14 +12,13 @@ export   function ButtonContact(){
         <button  onClick={() => router.push(`/${locale}/contact`)}
             className="text-white px-5 py-3 rounded-xl shadow-lg 
              cursor-pointer hover:scale-105  "
-            style={{
-              background: "linear-gradient(135deg, #b0dbf4 0%, #a9c9e4 50%, #6fa6d8 100%)"
-            }}
+             style={{ background: "var(--gradient-primary)" }}
           >
-            Kontaktieren →
+           {t.contact.contactbtn}
           </button>
     )
 }
+
 
 type Props = {
   onClick?: () => void,
@@ -27,29 +27,26 @@ type Props = {
 }
 
 export   function ButtonReservation({onClick}:Props){
+   const t = useTranslations()
     return (
         <button  onClick={onClick}
             className="text-white px-5 py-3 rounded-xl shadow-lg 
              cursor-pointer hover:scale-105  "
-            style={{
-              background: "linear-gradient(135deg, #b0dbf4 0%, #a9c9e4 50%, #6fa6d8 100%)"
-            }}
-          >
-            Buchen →
+             style={{ background: "var(--gradient-primary)" }}
+          > {t.contact.reserve}
           </button>
     )
 }
 
 export   function ButtonSubmit({onClickSubmit,loading}:Props){
+   const t = useTranslations()
     return (
-        <button  onClick={onClickSubmit}
+        <button  type="submit" onClick={onClickSubmit}
             className="text-white px-5 py-3 rounded-xl shadow-lg 
-             cursor-pointer hover:scale-105  "
-            style={{
-              background: "linear-gradient(135deg, #b0dbf4 0%, #a9c9e4 50%, #6fa6d8 100%)"
-            }}
+             cursor-pointer hover:scale-105 "
+             style={{ background: "var(--gradient-primary)" }}
           >
-           {loading ? "Sending..." : "Submit →"} 
+           {loading ?  t.contact.sending : t.contact.submit} 
           </button>
     )
 }

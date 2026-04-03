@@ -3,20 +3,13 @@
 import AdminNavbar from "@/componenten/AdminNavbar";
 import AdminServiceCard from "@/componenten/AdminServiceCard";
 import IconDiv from "@/componenten/Cards/IconDiv";
-import { getServices, createService } from "@/services/api";
 import { useEffect, useState } from "react"
+import { getCurentLanguage, Lang } from "@/languages/getcurentlanguage";  
+import { getServices } from "@/services/dienstApi";
 
-type Service = {
-  id: number
-  title: string
-  description: string
-  price: number
-  dateCreation: string
-}
+export default async function Page() {
 
-export default function Page() {
-
-  const [services, setServices] = useState<Service[]>([])
+  const [services, setServices] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [showForm, setShowForm] = useState(false)
 
@@ -30,7 +23,7 @@ export default function Page() {
 
   async function loadServices(){
     try{
-      const data = await getServices()
+      const data =    await getServices(getCurentLanguage() as Lang)
       setServices(data)
 
     }catch(err){
@@ -52,8 +45,9 @@ export default function Page() {
     setSuccess("")
     setSaving(true)
 
+    /*
     try{
-
+        
     const resp =  await createService({
         titre,
         description,
@@ -73,7 +67,8 @@ export default function Page() {
       setError(err.message || "Erreur lors de l'ajout")
     }finally{
       setSaving(false)
-    }
+    } 
+    */
 
   }
 

@@ -5,9 +5,62 @@
     "impressum": "Impressum",
     "privacy": "Datenschutz",
     "about": "Über Uns",
-    "agb":"AGB"
+    "agb": "AGB"
   },
+  "hero": {
+    "title": "Sauberkeit \n  auf die Sie sich verlassen können",
+    "subtitle": "Sohblitz-Mobil bietet schnelle, zuverlässige und gründliche Reinigungsdienste direkt vor Ort in Braunschweig und Umgebung"
+  },
+  "contact": {
+     "title": "Kontakt",
+  "subtitle": "Wir sind rund um die Uhr für Sie da. Kontaktieren Sie uns, um Ihren Bedarf zu besprechen!",
+    "iconLocation": "Unser Standort",
+    "contactbtn": "Kontaktieren →",
+    "reserve": "Buchen →",
+    "sending": "Sending...",
+    "submit": "Submit →",
+     "formtitle":"Kontakt aufnehmen",
+    "name":"Name",
+    "ihr":"Ihr",
+    "ihre":"Ihre",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "robochek":"Ich bin kein Roboter",
+    "availability": "Verfügbarkeit"
+  },
+  "about": {
+    "quality": "Hohe Qualität",
+    "title": "Wer wir sind",
+  "description": "Als Inhaber \nEmerant Dass Kuietche Soh\n aus Braunschweig sorge ich persönlich für blitzsaubere Ergebnisse – ob privat oder gewerblich.",
+  "subtitle": "Unser Einsatzgebiet",
+  "subdescription": "Wir kommen mobil zu dir in \nBraunschweig, Wolfsburg, Salzgitter, Gifhorn\n und Umgebung."
 
+  },
+ "service": {
+    "title": "Unsere Dienste und Preise",
+    "subtitle1": "Fahrtkosten innerhalb Braunschweig:",
+    "subtitle2": "0,35€ / km.",
+    "subtitle22":" Außerhalb Braunschweig:",
+    "subtitle3": "0,65€ / km.",
+    "subtitle4": "Mindestbestellwert:",
+    "subtitle5": "50€.",
+    "subtitle6": "Rabatte bei Dauerverträgen verfügbar.",
+    "footer0": "Sohblitz-Mobil:",
+    "footer": "100% chemiefrei & hygienisch  \n Preise variieren je nach Fläche, Verschmutzung und Zugänglichkeit. \n Zusatzleistungen wie Imprägnierung oder Fugenreinigung möglich."
+  },
+  "teamsection":{
+    "title": "Professionelle Reinigung für Ihr Zuhause",
+    "description":"   Wir bieten zuverlässige und gründliche Reinigungsdienste für Wohnungen, Büros und Fenster – damit Sie sich auf die wichtigen Dinge konzentrieren können."
+  },
+  "reviewsection": {
+    "title": "Einige Bewertungen",
+    "subtitle": "UNSERER KUNDEN",
+    "seemore": "Mehr anzeigen"
+  },
+  "demosection":{
+      "title": "Professionelle Reinigung für Ihr Zuhause",
+      "subtitle": " Wir sorgen für Sauberkeit in Wohnungen, Büros und Geschäften."
+  },
   "adminNavbar": {
     "dashboard": "Dashboard",
     "reservations": "Reservierungen",
@@ -15,12 +68,10 @@
     "contact": "Nachrichten",
     "logout": "Abmelden"
   },
-
   "dashboard": {
     "title": "Dashboard",
     "addService": "Service hinzufügen"
   },
-
   "contactPageHeaderInfos": {
     "title": "Kontaktieren Sie uns \n   für eine professionelle \n  Reinigung",
     "subtitle": "Ihr zuverlässiger Partner für Sauberkeit"
@@ -38,14 +89,12 @@
     "subtitle": "Informationen zum Schutz Ihrer Daten"
   },
   "agbPageHeaderInfos": {
-  "title": "Allgemeine \n Geschäftsbedingungen",
-  "subtitle": "Unsere Vertragsbedingungen für Dienstleistungen"
-},
-
+    "title": "Allgemeine \n Geschäftsbedingungen",
+    "subtitle": "Unsere Vertragsbedingungen für Dienstleistungen"
+  },
   "privacyPage": {
     "title": "Datenschutzerklärung",
     "intro": "Sohblitz-Mobil nimmt den Schutz Ihrer personenbezogenen Daten sehr ernst. Ihre Daten werden vertraulich und gemäß DSGVO sowie BDSG verarbeitet.",
-    
     "sections": [
       {
         "title": "1. Verantwortlicher",
@@ -115,7 +164,6 @@
         ]
       }
     ],
-
     "footer": "Letzte Aktualisierung: März 2026"
   },
   "impressumPage": {
@@ -189,7 +237,6 @@
       }
     ]
   },
-
   "agbPage": {
     "title": "Allgemeine Geschäftsbedingungen",
     "sections": [
@@ -268,11 +315,10 @@
     ]
   },
   "aboutSection": {
-  "title": "Über Sohblitz-Mobil",
-  "subtitle": "Professionelle Reinigung mit Leidenschaft",
-  "text1": "Sohblitz-Mobil ist ein modernes Reinigungsunternehmen mit Sitz in Braunschweig. Unser Ziel ist es, unseren Kunden saubere, hygienische und angenehme Räume zu bieten – egal ob Zuhause, im Büro oder im Unternehmen.",
-  "text2": "Wir bieten eine Vielzahl professioneller Reinigungsdienstleistungen an, darunter Gebäudereinigung, Polsterreinigung, Teppichreinigung, Autoinnenreinigung sowie Fenster- und Glasreinigung.",
-  "text3": "Mit professionellen Geräten, hochwertigen Reinigungsmitteln und einem engagierten Team sorgen wir für zuverlässige Ergebnisse und höchste Kundenzufriedenheit."
-}
-
+    "title": "Über Sohblitz-Mobil",
+    "subtitle": "Professionelle Reinigung mit Leidenschaft",
+    "text1": "Sohblitz-Mobil ist ein modernes Reinigungsunternehmen mit Sitz in Braunschweig. Unser Ziel ist es, unseren Kunden saubere, hygienische und angenehme Räume zu bieten – egal ob Zuhause, im Büro oder im Unternehmen.",
+    "text2": "Wir bieten eine Vielzahl professioneller Reinigungsdienstleistungen an, darunter Gebäudereinigung, Polsterreinigung, Teppichreinigung, Autoinnenreinigung sowie Fenster- und Glasreinigung.",
+    "text3": "Mit professionellen Geräten, hochwertigen Reinigungsmitteln und einem engagierten Team sorgen wir für zuverlässige Ergebnisse und höchste Kundenzufriedenheit."
+  }
 }

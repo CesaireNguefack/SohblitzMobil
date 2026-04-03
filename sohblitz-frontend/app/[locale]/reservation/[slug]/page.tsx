@@ -1,19 +1,17 @@
 "use client"
-import HeaderPages from "@/componenten/headerPages";
 import Navbar from "@/componenten/Navbar";
 import SplitSection from "@/componenten/SplitSection";
-import { usePathname } from "next/navigation"
 import { ContactCalendar } from "../../HomePage/ContactSectionForm";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ButtonSubmit } from "@/componenten/Cards/KontaktButton";
 import { useParams } from "next/navigation";
 import { createReservation } from "@/services/reservationApi";
-import { services } from "@/app/data";
-import { getCurentLanguage } from "@/languages/getcurentlanguage";
+import { getCurentLanguage, Lang } from "@/languages/getcurentlanguage";
+import { getServiceById, Service } from "@/services/dienstApi";
 
 export default function ReservationPage() {
   return <main className="bg-white">
-    <Navbar navState="gradient" />
+    <Navbar navState="gradient" showLogo={true} />
     <br />
     <SplitSection
       left={
@@ -31,13 +29,6 @@ export function ReservationForm() {
   const params = useParams();
   const slug = params.slug as string;
   const locale = getCurentLanguage()
-
-  const id = slug.split("-")[0];
-  const service = services.find((s) => s.id === parseInt(id));
-  if (!service) {
-    return <div className="p-20 text-center">Service not found</div>;
-  }
-
   const [form, setForm] = useState({
     idService: 0,
     name: "",
@@ -55,6 +46,25 @@ export function ReservationForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
   const [success, setSuccess] = useState(false)
+
+  const [service, setService] = useState<Service | null>(null)
+
+  const id = slug.split("-")[0];
+  useEffect(() => {
+    async function loadService() {
+      const id = parseInt(slug.split("-")[0])
+
+      const data = await getServiceById(id, locale as Lang)
+      setService(data)
+      setLoading(false)
+    }
+
+    loadService()
+  }, [slug, locale])
+
+  if (!service) {
+    return <div className="p-20 text-center">Service not found</div>;
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })

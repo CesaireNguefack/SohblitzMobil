@@ -32,7 +32,7 @@ export default function HeaderPages({ title, headerTitle, subtitle, image }: Pro
 
     return (
         <main>
-            <Navbar navState="gradient" />
+            <Navbar navState="gradient" showLogo={true} />
 
             <section className="pt-14 bg-gray-50 bg-gradient-to-r from-[#d7e8f2] via-[#a9c9e4] to-[#6fa6d8]">
 

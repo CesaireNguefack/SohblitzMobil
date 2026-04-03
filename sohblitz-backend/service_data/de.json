@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Gebäudereinigung",
+    "description1": "– Regelmäßige Unterhalts- oder Grundreinigung für Häuser und Wohnungen.",
+    "description": "100% chemiefreie Gebäudereinigung mit Dampftechnologie. Ideal für Haushalte, AirBnB und Ferienwohnungen.",
+    "pricing": ["25€ – 35€ pro Stunde"],
+    "tags": ["Dampfreinigung", "Allergikerfreundlich", "Hygienisch"]
+  },
+  {
+    "id": 2,
+    "title": "Büro und Praxisreinigung",
+    "description1": "– Hygienische Reinigung für Büros und Praxen mit Desinfektion.",
+    "description": "Professionelle Reinigung für Büros und Praxen für ein gesundes Arbeitsklima. Desinfektion ohne Chemie.",
+    "pricing": ["30€ – 40€ pro Stunde"],
+    "tags": ["Desinfektion", "Arbeitsplatzhygiene"]
+  },
+  {
+    "id": 3,
+    "title": "Bauendreinigung",
+    "description1": "– Bauschluss- oder Feinreinigung nach Renovierungen.",
+    "description": "Gründliche Reinigung nach Bau oder Renovierung. Entfernt Baustaub, Fett und Verschmutzungen.",
+    "pricing": [
+      "Grobreinigung: 4€ – 9€ / m²",
+      "Feinreinigung: 5€ – 9.50€ / m²",
+      "Sanitär, Geräte und Möbel werden extra berechnet"
+    ],
+    "tags": ["Neubau", "Renovierung"]
+  },
+  {
+    "id": 4,
+    "title": "Fenster und Glasreinigung",
+    "description1": "– Streifenfreie Reinigung von Fenstern, Spiegeln und Glasflächen, innen und außen plus Rahmen.",
+    "description": "Streifenfreie Glas- und Fensterreinigung für private Haushalte, Büros und Geschäfte.",
+    "pricing": [
+      "4€ – 8€ / m² (innen & außen)",
+      "Rahmen: +1.45€ pro Fenster",
+      "Verschmutzungsgrad / Höhe: +20% – 50%"
+    ],
+    "tags": ["Streifenfrei", "Professionell"]
+  },
+  {
+    "id": 5,
+    "title": "Autoinnenreinigung",
+    "description1": "– Frischer Innenraum für dein Fahrzeug.",
+    "description": "Dampfreinigung des Fahrzeuginnenraums ohne Chemie. Entfernt Gerüche, Keime und Schmutz.",
+    "pricing": [
+      "Basisreinigung: 40€ – 130€",
+      "Intensivreinigung: 130€ – 250€",
+      "Ozon Reinigung inklusive",
+      "Geruchsbeseitigung: 50€ – 80€"
+    ],
+    "tags": ["Auto", "Desinfektion"]
+  },
+  {
+    "id": 6,
+    "title": "Polster Reinigung",
+    "description1": "– Saubere Sofas, Sessel und Matratzen, hygienisch und schonend.",
+    "description": "Tiefenreinigung von Sofas und Polstern. Entfernt Milben, Flecken und Bakterien.",
+    "pricing": [
+      "Sofa: 20€ – 40€ pro Sitz",
+      "Sessel: 25€ – 40€",
+      "Bürostuhl: 9€ – 20€"
+    ],
+    "tags": ["Milbenentfernung", "Tiefenreinigung"]
+  },
+  {
+    "id": 7,
+    "title": "Teppichreinigung",
+    "description1": "– Tiefenreinigung mit mobiler Technik.",
+    "description": "Dampfreinigung von Teppichen für hygienische Sauberkeit und frische Stoffe.",
+    "pricing": ["6€ – 9€ pro m²"],
+    "tags": ["Allergikerfreundlich"]
+  },
+  {
+    "id": 8,
+    "title": "Raffstore & Jalousie Reinigung",
+    "description1": "",
+    "description": "Reinigung von Jalousien und Raffstores mit schonender Dampftechnologie.",
+    "pricing": [
+      "20€ – 55€ pro Stück",
+      "Je nach Verschmutzung & Höhe: +10% – 45%"
+    ],
+    "tags": ["Sonnenschutz"]
+  },
+  {
+    "id": 9,
+    "title": "Stein-, Fassaden- und Dachreinigung",
+    "description1": "",
+    "description": "Entfernung von Moos, Algen und Verschmutzungen auf Terrassen, Fassaden und Dächern mit Hochdruck-Dampf.",
+    "pricing": [
+      "Steinreinigung: 6€ – 16€ / m²",
+      "Mit Imprägnierung: 8€ – 12€ / m²",
+      "Dachreinigung: 8€ – 30€ / m²"
+    ],
+    "tags": ["Terrasse", "Fassade", "Dach", "Moosentfernung"]
+  }
+]

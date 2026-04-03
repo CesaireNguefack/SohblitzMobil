@@ -5,20 +5,19 @@ import Hero from "@/app/[locale]/HomePage/Hero"
 import Navbar from "@/componenten/Navbar"
 
 import ReviewsSection from "@/app/[locale]/HomePage/ReviewsSection"
-import Services from "@/app/[locale]/HomePage/Services"
-import { getServices } from "@/services/api"
+
 import { useEffect, useState, useRef } from "react"
 import Demo from "./Demo"
 import TeamHome from "./Team"
-import Prices from "./Prices"
-import ContactSection from "./Contact"
-import ContactSectionForm from "./ContactSectionForm"
+import HomePageContacSection from "./HomePageContacSection"
+import ServicesBlock from "./Services"
 
 export default function Welcome() {
 
     const [navState, setNavState] = useState<"transparent" | "gradient" | "white">("transparent")
 
     const heroRef = useRef<HTMLDivElement | null>(null)
+    const [showlogo, setShowLogo] = useState<boolean>(false)
 
 
 
@@ -38,9 +37,11 @@ export default function Welcome() {
             }
             else if (scroll >= oneThird && scroll < heroHeight) {
                 setNavState("gradient")
+                setShowLogo(true)
             }
             else {
                 setNavState("white")
+                  setShowLogo(true)
             }
 
         }
@@ -54,16 +55,16 @@ export default function Welcome() {
     return (
 
         <main className="bg-white">
-            <Navbar navState={navState} />
+            <Navbar navState={navState} showLogo={showlogo}/>
             <div ref={heroRef}>
                 <Hero />
             </div>
             <AboutSection />
-            <Prices />
+            <ServicesBlock  />
             <TeamHome />
             <ReviewsSection />
             <Demo />
-            <ContactSectionForm />
+            <HomePageContacSection />
 
         </main>
     )

@@ -42,7 +42,7 @@ export default function ConfirmReservationPage() {
 
   return (
      <main className="bg-white">
-                <Navbar navState="gradient" />
+                <Navbar navState="gradient" showLogo={true} />
                 <section className="min-h-screen flex items-center justify-center">
       <div style={{ padding: "2rem", textAlign: "center" }}>
         {status === "loading" && <p>Confirmation en cours...</p>}

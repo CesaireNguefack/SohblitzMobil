@@ -7,11 +7,64 @@
     "about": "Apropos de nous",
     "agb": "CGV"
   },
+  "hero": {
+    "title": "Une propreté \n sur laquelle vous pouvez compter",
+    "subtitle": "Des services de nettoyage rapides, fiables et de qualité directement sur place à Braunschweig et ses environs"
+  },
+  "about": {
+    "quality": "Qualité supérieure",
+    "title": "Qui nous sommes",
+    "description": "En tant que propriétaire, \nEmerant Dass Kuietche Soh\n basé à Braunschweig, je garantis personnellement des résultats impeccables – que ce soit pour des particuliers ou des entreprises.",
+    "subtitle": "Notre zone de service",
+    "subdescription": "Nous nous déplaçons directement chez vous à \nBraunschweig, Wolfsburg, Salzgitter, Gifhorn\n et dans les environs."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Nous sommes à votre disposition 24 heures sur 24, joignez-nous pour discuter de votre besoin!",
+    "iconLocation": "Notre localisation",
+    "contactbtn": "Nous contacter →",
+    "reserve": "Réserver →",
+    "sending": "Envoi en cours...",
+    "submit": "Envoyer →",
+    "formtitle": "Nous contacter",
+    "name": "Nom",
+    "ihr": "Votre",
+    "ihre": "Votre",
+    "phone": "Téléphone",
+    "message": "Message",
+    "robochek": "Je ne suis pas un robot",
+    "availability": "Disponibilité"
+  },
+  "service": {
+    "title": "Nos services et  tarifs",
+    "subtitle1": "Frais de déplacement à Braunschweig :",
+    "subtitle2": "0,35€ / km.",
+    "subtitle22": "Hors Braunschweig :",
+    "subtitle3": "0,65€ / km.",
+    "subtitle4": "Montant minimum de commande :",
+    "subtitle5": "50€.",
+    "subtitle6": "Réductions disponibles pour les contrats à long terme.",
+    "footer0": "Sohblitz-Mobil :",
+    "footer": "100% sans produits chimiques & hygiénique  \n Les prix varient selon la surface, le niveau de saleté et l’accessibilité. \n Des services supplémentaires comme l’imprégnation ou le nettoyage des joints sont possibles."
+  },
+  "teamsection": {
+    "title": "Nettoyage professionnel pour votre domicile",
+    "description": "Nous proposons des services de nettoyage fiables et minutieux pour les appartements, les bureaux et les fenêtres – afin que vous puissiez vous concentrer sur l’essentiel."
+  },
+  "demosection": {
+    "title": "Nettoyage professionnel pour votre domicile",
+    "subtitle": "Nous assurons la propreté des appartements, bureaux et commerces."
+  },
+  "reviewsection": {
+    "title": "Quelques avis",
+    "subtitle": "DE NOS CLIENTS",
+    "seemore": "Voir plus"
+  },
   "adminNavbar": {
     "dashboard": "Tableau de bord",
     "reservations": "Réservations",
     "services": "Services",
-    "contact": "Messages",  
+    "contact": "Messages",
     "logout": "Déconnexion"
   },
   "dashboard": {

@@ -1,27 +1,5 @@
  const API_URL = process.env.NEXT_PUBLIC_API_URL;  
 
-export async function getServices(){
-  console.log(process.env.NEXT_PUBLIC_API_URL)
-  console.log("fetching services...")
-    const res = await fetch(`${API_URL}/service`)
-    return res.json()
-}
-
-export async function createService(data:any) {
-   console.log(data)
-    const res = await fetch(`${API_URL}/service`,{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify(data)
-    })
-    console.log(res)
-
-    return res.json()
-}
-
-
 export async function loginAdmin(email: string, password: string) {
 
   const res = await fetch(`${API_URL}/user/login`, {
