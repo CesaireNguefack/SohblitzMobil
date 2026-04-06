@@ -28,7 +28,7 @@ export function proxy(request: NextRequest){
 
     if(token){
       return NextResponse.redirect(
-        new URL(`/${locale}/administration/dashboard`,request.url)
+        new URL(`/${locale}/administration/services`,request.url)
       )
     }
 
