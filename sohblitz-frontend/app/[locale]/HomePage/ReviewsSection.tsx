@@ -165,8 +165,7 @@ export default function ReviewsSection() {
                 {/* BUTTON */}
                 <div className="mt-10 text-center">
                     <a
-                        href="https://www.google.com/search?newwindow=1&sca_esv=6e5276631c46225b&hl=fr-DE&sxsrf=ANbL-n45ZXW9ugCKb7Gk1bUMmk-fvPeITA:1775153986464&q=Sohblitz-Mobil%20Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNLa0MDa2MDQzM7CwNDWzNDEws9jAyPiKUTg4PyMpJ7OkStc3PykzR8GxLLN4ESs2UQCKg4eQRwAAAA&rldimm=13983381660895694068&tbm=lcl&sa=X&ved=0CAsQ5foLahcKEwiYt9P248-TAxUAAAAAHQAAAAAQBQ#lkt=LocalPoiReviews&arid=Ci9DQUlRQUNvZENodHljRjlvT21GSFpIRmhNR2hHU1hGV05ERmlZbVoxU0c5cVJWRRAB"
-                        target="_blank"
+                        href= "https://share.google/5BMXF9gzR9jo0bPYt" target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm font-medium text-[var(--foreground2)] hover:underline"
                     >
