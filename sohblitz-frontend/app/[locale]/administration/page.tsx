@@ -30,7 +30,7 @@ export default function AdminLogin() {
        
 
       // redirection. 
-      router.push(`/${locale}/administration/services`)
+      router.push(`/${locale}/administration/reservations`)
 
     } catch (err: any) {
 
