@@ -15,6 +15,9 @@ export type Service = {
 
 // 🔥 Get all services with language
 export async function getServices(lang: Lang = "de"): Promise<Service[]> {
+
+  console.log("API_URL++++backend")
+  console.log(API_URL)
   try {
     const res = await fetch(`${API_URL}/services?lang=${lang}`, {
       cache: "no-store",
