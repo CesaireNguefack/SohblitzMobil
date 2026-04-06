@@ -13,7 +13,7 @@ export class ServicesService {
   async createService(data: { titre: string, description: string, price: number }) {
     return this.prisma.service.create({ data })
   }
-
+ 
   async getDBServices() {
     return this.prisma.service.findMany()
   }
@@ -22,6 +22,7 @@ export class ServicesService {
     const service = await this.prisma.service.findUnique({
       where: { id },
     })
+  
 
     await this.prisma.reservation.deleteMany({
       where: { idService: id }
