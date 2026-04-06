@@ -42,7 +42,9 @@ jobs:
 
       - name: Build & Push Frontend
         run: |
-          docker build -t $IMAGE_FRONTEND:${{ github.sha }} ./sohblitz-frontend
+          docker build \
+            --build-arg NEXT_PUBLIC_API_URL=https://sohblitz-mobil.de/api \
+            -t $IMAGE_FRONTEND:${{ github.sha }} ./sohblitz-frontend
           docker push $IMAGE_FRONTEND:${{ github.sha }}
 
           docker tag $IMAGE_FRONTEND:${{ github.sha }} $IMAGE_FRONTEND:latest
