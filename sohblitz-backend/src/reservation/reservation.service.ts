@@ -67,7 +67,7 @@ export class ReservationService {
 
             return {
                 status: "success",
-                message: "Reservation found",
+                message: "Reservation success",
                 data: reservation,
             };
         } catch (err) {
