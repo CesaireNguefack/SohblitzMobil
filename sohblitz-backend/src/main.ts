@@ -16,6 +16,7 @@ async function bootstrap() {
     origin: [
                 'http://localhost:3000',
                 'http://51.75.65.254:3000',
+                'https://sohblitz-mobil.de',
                 'https://sohblitz-mobil.de'
               ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
