@@ -15,7 +15,8 @@ async function bootstrap() {
    app.enableCors({
     origin: [
                 'http://localhost:3000',
-                'http://51.75.65.254:3000'
+                'http://51.75.65.254:3000',
+                'https://sohblitz-mobil.de'
               ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
     credentials: true

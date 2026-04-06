@@ -5,7 +5,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      NEXT_PUBLIC_API_URL: http://51.75.65.254:3001
+      NEXT_PUBLIC_API_URL: https://sohblitz-mobil.de/api
     depends_on:
       - backend
 
