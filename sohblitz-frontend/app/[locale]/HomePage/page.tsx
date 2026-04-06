@@ -34,6 +34,7 @@ export default function Welcome() {
 
             if (scroll < oneThird) {
                 setNavState("transparent")
+                setShowLogo(false)
             }
             else if (scroll >= oneThird && scroll < heroHeight) {
                 setNavState("gradient")

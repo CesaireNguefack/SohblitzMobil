@@ -22,12 +22,12 @@ export default function SplitSection({
         `}
       >
         {/* LEFT */}
-        <div className={`${reverse ? "md:order-2" : ""}`}>
+        <div className={`${reverse ? "order-2 md:order-1" : ""}`}>
           {left}
         </div>
 
         {/* RIGHT */}
-        <div className={`${reverse ? "md:order-1" : ""}`}>
+        <div className={`${reverse ? "order-1 md:order-2" : ""}`}>
           {right}
         </div>
       </div>

@@ -3,19 +3,19 @@
 import { useParams, usePathname, useRouter } from "next/navigation";
 import Navbar from "@/componenten/Navbar";
 import Image from "next/image";
-import {ButtonReservation} from "@/componenten/Cards/KontaktButton";
+import { ButtonReservation } from "@/componenten/Cards/KontaktButton";
 import { useState, useEffect } from "react";
 import SplitSection from "@/componenten/SplitSection";
- 
+
 import { Lang, getCurentLanguage } from "@/languages/getcurentlanguage";
-import { getServiceById,Service, API_URL } from "@/services/dienstApi";
+import { getServiceById, Service, API_URL } from "@/services/dienstApi";
 
 
 export default function ServiceDetail() {
   const params = useParams()
 
   const slug = params.slug as string
-const lang = getCurentLanguage()  
+  const lang = getCurentLanguage()
 
   const [service, setService] = useState<Service | null>(null)
   const [loading, setLoading] = useState(true)
@@ -34,26 +34,26 @@ const lang = getCurentLanguage()
 
   // ⏳ Loading state
   if (loading) {
-    
-     return (
-    <main>
-      <Navbar navState="gradient" showLogo={true} />
-      <br />
-       <div className="p-20 text-center">Loading ...</div>
-    </main>
-  )
+
+    return (
+      <main>
+        <Navbar navState="gradient" showLogo={true} />
+        <br />
+        <div className="p-20 text-center">Loading ...</div>
+      </main>
+    )
   }
 
   // ❌ Not found
   if (!service) {
 
-     return (
-    <main>
-      <Navbar navState="gradient"  showLogo={true}/>
-      <br />
-       <div className="p-20 text-center">Service not found</div>
-    </main>
-  )
+    return (
+      <main>
+        <Navbar navState="gradient" showLogo={true} />
+        <br />
+        <div className="p-20 text-center">Service not found</div>
+      </main>
+    )
   }
 
   // ✅ Render
@@ -78,117 +78,117 @@ const slugify = (text: string) =>
 
 
 export function ServiceDescription({ service }: { service: Service }) {
-        const slug = `${service.id}-${slugify(service.title)}`;
-        const pathname = usePathname()
-       const locale = pathname.split("/")[1] || "de"
-        const router = useRouter()
-    return (
-        <div className="w-full max-w-xl mx-auto md:mx-0">
+  const slug = `${service.id}-${slugify(service.title)}`;
+  const pathname = usePathname()
+  const locale = pathname.split("/")[1] || "de"
+  const router = useRouter()
+  return (
+    <div className="w-full max-w-xl mx-auto md:mx-0">
 
-            {/* TITLE */}
-            <h1 className="
+      {/* TITLE */}
+      <h1 className="
         text-2xl sm:text-3xl md:text-4xl lg:text-5xl
         font-bold text-primary
         mb-4 md:mb-6
         leading-tight
       ">
-                {service.title}
-            </h1>
+        {service.title}
+      </h1>
 
-            {/* DESCRIPTION */}
-            <p className="
+      {/* DESCRIPTION */}
+      <p className="
         text-sm sm:text-base md:text-lg
         text-gray-600
         mb-6 md:mb-8
         leading-relaxed
       ">
-                {service.description1} <br />
-                {service.description}
-            </p>
+        {service.description1} <br />
+        {service.description}
+      </p>
 
-            {/* TAGS */}
-            {service.tags && (
-                <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
-                    {service.tags.map((tag, i) => (
-                        <span
-                            key={i}
-                            className="
+      {/* TAGS */}
+      {service.tags && (
+        <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
+          {service.tags.map((tag, i) => (
+            <span
+              key={i}
+              className="
                 bg-primary/10 text-primary
                 text-xs sm:text-sm
                 px-3 py-1
                 rounded-full
                 whitespace-nowrap
               "
-                        >
-                            {tag}
-                        </span>
-                    ))}
-                </div>
-            )}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
 
-            {/* PRICING */}
-            <div className="
+      {/* PRICING */}
+      <div className="
         bg-white
         rounded-2xl
         shadow-md md:shadow-lg
         p-4 sm:p-5 md:p-6
         mb-6 md:mb-8
       ">
-                <h3 className="
+        <h3 className="
           text-lg sm:text-xl md:text-2xl
           font-semibold
           mb-3 md:mb-4
           text-gray-800
         ">
-                    Preise
-                </h3>
+          Preise
+        </h3>
 
-                <ul className="space-y-2 md:space-y-3 text-gray-600">
-                    {service.pricing.map((item, i) => (
-                        <li key={i} className="flex gap-2 items-start">
-                            <span className="text-primary mt-1 text-sm md:text-base">✔</span>
+        <ul className="space-y-2 md:space-y-3 text-gray-600">
+          {service.pricing.map((item, i) => (
+            <li key={i} className="flex gap-2 items-start">
+              <span className="text-primary mt-1 text-sm md:text-base">✔</span>
 
-                            <span className="
+              <span className="
                 text-sm sm:text-base
                 break-words
               ">
-                                {item}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-            {/* CTA */}
-            <div className="
+      {/* CTA */}
+      <div className="
         flex flex-col sm:flex-row
         gap-3 sm:gap-4
       ">
-                <ButtonReservation onClick={() => router.push(`/${locale}/reservation/${slug}`)} />
-            </div>
+        <ButtonReservation onClick={() => router.push(`/${locale}/reservation/${slug}`)} />
+      </div>
 
-            {/* EXTRA INFO */}
-            <p className="
+      {/* EXTRA INFO */}
+      <p className="
         mt-6 md:mt-8
         text-xs sm:text-sm
         text-gray-500
         leading-relaxed
       ">
-                Wir sind in Braunschweig und Umgebung verfügbar – schnell, zuverlässig und 100% chemiefrei.
-            </p>
+        Wir sind in Braunschweig und Umgebung verfügbar – schnell, zuverlässig und 100% chemiefrei.
+      </p>
 
-        </div>
-    )
+    </div>
+  )
 }
 
- 
- 
+
+const defaultImage = "/service_data/images/personel.jpeg";
 
 export function ServiceCarousel({ service }: { service: Service }) {
-  
+
   const images = service.images && service.images.length > 0
     ? service.images
-    : ["/images/appointment0.png"]
+    : [defaultImage]
 
   const [current, setCurrent] = useState(0)
 
@@ -207,9 +207,10 @@ export function ServiceCarousel({ service }: { service: Service }) {
   const currentImage = images[current] || images[0]
 
   const getFullUrl = (path: string) => {
-    if (path.startsWith("http") || path.startsWith("/images")) return path
+    // if (path.startsWith("http") || path.startsWith("/images")) return path
     return `${API_URL}${path}`
   }
+
 
   return (
     <div className="relative flex flex-col items-center md:items-start">
@@ -220,7 +221,7 @@ export function ServiceCarousel({ service }: { service: Service }) {
           src={getFullUrl(currentImage)}
           alt={service.title}
           fill
-           
+
           className="object-cover"
         />
 
@@ -254,16 +255,15 @@ export function ServiceCarousel({ service }: { service: Service }) {
           <div
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-14 h-14 rounded-lg overflow-hidden cursor-pointer border-2 ${
-              current === i ? "border-primary" : "border-transparent"
-            }`}
+            className={`w-14 h-14 rounded-lg overflow-hidden cursor-pointer border-2 ${current === i ? "border-primary" : "border-transparent"
+              }`}
           >
             <Image
               src={getFullUrl(img)}
               alt="thumb"
               width={56}
               height={56}
-               
+
               className="object-cover"
             />
           </div>
@@ -277,9 +277,8 @@ export function ServiceCarousel({ service }: { service: Service }) {
             <div
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
-                current === i ? "bg-primary" : "bg-gray-300"
-              }`}
+              className={`w-2.5 h-2.5 rounded-full cursor-pointer ${current === i ? "bg-primary" : "bg-gray-300"
+                }`}
             />
           ))}
         </div>
