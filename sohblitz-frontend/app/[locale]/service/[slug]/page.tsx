@@ -217,10 +217,10 @@ export function ServiceCarousel({ service }: { service: Service }) {
 
       {/* MAIN IMAGE */}
       <div className="relative w-full max-w-[420px] aspect-square rounded-3xl overflow-hidden shadow-2xl">
-        <Image
+        <img
           src={getFullUrl(currentImage)}
           alt={service.title}
-          fill
+           
 
           className="object-cover"
         />
@@ -258,7 +258,7 @@ export function ServiceCarousel({ service }: { service: Service }) {
             className={`w-14 h-14 rounded-lg overflow-hidden cursor-pointer border-2 ${current === i ? "border-primary" : "border-transparent"
               }`}
           >
-            <Image
+            <img
               src={getFullUrl(img)}
               alt="thumb"
               width={56}
