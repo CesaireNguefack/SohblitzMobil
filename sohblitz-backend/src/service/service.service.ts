@@ -23,6 +23,10 @@ export class ServicesService {
       where: { id },
     })
 
+    await this.prisma.reservation.deleteMany({
+      where: { idService: id }
+    });
+
     if (!service) {
       return {
         status: "error",
