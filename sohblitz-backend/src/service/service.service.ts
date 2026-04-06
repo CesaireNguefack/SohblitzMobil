@@ -1,11 +1,45 @@
 import { Injectable } from "@nestjs/common"
 import * as fs from "fs"
 import * as path from "path"
+import { PrismaService } from 'src/prisma/prisma.service';
 
 type Lang = "de" | "fr" | "en"
 
 @Injectable()
 export class ServicesService {
+
+  constructor(private prisma: PrismaService) { }
+
+  async createService(data: { titre: string, description: string, price: number }) {
+    return this.prisma.service.create({ data })
+  }
+
+  async getDBServices() {
+    return this.prisma.service.findMany()
+  }
+
+  async deleteDBService(id: number) {
+    const service = await this.prisma.service.findUnique({
+      where: { id },
+    })
+
+    if (!service) {
+      return {
+        status: "error",
+        message: "service not found",
+        data: null,
+      }
+    }
+
+    await this.prisma.service.delete({
+      where: { id },
+    })
+
+    return {
+      status: "success",
+      message: "service deleted",
+    }
+  }
 
   private getDataPath(file: string) {
     return path.join(process.cwd(), "service_data", file)
