@@ -85,14 +85,13 @@
   },
   {
     "id": 9,
-    "title": "Nettoyage de pierres, façades et toitures",
+    "title": "Nettoyage de pierres et façades  ",
     "description1": "",
-    "description": "Élimination de la mousse, des algues et des saletés sur terrasses, façades et toitures grâce à la vapeur haute pression.",
+    "description": "Élimination de la mousse, des algues et des saletés sur terrasses et  façades  grâce à la vapeur haute pression.",
     "pricing": [
       "Nettoyage pierre : 6€ – 16€ / m²",
-      "Avec protection : 8€ – 12€ / m²",
-      "Nettoyage toiture : 8€ – 30€ / m²"
+      "Avec protection : 8€ – 12€ / m²"
     ],
-    "tags": ["Terrasse", "Façade", "Toiture", "Élimination de mousse"]
+    "tags": ["Terrasse", "Façade", "Élimination de mousse"]
   }
 ]

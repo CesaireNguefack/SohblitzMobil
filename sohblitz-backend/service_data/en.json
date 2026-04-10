@@ -85,14 +85,13 @@
   },
   {
     "id": 9,
-    "title": "Stone, Facade and Roof Cleaning",
+    "title": "Stone  and Facade Cleaning",
     "description1": "",
-    "description": "Removal of moss, algae and dirt from terraces, facades and roofs using high-pressure steam.",
+    "description": "Removal of moss, algae and dirt from terraces and facades  using high-pressure steam.",
     "pricing": [
       "Stone cleaning: €6 – €16 / m²",
-      "With sealing: €8 – €12 / m²",
-      "Roof cleaning: €8 – €30 / m²"
+      "With sealing: €8 – €12 / m²"
     ],
-    "tags": ["Terrace", "Facade", "Roof", "Moss removal"]
+    "tags": ["Terrace", "Facade",  "Moss removal"]
   }
 ]

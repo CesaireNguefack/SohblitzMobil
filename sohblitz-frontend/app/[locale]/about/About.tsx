@@ -16,7 +16,7 @@ export default function AboutSection() {
 
         <div className="flex justify-center">
           <img
-            src="/images/about0.png"
+            src="/images/about2.png"
             alt="Cleaning team"
             className="rounded-xl shadow-lg w-[350px] md:w-[450px]"
           />

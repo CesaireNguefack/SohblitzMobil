@@ -37,7 +37,7 @@ export default function ServiceBody({ services }: { services: Service[] }) {
         </div>
 
         <div className="mt-6 text-center mb-16 text-black max-w-3xl mx-auto text-sm opacity-90">
-          <label> {t.service.subtitle1} <b> {t.service.subtitle2}</b>  {t.service.subtitle22} <b>{t.service.subtitle3}</b> {t.service.subtitle4} <b>{t.service.subtitle5}</b> {t.service.subtitle6}
+          <label> {t.service.subtitle1} <b> {t.service.subtitle2}</b>. {t.service.besichtigungstermin}.  {t.service.subtitle22} <b>{t.service.subtitle3}</b> {t.service.subtitle4} <b>{t.service.subtitle5}</b> {t.service.subtitle6}
           </label></div>
 
         {/* Grid */}

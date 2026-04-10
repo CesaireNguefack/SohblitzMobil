@@ -85,14 +85,13 @@
   },
   {
     "id": 9,
-    "title": "Stein-, Fassaden- und Dachreinigung",
+    "title": "Stein- und Fassadenreinigung",
     "description1": "",
-    "description": "Entfernung von Moos, Algen und Verschmutzungen auf Terrassen, Fassaden und Dächern mit Hochdruck-Dampf.",
+    "description": "Entfernung von Moos, Algen und Verschmutzungen auf Terrassen und  Fassaden  mit Hochdruck-Dampf.",
     "pricing": [
       "Steinreinigung: 6€ – 16€ / m²",
-      "Mit Imprägnierung: 8€ – 12€ / m²",
-      "Dachreinigung: 8€ – 30€ / m²"
+      "Mit Imprägnierung: 8€ – 12€ / m²"
     ],
-    "tags": ["Terrasse", "Fassade", "Dach", "Moosentfernung"]
+    "tags": ["Terrasse", "Fassade", "Moosentfernung"]
   }
 ]

@@ -1,10 +1,10 @@
 import ContactSection from "@/app/[locale]/HomePage/Contact"
 import Image from "next/image"
-import {Logo} from "@/componenten/Navbar"
+import { Logo } from "@/componenten/Navbar"
 import { useTranslations } from "@/lib/TranslationProvider"
 
 export default function Hero() {
-   const t = useTranslations()
+  const t = useTranslations()
 
   return (
     <section
@@ -27,7 +27,7 @@ export default function Hero() {
 
       {/* CONTAINER */}
       <div className="relative max-w-7xl mx-auto px-4 md:px-10">
-        
+
         {/* ✅ LOGO aligné avec le contenu */}
         <div className="mb-8">
           <Logo />
@@ -35,7 +35,7 @@ export default function Hero() {
 
         {/* GRID */}
         <div className="grid md:grid-cols-2 items-center">
-          
+
           {/* LEFT */}
           <div>
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-primary">
@@ -43,27 +43,29 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 text-gray-600 max-w-md">
-               {t.hero.subtitle}
-               </p>
+              {t.hero.subtitle}
+            </p>
           </div>
 
           {/* RIGHT */}
-          <div className="flex justify-center md:justify-end mt-10 md:mt-0 gap-4">
+          <div className="flex flex-wrap justify-center md:justify-end items-end mt-10 md:mt-0 gap-4">
+
             <Image
               src="/images/hero1.png"
               alt="Cleaning"
               width={250}
               height={250}
-              className="w-[150px] sm:w-[200px] md:w-[300px]"
+              className="h-[140px] sm:h-[180px] md:h-[260px] w-auto object-contain"
             />
 
             <Image
-              src="/images/heroo.png"
+              src="/images/heroo1.png"
               alt="Cleaning"
-              width={250}
-              height={250}
-              className="w-[150px] sm:w-[200px] md:w-[300px]"
+              width={1200}
+              height={600}
+              className="h-[140px] sm:h-[180px] md:h-[260px] w-auto object-contain max-w-full"
             />
+
           </div>
 
         </div>
