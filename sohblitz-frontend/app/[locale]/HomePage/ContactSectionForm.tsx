@@ -2,8 +2,6 @@
 
 import SplitSection from "@/componenten/SplitSection"
 import { useState } from "react"
-import Calendar from "react-calendar"
-import "react-calendar/dist/Calendar.css"
 import { createContact } from "@/services/contactApi"
 import { getCurentLanguage } from "@/languages/getcurentlanguage"
 import { useTranslations } from "@/lib/TranslationProvider"
