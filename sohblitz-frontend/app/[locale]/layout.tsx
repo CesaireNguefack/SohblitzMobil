@@ -2,6 +2,9 @@ import { getTranslations } from "@/lib/translation";
 import { TranslationProvider } from "@/lib/TranslationProvider";
 import "../globals.css";
 import { notFound } from "next/navigation"; 
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
+import Footer from "@/componenten/Footer"
 
 const locales = ["en", "de", "fr"];
 
@@ -28,6 +31,7 @@ export default async function RootLayout({
 
         <TranslationProvider messages={messages}>
           {children}
+          <Footer />
         </TranslationProvider>
 
       </body>

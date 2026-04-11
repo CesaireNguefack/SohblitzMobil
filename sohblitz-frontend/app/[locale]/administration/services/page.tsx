@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 import { getCurentLanguage, Lang } from "@/languages/getcurentlanguage";  
 import { getServices } from "@/services/dienstApi";
 
-export default async function Page() {
+export default   function Page() {
 
   const [services, setServices] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
@@ -21,7 +21,7 @@ export default async function Page() {
   const [success,setSuccess] = useState("")
   const [saving,setSaving] = useState(false)
 
-  async function loadServices(){
+    const fetchData = async () => {
     try{
       const data =    await getServices(getCurentLanguage() as Lang)
       setServices(data)
@@ -33,8 +33,9 @@ export default async function Page() {
     }
   }
 
+
   useEffect(()=>{
-    loadServices()
+    fetchData()
   },[])
 
   async function handleSubmit(e:React.FormEvent){
@@ -114,7 +115,7 @@ export default async function Page() {
           <button
             onClick={()=>{
               setShowForm(false)
-              loadServices()
+              fetchData()
             }}
             className="text-blue-600 mb-6 hover:underline"
           >

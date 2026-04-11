@@ -11,6 +11,11 @@
     "title": "Cleanliness \n you can rely on",
     "subtitle": "Fast, reliable, and high-quality cleaning services delivered on-site in Braunschweig and the surrounding area"
   },
+    "footer":{
+    "title":"Professional cleaning services in Germany. Fast, reliable and  100% chemical-free solutions for your home and business.",
+    "navigation": "Navigation",
+    "sublime": "All rights reserved. Designed and developed by "
+  },
   "contact": {
     "title": "Contact",
     "subtitle": "We are available 24/7. Get in touch with us to discuss your needs!",
@@ -26,7 +31,21 @@
     "phone": "Phone",
     "message": "Message",
     "robochek": "I am not a robot",
-    "availability": "Availability"
+    "roboterror": "Please confirm that you are not a robot",
+    "availability": "Availability",
+    "street": "Street and house number",
+    "postcode": "Postal code",
+    "city": "City",
+    "reservationformtitle": "Booking form",
+    "confirmedreservationsent": "Reservation sent!",
+    "goback": "← Back",
+    "showfullcalender": "View full calendar",
+    "invalide": "invalid",
+    "datereservation": "Please enter your preferred date.",
+    "notavailable": "We are not available on this date.",
+    "sizeerror": "must be between 2 and 70 characters",
+    "errorcharacter": "contains invalid characters",
+    "messageerror": "must be between 2 and 500 characters"
   },
   "about": {
     "quality": "High Quality",
@@ -46,6 +65,8 @@
     "subtitle5": "50€.",
     "subtitle6": "Discounts available for long-term contracts.",
     "footer0": "Sohblitz-Mobil:",
+    "price": "Prices",
+    "detailfooter": "We are available in Braunschweig and surrounding areas – fast, reliable, and 100% chemical-free.",
     "footer": "100% chemical-free & hygienic  \n Prices vary depending on surface area, level of dirt, and accessibility. \n Additional services such as impregnation or joint cleaning are available."
   },
   "teamsection": {
@@ -64,6 +85,7 @@
   "adminNavbar": {
     "dashboard": "Dashboard",
     "reservations": "Reservations",
+    "availability": "Availability",
     "services": "Services",
     "contact": "Messages",
     "logout": "Logout"

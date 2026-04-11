@@ -11,6 +11,11 @@
     "title": "Une propreté \n sur laquelle vous pouvez compter",
     "subtitle": "Des services de nettoyage rapides, fiables et de qualité directement sur place à Braunschweig et ses environs"
   },
+  "footer": {
+  "title": "Services de nettoyage professionnels en Allemagne. Solutions rapides, fiables et 100 % sans produits chimiques pour votre maison et votre entreprise.",
+  "navigation": "Navigation",
+  "sublime": "Tous droits réservés. Conçu et développé par "
+},
   "about": {
     "quality": "Qualité supérieure",
     "title": "Qui nous sommes",
@@ -33,7 +38,21 @@
     "phone": "Téléphone",
     "message": "Message",
     "robochek": "Je ne suis pas un robot",
-    "availability": "Disponibilité"
+    "roboterror": "Veuillez confirmer que vous n'êtes pas un robot",
+    "availability": "Disponibilité",
+    "street": "Rue et numéro",
+    "postcode": "Code postal",
+    "city": "Ville",
+    "reservationformtitle": "Formulaire de reservation",
+    "confirmedreservationsent": "Réservation envoyée !",
+    "goback": "← Retour",
+    "showfullcalender": "Voir le calendrier complet",
+    "invalide": "invalide",
+    "datereservation": "Entrez la date à la quelle vous souhaitez le service",
+    "notavailable": "Nous ne sommes pas disponibles à cette date.",
+    "sizeerror": "doit contenir entre 2 et 70 caractères",
+    "errorcharacter": "contient des caractères non valides",
+    "messageerror": "doit contenir entre 2 et 500 caractères"
   },
   "service": {
     "title": "Nos services et  tarifs",
@@ -46,7 +65,9 @@
     "subtitle5": "50€.",
     "subtitle6": "Réductions disponibles pour les contrats à long terme.",
     "footer0": "Sohblitz-Mobil :",
-    "footer": "100% sans produits chimiques & hygiénique  \n Les prix varient selon la surface, le niveau de saleté et l’accessibilité. \n Des services supplémentaires comme l’imprégnation ou le nettoyage des joints sont possibles."
+    "footer": "100% sans produits chimiques & hygiénique  \n Les prix varient selon la surface, le niveau de saleté et l’accessibilité. \n Des services supplémentaires comme l’imprégnation ou le nettoyage des joints sont possibles.",
+    "price": "Prix",
+    "detailfooter": "Nous sommes disponibles à Braunschweig et ses environs – rapides, fiables et 100 % sans produits chimiques."
   },
   "teamsection": {
     "title": "Nettoyage professionnel pour votre domicile",
@@ -64,6 +85,7 @@
   "adminNavbar": {
     "dashboard": "Tableau de bord",
     "reservations": "Réservations",
+    "availability": "Disponibilité",
     "services": "Services",
     "contact": "Messages",
     "logout": "Déconnexion"

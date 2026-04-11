@@ -18,7 +18,7 @@ export default function AboutSection() {
               {/* Image principale */}
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/about2.png"
+                  src="/images/about20.png"
                   alt="doctor consultation"
                   width={420}
                   height={420}

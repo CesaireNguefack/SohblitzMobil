@@ -40,7 +40,7 @@ export class ReservationService {
                 message: "successfully updated",
                 data: updated,
             }
-        } catch (err) {
+        } catch (err:any) {
             console.error(err)
             return {
                 status: "error",
@@ -70,7 +70,7 @@ export class ReservationService {
                 message: "Reservation success",
                 data: reservation,
             };
-        } catch (err) {
+        } catch (err:any) {
             console.error(err);
             return {
                 status: "error",

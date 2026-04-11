@@ -11,7 +11,7 @@ export class ContactService {
                     name: data.name,
                     email: data.email,
                     phone: data.phone,
-                    message: data.message,
+                    message: data.message,  
                 },
             })
         } catch (error) {
@@ -36,7 +36,7 @@ export class ContactService {
                 message: "successfully deleted",
                 data: deleted,
             }
-        } catch (err) {
+        } catch (err:any) {
             console.error(err)
             return {
                 status: "error",

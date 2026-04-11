@@ -6,6 +6,8 @@ import { UserModule } from './user/user.module';
 import { ReservationModule } from './reservation/reservation.module';
 import { MailModule } from './mail/email.module';
 import { ContactModule } from './contact/contact.module';
+import {AvailabilityModule} from './availability/availability.module'
+import { AvailabilityService } from './availability/availability.service';
 
 @Module({
   imports: [
@@ -15,7 +17,8 @@ import { ContactModule } from './contact/contact.module';
       ReservationModule,
       ContactModule,
       UserModule,
-      MailModule
+      MailModule,
+      AvailabilityModule
   ],
  // providers: [PrismaService],
   

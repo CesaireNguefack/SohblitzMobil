@@ -9,6 +9,7 @@ import SplitSection from "@/componenten/SplitSection";
 
 import { Lang, getCurentLanguage } from "@/languages/getcurentlanguage";
 import { getServiceById, Service, API_URL } from "@/services/dienstApi";
+import { useTranslations } from "@/lib/TranslationProvider"
 
 
 export default function ServiceDetail() {
@@ -82,6 +83,8 @@ export function ServiceDescription({ service }: { service: Service }) {
   const pathname = usePathname()
   const locale = pathname.split("/")[1] || "de"
   const router = useRouter()
+   const t = useTranslations()
+
   return (
     <div className="w-full max-w-xl mx-auto md:mx-0">
 
@@ -140,7 +143,7 @@ export function ServiceDescription({ service }: { service: Service }) {
           mb-3 md:mb-4
           text-gray-800
         ">
-          Preise
+          {t.service.price}
         </h3>
 
         <ul className="space-y-2 md:space-y-3 text-gray-600">
@@ -174,7 +177,7 @@ export function ServiceDescription({ service }: { service: Service }) {
         text-gray-500
         leading-relaxed
       ">
-        Wir sind in Braunschweig und Umgebung verfügbar – schnell, zuverlässig und 100% chemiefrei.
+       {t.service.detailfooter}
       </p>
 
     </div>

@@ -11,37 +11,58 @@
     "title": "Sauberkeit \n  auf die Sie sich verlassen können",
     "subtitle": "Sohblitz-Mobil bietet schnelle, zuverlässige und gründliche Reinigungsdienste direkt vor Ort in Braunschweig und Umgebung"
   },
+  "footer": {
+    "title": "Professionelle Reinigungsdienste in Deutschland. Schnelle, zuverlässige und 100 % chemiefreie Lösungen für Ihr Zuhause und Ihr Unternehmen.",
+    "navigation": "Navigation",
+"sublime": "Alle Rechte vorbehalten.  Designed und entwickelt von "
+    
+  },
   "contact": {
-     "title": "Kontakt",
-  "subtitle": "Wir sind rund um die Uhr für Sie da. Kontaktieren Sie uns, um Ihren Bedarf zu besprechen!",
+    "title": "Kontakt",
+    "subtitle": "Wir sind rund um die Uhr für Sie da. Kontaktieren Sie uns, um Ihren Bedarf zu besprechen!",
     "iconLocation": "Unser Standort",
     "contactbtn": "Kontaktieren →",
     "reserve": "Buchen →",
     "sending": "Sending...",
     "submit": "Submit →",
-     "formtitle":"Kontakt aufnehmen",
-    "name":"Name",
-    "ihr":"Ihr",
-    "ihre":"Ihre",
+    "formtitle": "Kontakt aufnehmen",
+    "name": "Name",
+    "ihr": "Ihr",
+    "ihre": "Ihre",
     "phone": "Telefon",
     "message": "Nachricht",
-    "robochek":"Ich bin kein Roboter",
-    "availability": "Verfügbarkeit"
+    "robochek": "Ich bin kein Roboter",
+    "roboterror": "Bitte bestätigen Sie, dass Sie kein Roboter sind",
+    "availability": "Verfügbarkeit",
+    "street": "Straße und Hausnummer",
+    "postcode": "Postleitzahl",
+    "city": "Stadt",
+    "reservationformtitle": "Buchungsformular",
+    "confirmedreservationsent": "Reservation sent!",
+    "goback": "← Zurück",
+    "showfullcalender": "Zum Kalender wechseln",
+    "invalide": "ungültig",
+    "datereservation": "Bitte geben Sie das gewünschte Datum ein.",
+    "notavailable": "Wir sind an diesem Datum nicht verfügbar.",
+    "sizeerror": "muss zwischen 2 und 70 Zeichen enthalten",
+    "errorcharacter": "enthält ungültige Zeichen",
+    "messageerror": "muss zwischen 2 und 500 Zeichen enthalten"
   },
   "about": {
     "quality": "Hohe Qualität",
     "title": "Wer wir sind",
-  "description": "Als Inhaber \nEmerant Dass Kuietche Soh\n aus Braunschweig sorge ich persönlich für blitzsaubere Ergebnisse – ob privat oder gewerblich.",
-  "subtitle": "Unser Einsatzgebiet",
-  "subdescription": "Wir kommen mobil zu dir in \nBraunschweig, Wolfsburg, Salzgitter, Gifhorn\n und Umgebung."
-
+    "description": "Als Inhaber \nEmerant Dass Kuietche Soh\n aus Braunschweig sorge ich persönlich für blitzsaubere Ergebnisse – ob privat oder gewerblich.",
+    "subtitle": "Unser Einsatzgebiet",
+    "subdescription": "Wir kommen mobil zu dir in \nBraunschweig, Wolfsburg, Salzgitter, Gifhorn\n und Umgebung."
   },
- "service": {
+  "service": {
     "title": "Unsere Dienste und Preise",
     "subtitle1": "Fahrtkosten innerhalb Braunschweig:",
     "subtitle2": "10€ bis 20€ ",
-    "besichtigungstermin":"Kostenlos Besichtigungstermin",
-    "subtitle22":" Außerhalb Braunschweig:",
+    "besichtigungstermin": "Kostenlos Besichtigungstermin",
+    "price": "Preise",
+    "detailfooter": " Wir sind in Braunschweig und Umgebung verfügbar – schnell, zuverlässig und 100% chemiefrei.",
+    "subtitle22": " Außerhalb Braunschweig:",
     "subtitle3": "0,65€ / km.",
     "subtitle4": "Mindestbestellwert:",
     "subtitle5": "50€.",
@@ -49,22 +70,23 @@
     "footer0": "Sohblitz-Mobil:",
     "footer": "100% chemiefrei & hygienisch  \n Preise variieren je nach Fläche, Verschmutzung und Zugänglichkeit. \n Zusatzleistungen wie Imprägnierung oder Fugenreinigung möglich."
   },
-  "teamsection":{
+  "teamsection": {
     "title": "Professionelle Reinigung für Ihr Zuhause",
-    "description":"   Wir bieten zuverlässige und gründliche Reinigungsdienste für Wohnungen, Büros und Fenster – damit Sie sich auf die wichtigen Dinge konzentrieren können."
+    "description": "   Wir bieten zuverlässige und gründliche Reinigungsdienste für Wohnungen, Büros und Fenster – damit Sie sich auf die wichtigen Dinge konzentrieren können."
   },
   "reviewsection": {
     "title": "Einige Bewertungen",
     "subtitle": "UNSERER KUNDEN",
     "seemore": "Mehr anzeigen"
   },
-  "demosection":{
-      "title": "Professionelle Reinigung für Ihr Zuhause",
-      "subtitle": " Wir sorgen für Sauberkeit in Wohnungen, Büros und Geschäften."
+  "demosection": {
+    "title": "Professionelle Reinigung für Ihr Zuhause",
+    "subtitle": " Wir sorgen für Sauberkeit in Wohnungen, Büros und Geschäften."
   },
   "adminNavbar": {
     "dashboard": "Dashboard",
     "reservations": "Reservierungen",
+    "availability": "Verfügbarkeit",
     "services": "Services",
     "contact": "Nachrichten",
     "logout": "Abmelden"
