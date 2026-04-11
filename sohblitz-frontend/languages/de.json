@@ -14,8 +14,7 @@
   "footer": {
     "title": "Professionelle Reinigungsdienste in Deutschland. Schnelle, zuverlässige und 100 % chemiefreie Lösungen für Ihr Zuhause und Ihr Unternehmen.",
     "navigation": "Navigation",
-"sublime": "Alle Rechte vorbehalten.  Designed und entwickelt von "
-    
+    "sublime": "Alle Rechte vorbehalten.  Designed und entwickelt von "
   },
   "contact": {
     "title": "Kontakt",
@@ -46,7 +45,9 @@
     "notavailable": "Wir sind an diesem Datum nicht verfügbar.",
     "sizeerror": "muss zwischen 2 und 70 Zeichen enthalten",
     "errorcharacter": "enthält ungültige Zeichen",
-    "messageerror": "muss zwischen 2 und 500 Zeichen enthalten"
+    "messageerror": "muss zwischen 2 und 500 Zeichen enthalten",
+    "sendsucess": "Nachricht erfolgreich gesendet ✅",
+    "senderror": "Fehler beim Senden"
   },
   "about": {
     "quality": "Hohe Qualität",

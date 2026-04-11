@@ -52,7 +52,9 @@
     "notavailable": "Nous ne sommes pas disponibles à cette date.",
     "sizeerror": "doit contenir entre 2 et 70 caractères",
     "errorcharacter": "contient des caractères non valides",
-    "messageerror": "doit contenir entre 2 et 500 caractères"
+    "messageerror": "doit contenir entre 2 et 500 caractères",
+    "sendsucess":"Message envoyé avec succès ✅",
+    "senderror":"Erreur envoi"
   },
   "service": {
     "title": "Nos services et  tarifs",

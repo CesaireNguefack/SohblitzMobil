@@ -123,7 +123,7 @@ export default function ContactFormBody() {
 
       if (!res.ok) throw new Error(data.message || "Erreur")
 
-      setSuccess("Message envoyé avec succès ✅")
+      setSuccess(t.contact.sendsucess)
 
       setForm({
         name: "",
@@ -134,7 +134,7 @@ export default function ContactFormBody() {
       })
 
     } catch (err: any) {
-      setError(err.message || "Erreur envoi")
+      setError(err.message || t.contact.senderror)
     } finally {
       setLoading(false)
     }
