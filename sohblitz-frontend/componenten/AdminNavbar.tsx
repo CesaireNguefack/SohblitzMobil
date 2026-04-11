@@ -200,7 +200,7 @@ export default function AdminNavbar({ navState }: Props) {
           </div>
         )}
 
-      </header>
+      </header> <br /> <br />
     </main>
   )
 }
