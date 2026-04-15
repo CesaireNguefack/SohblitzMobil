@@ -37,7 +37,7 @@ export default function ContactSection() {
         <IconCard
           icon="📍"
           title= {t.contact.iconLocation}
-          description="Heinrich-Büssing-Ring 22, 38102 Braunschweig"
+          description={t.contact.addresse}
         />
 
         <div className="flex justify-center items-center h-full">

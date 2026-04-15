@@ -2,9 +2,11 @@
 
 import { usePathname } from "next/navigation"
 import Link from "next/link";
-import { Service, API_URL } from "@/services/dienstApi";
+import { Service, getServices } from "@/services/dienstApi";
 import { useTranslations } from "@/lib/TranslationProvider"
-
+import HeaderPages from "@/componenten/headerPages";
+import { getCurentLanguage, Lang } from "@/languages/getcurentlanguage";  
+import { useEffect, useState } from "react"
 
 // fonction slug
 const slugify = (text: string) =>
@@ -14,7 +16,29 @@ const slugify = (text: string) =>
     .replace(/[^\w-]+/g, "");
 
 
-export default function ServiceBody({ services }: { services: Service[] }) {
+export default   function ServicesBlock(){
+
+ const [services, setServices] = useState<Service[]>([])
+ const lang =getCurentLanguage()  
+
+useEffect(() => {
+  async function loadServices() {
+    const data = await getServices(lang as Lang)
+    setServices(data)
+  }
+
+  loadServices()
+}, [])
+  return <main className="bg-white">
+      <HeaderPages title={""} headerTitle="contactPageHeaderInfos.title" subtitle ="contactPageHeaderInfos.subtitle" image="appointment1.png"/>
+       <ServiceBody services={services} />
+    </main>; 
+  
+ 
+}
+
+
+export   function ServiceBody({ services }: { services: Service[] }) {
   const pathname = usePathname();
   const locale = pathname.split("/")[1] || "de";
   const t = useTranslations()
@@ -29,11 +53,16 @@ export default function ServiceBody({ services }: { services: Service[] }) {
         {/* Title */}
         <div className="text-center mb-6 text-white">
           <h1 className="text-4xl font-bold text-gray-800 mb-2">
-            {t.service.title}
+            {t.service.title2}
           </h1>
-         
+          <p className="text-[var(--foreground)] font-semibold mb-6">
+            (netto, zzgl. MwSt.)
+          </p>
         </div>
-        <br />
+
+        <div className="mt-6 text-center mb-16 text-black max-w-3xl mx-auto text-sm opacity-90">
+          <label> {t.service.subtitle1} <b> {t.service.subtitle2}</b>. {t.service.besichtigungstermin}.  {t.service.subtitle22} <b>{t.service.subtitle3}</b> {t.service.subtitle4} <b>{t.service.subtitle5}</b> {t.service.subtitle6}
+          </label></div>
 
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -54,37 +83,23 @@ export default function ServiceBody({ services }: { services: Service[] }) {
                   {/* Content */}
                   <div className="relative z-10">
 
-                    {/* image */}
-                    <div className="overflow-hidden">
-                      <img
-                        src={service.cover
-                          ? `${API_URL}${service.cover}`
-                          : "/images/appointment0.png"}
-                        alt={service.title}
-                        className="w-full h-52 object-cover transition duration-500 group-hover:scale-110"
-                      />
-                    </div>
+                     
 
                     {/* text */}
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-4 text-primary group-hover:text-white transition">
                         {service.title}
                       </h3>
-                       <p className="space-y-2 text-gray-700 text-sm group-hover:text-white/90 transition line-clamp-1">
-                        {service.description1}
-                      </p>
-                       <p className="space-y-2 text-gray-700 text-sm group-hover:text-white/90 transition line-clamp-2">
-                        {service.description}
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {service.tags?.map((tag, i) => (
-                        <span key={i} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
 
+                      <ul className="space-y-2 text-gray-700 text-sm group-hover:text-white/90 transition">
+                        {service.pricing.map((item, i) => (
+                          <li key={i} className="flex gap-2">
+                            <span className="text-primary group-hover:text-white">✔</span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </Link>

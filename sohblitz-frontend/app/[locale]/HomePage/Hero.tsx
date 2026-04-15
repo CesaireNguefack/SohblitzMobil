@@ -59,7 +59,7 @@ export default function Hero() {
             />
 
             <Image
-              src="/images/heroo1.png"
+              src="/images/heroo11.png"
               alt="Cleaning"
               width={1200}
               height={600}

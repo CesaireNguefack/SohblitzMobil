@@ -3,17 +3,28 @@
     "id": 1,
     "title": "Gebäudereinigung",
     "description1": "– Regelmäßige Unterhalts- oder Grundreinigung für Häuser und Wohnungen.",
-    "description": "100% chemiefreie Gebäudereinigung mit Dampftechnologie. Ideal für Haushalte, AirBnB und Ferienwohnungen.",
-    "pricing": ["25€ – 35€ pro Stunde"],
-    "tags": ["Dampfreinigung", "Allergikerfreundlich", "Hygienisch"]
+    "description": "100% chemiefreie Gebäudereinigung mit Dampftechnologie. Ideal für Haushalte, AirBnB, Ferienwohnungen, gewerblich raume, Restaurant, Lagerfläche und Industrie Anlage",
+    "pricing": [
+      "25€ – 35€ pro Stunde"
+    ],
+    "tags": [
+      "Dampfreinigung",
+      "Allergikerfreundlich",
+      "Hygienisch"
+    ]
   },
   {
     "id": 2,
     "title": "Büro und Praxisreinigung",
     "description1": "– Hygienische Reinigung für Büros und Praxen mit Desinfektion.",
     "description": "Professionelle Reinigung für Büros und Praxen für ein gesundes Arbeitsklima. Desinfektion ohne Chemie.",
-    "pricing": ["30€ – 40€ pro Stunde"],
-    "tags": ["Desinfektion", "Arbeitsplatzhygiene"]
+    "pricing": [
+      "30€ – 40€ pro Stunde"
+    ],
+    "tags": [
+      "Desinfektion",
+      "Arbeitsplatzhygiene"
+    ]
   },
   {
     "id": 3,
@@ -25,7 +36,10 @@
       "Feinreinigung: 5€ – 9.50€ / m²",
       "Sanitär, Geräte und Möbel werden extra berechnet"
     ],
-    "tags": ["Neubau", "Renovierung"]
+    "tags": [
+      "Neubau",
+      "Renovierung"
+    ]
   },
   {
     "id": 4,
@@ -37,20 +51,26 @@
       "Rahmen: +1.45€ pro Fenster",
       "Verschmutzungsgrad / Höhe: +20% – 50%"
     ],
-    "tags": ["Streifenfrei", "Professionell"]
+    "tags": [
+      "Streifenfrei",
+      "Professionell"
+    ]
   },
   {
     "id": 5,
     "title": "Autoinnenreinigung",
     "description1": "– Frischer Innenraum für dein Fahrzeug.",
-    "description": "Dampfreinigung des Fahrzeuginnenraums ohne Chemie. Entfernt Gerüche, Keime und Schmutz.",
+    "description": "Dampfreinigung des Fahrzeuginnenraums ohne Chemie. Entfernt Gerüche, Keime und Schmutz. Innenraum komplett + Sitze: Staubsaugen (inkl. Kofferraum)Kunststoffreinigung Armaturen + Lüftung, Scheiben innen, Sitze shampoonieren (Waschsauger), Flecken entfernen, Fußmatten reinigen",
     "pricing": [
       "Basisreinigung: 40€ – 130€",
       "Intensivreinigung: 130€ – 250€",
       "Ozon Reinigung inklusive",
       "Geruchsbeseitigung: 50€ – 80€"
     ],
-    "tags": ["Auto", "Desinfektion"]
+    "tags": [
+      "Auto",
+      "Desinfektion"
+    ]
   },
   {
     "id": 6,
@@ -62,15 +82,24 @@
       "Sessel: 25€ – 40€",
       "Bürostuhl: 9€ – 20€"
     ],
-    "tags": ["Milbenentfernung", "Tiefenreinigung"]
+    "tags": [
+      "Milbenentfernung",
+      "Tiefenreinigung"
+    ]
   },
   {
     "id": 7,
     "title": "Teppichreinigung",
     "description1": "– Tiefenreinigung mit mobiler Technik.",
     "description": "Dampfreinigung von Teppichen für hygienische Sauberkeit und frische Stoffe.",
-    "pricing": ["6€ – 9€ pro m²"],
-    "tags": ["Allergikerfreundlich"]
+    "pricing": [
+      "kleiner Teppich: 20 - 50 €",
+      "mittel: 50 - 100 €",
+      "groß: 100 - 200 €"
+    ],
+    "tags": [
+      "Allergikerfreundlich"
+    ]
   },
   {
     "id": 8,
@@ -81,17 +110,51 @@
       "20€ – 55€ pro Stück",
       "Je nach Verschmutzung & Höhe: +10% – 45%"
     ],
-    "tags": ["Sonnenschutz"]
+    "tags": [
+      "Sonnenschutz"
+    ]
   },
   {
     "id": 9,
-    "title": "Stein- und Fassadenreinigung",
+    "title": "Steinreinigung",
     "description1": "",
-    "description": "Entfernung von Moos, Algen und Verschmutzungen auf Terrassen und  Fassaden  mit Hochdruck-Dampf.",
+    "description": "Entfernung von Moos, Algen und Verschmutzungen auf Terrassen  mit Hochdruck-Dampf.",
     "pricing": [
-      "Steinreinigung: 6€ – 16€ / m²",
-      "Mit Imprägnierung: 8€ – 12€ / m²"
+      "Leichte Verschmutzung (Staub, normaler Dreck): 5 - 8 € / m²",
+      "Mittlere Verschmutzung (Moos, Algen): 8 - 13 € / m²",
+      "Starke Verschmutzung (Öl, Flecken, tief sitzender Schmutz): 15 - 28 € / m²",
+      "Mit Imprägnierung / Versiegelung: 4 - 6 € / m²"
     ],
-    "tags": ["Terrasse", "Fassade", "Moosentfernung"]
-  }
+    "tags": [
+      "Terrasse",
+      "Fassade",
+      "Moosentfernung"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Treppen Reinigung",
+    "description1": "- Saubere Treppen",
+    "description": " Der erste Eindruck zählt Wir sorgen für gepflegte und hygienisch saubere Treppenhäuser i n Wohn- und Geschäftsgebäuden. Unser zuverlässiger Reinigungsservice entfernt gründlich Schmutz, Staub und Ablagerungen - von den Stufen bis zum Geländer. Regelmäßig, flexibel und mit viel Sorgfalt kümmern wir uns darum, dass Ihr Treppenhaus jederzeit einladend aussieht",
+    "pricing": [
+      "Klein (2-4 Etagen): 20-40 €",
+      "Mittel (5-8 Etagen): 40-80 €",
+      "Groß (mehr als 8 Etagen): 80- 150 €"
+    ],
+    "tags": []
+  },
+  {
+  "id": 11,
+  "title": "Hausreinigung",
+  "description1": "",
+  "description": "Reinigung von Wohnräumen, Küchen und Bädern. Staubsaugen, Wischen und Staubentfernung. Fenster- und Glasreinigung. Tiefenreinigung bei Bedarf. Flexible Termine – einmalig oder regelmäßig.",
+  "pricing": [
+    "25 € – 30 € pro Stunde"
+  ],
+  "tags": [
+    "Residenzen",
+    "Wohnungen",
+    "Einfamilienhaus"
+  ]
+}
 ]

@@ -257,7 +257,7 @@ export function ContactCalendar() {
 
       <IconCardForm
         icon="📍"
-        title="Heinrich-Büssing-Ring 22, 38102 Braunschweig"
+        title={t.contact.addresse}
       /> <br></br>
 
          

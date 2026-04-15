@@ -1,12 +1,15 @@
 {
   "navbar": {
     "home": "Startseite",
+    "price":"Preisliste",
+    "gallery":"Gallery",
     "contact": "Kontakt",
     "impressum": "Impressum",
     "privacy": "Datenschutz",
     "about": "Über Uns",
     "agb": "AGB"
   },
+  
   "hero": {
     "title": "Sauberkeit \n  auf die Sie sich verlassen können",
     "subtitle": "Sohblitz-Mobil bietet schnelle, zuverlässige und gründliche Reinigungsdienste direkt vor Ort in Braunschweig und Umgebung"
@@ -47,7 +50,8 @@
     "errorcharacter": "enthält ungültige Zeichen",
     "messageerror": "muss zwischen 2 und 500 Zeichen enthalten",
     "sendsucess": "Nachricht erfolgreich gesendet ✅",
-    "senderror": "Fehler beim Senden"
+    "senderror": "Fehler beim Senden",
+    "addresse":"Braunschweig, Wolfsburg, Salzgitter, Gifhorn und Umgebung."
   },
   "about": {
     "quality": "Hohe Qualität",
@@ -57,7 +61,8 @@
     "subdescription": "Wir kommen mobil zu dir in \nBraunschweig, Wolfsburg, Salzgitter, Gifhorn\n und Umgebung."
   },
   "service": {
-    "title": "Unsere Dienste und Preise",
+    "title": "Unsere Dienste ",
+    "title2": "Unsere Preise",
     "subtitle1": "Fahrtkosten innerhalb Braunschweig:",
     "subtitle2": "10€ bis 20€ ",
     "besichtigungstermin": "Kostenlos Besichtigungstermin",

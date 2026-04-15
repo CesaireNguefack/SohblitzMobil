@@ -3,6 +3,8 @@
     "home": "Home",
     "contact": "Contact",
     "impressum": "Imprint",
+    "price":"List of prices",
+    "gallery":"Gallery",
     "privacy": "Privacy Policy",
     "about": "About us",
     "agb": "T&C"
@@ -47,7 +49,8 @@
     "errorcharacter": "contains invalid characters",
     "messageerror": "must be between 2 and 500 characters",
     "sendsucess": "Message sent successfully ✅",
-    "senderror": "Error sending message"
+    "senderror": "Error sending message",
+    "addresse":"Braunschweig, Wolfsburg, Salzgitter, Gifhorn and surrounding areas."
   },
   "about": {
     "quality": "High Quality",
@@ -57,7 +60,8 @@
     "subdescription": "We come directly to you in \nBraunschweig, Wolfsburg, Salzgitter, Gifhorn\n and surrounding areas."
   },
   "service": {
-    "title": "Our Services and Prices",
+    "title": "Our Services",
+     "title2": "Our Prices",
     "subtitle1": "Travel costs within Braunschweig:",
     "subtitle2": "€10 to €20",
     "besichtigungstermin": "Free inspection appointment",

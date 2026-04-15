@@ -7,7 +7,7 @@ import { useTranslations } from "@/lib/TranslationProvider"
 
 type Props = {
   navState: "transparent" | "gradient" | "white",
-  showLogo:boolean
+  showLogo: boolean
 }
 
 export default function Navbar({ navState, showLogo }: Props) {
@@ -25,10 +25,9 @@ export default function Navbar({ navState, showLogo }: Props) {
   }
 
   const linkClass = (path: string) =>
-    `transition ${
-      isActive(path)
-        ? "text-blue-600 font-semibold"
-        : "hover:text-blue-500"
+    `transition ${isActive(path)
+      ? "text-blue-600 font-semibold"
+      : "hover:text-blue-500"
     }`
 
   // ✅ LANGUAGE SWITCH (stay on same page)
@@ -45,78 +44,85 @@ export default function Navbar({ navState, showLogo }: Props) {
 
   // ✅ LANGUAGE ACTIVE STYLE
   const langClass = (lang: string) =>
-    `transition cursor-pointer ${
-      locale === lang
-        ? "scale-125 ring-2   "
-        : "opacity-60 hover:opacity-100 text-primary"
+    `transition cursor-pointer ${locale === lang
+      ? "scale-125 ring-2   "
+      : "opacity-60 hover:opacity-100 text-primary"
     }`
 
   return (
     <header
-  className={`fixed top-0 w-full z-50 h-14 overflow-visible
+      className={`fixed top-0 w-full z-50 h-14 overflow-visible
   ${navState === "transparent" && "bg-transparent"}
   ${navState === "gradient" && "bg-gradient-to-r from-[#d7e8f2] via-[#a9c9e4] to-[#6fa6d8] shadow-lg backdrop-blur-md"}
   ${navState === "white" && "bg-white shadow-md"}
   `}
->
-  <div className="max-w-7xl mx-auto flex items-center h-full px-4 md:px-10">
-    <Logo2 show={showLogo} />
-   
+    >
+      <div className="max-w-7xl mx-auto flex items-center h-full px-4 md:px-10">
+        <Logo2 show={showLogo} />
 
-  {/* RIGHT BLOCK → tout à droite */}
-  <div className="hidden md:flex items-center gap-8 ml-auto">
 
-    {/* NAV */}
-    <nav className="flex gap-6 text-slate-700">
-      <Link href={`/${locale}`} className={linkClass("")}>
-        {t.navbar.home}
-      </Link>
+        {/* RIGHT BLOCK → tout à droite */}
+        <div className="hidden md:flex items-center gap-8 ml-auto">
 
-      <Link href={`/${locale}/about`} className={linkClass("/about")}>
-        {t.navbar.about}
-      </Link>
+          {/* NAV */}
+          <nav className="flex gap-6 text-slate-700">
+            <Link href={`/${locale}`} className={linkClass("")}>
+              {t.navbar.home}
+            </Link>
 
-      <Link href={`/${locale}/impressum`} className={linkClass("/impressum")}>
-        {t.navbar.impressum}
-      </Link>
+            <Link href={`/${locale}/price`} className={linkClass("/price")}>
+              {t.navbar.price}
+            </Link>
 
-      <Link href={`/${locale}/privacy`} className={linkClass("/privacy")}>
-        {t.navbar.privacy}
-      </Link>
+            <Link href={`/${locale}/gallery`} className={linkClass("/gallery")}>
+              {t.navbar.gallery}
+            </Link>
 
-      <Link href={`/${locale}/agb`} className={linkClass("/agb")}>
-        {t.navbar.agb}
-      </Link>
+            <Link href={`/${locale}/about`} className={linkClass("/about")}>
+              {t.navbar.about}
+            </Link>
 
-      <Link href={`/${locale}/contact`} className={linkClass("/contact")}>
-        {t.navbar.contact}
-      </Link>
-    </nav>
+            <Link href={`/${locale}/impressum`} className={linkClass("/impressum")}>
+              {t.navbar.impressum}
+            </Link>
 
-    {/* LANGUAGES */}
-    <div className="flex gap-4 items-center text-xl">
-      <Link href={getLocalizedPath("de")} className={langClass("de")}>
-        🇩🇪
-      </Link>
-      <Link href={getLocalizedPath("en")} className={langClass("en")}>
-        🇬🇧
-      </Link>
-      <Link href={getLocalizedPath("fr")} className={langClass("fr")}>
-        🇫🇷
-      </Link>
-    </div>
+            <Link href={`/${locale}/privacy`} className={linkClass("/privacy")}>
+              {t.navbar.privacy}
+            </Link>
 
-  </div>
+            <Link href={`/${locale}/agb`} className={linkClass("/agb")}>
+              {t.navbar.agb}
+            </Link>
 
-  {/* BURGER (mobile) */}
-  <button
-    onClick={() => setOpen(!open)}
-    className="md:hidden ml-auto text-2xl"
-  >
-    ☰
-  </button>
+            <Link href={`/${locale}/contact`} className={linkClass("/contact")}>
+              {t.navbar.contact}
+            </Link>
+          </nav>
 
-</div>
+          {/* LANGUAGES */}
+          <div className="flex gap-4 items-center text-xl">
+            <Link href={getLocalizedPath("de")} className={langClass("de")}>
+              🇩🇪
+            </Link>
+            <Link href={getLocalizedPath("en")} className={langClass("en")}>
+              🇬🇧
+            </Link>
+            <Link href={getLocalizedPath("fr")} className={langClass("fr")}>
+              🇫🇷
+            </Link>
+          </div>
+
+        </div>
+
+        {/* BURGER (mobile) */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden ml-auto text-2xl"
+        >
+          ☰
+        </button>
+
+      </div>
 
       {/* MOBILE MENU */}
       {open && (
@@ -125,6 +131,14 @@ export default function Navbar({ navState, showLogo }: Props) {
           <Link href={`/${locale}`} onClick={() => setOpen(false)}>
             {t.navbar.home}
           </Link>
+
+          <Link href={`/${locale}/price`} onClick={() => setOpen(false)}>
+              {t.navbar.price}
+            </Link>
+
+            <Link href={`/${locale}/gallery`} onClick={() => setOpen(false)}>
+              {t.navbar.gallery}
+            </Link>
 
           <Link href={`/${locale}/about`} onClick={() => setOpen(false)}>
             {t.navbar.about}
@@ -160,7 +174,6 @@ export default function Navbar({ navState, showLogo }: Props) {
             >
               🇬🇧
             </Link>
-
             <Link
               href={getLocalizedPath("fr")}
               className={langClass("fr")}
@@ -168,7 +181,6 @@ export default function Navbar({ navState, showLogo }: Props) {
             >
               🇫🇷
             </Link>
-
           </div>
 
         </div>
@@ -199,7 +211,7 @@ export function Logo({ className = "" }) {
 export function Logo2({ show = true, className = "" }) {
   if (!show) return null;
   return (
-     <div className={className}>
+    <div className={className}>
       <Image
         src="/images/logo.png"
         alt="Sohblitz Mobil Logo"

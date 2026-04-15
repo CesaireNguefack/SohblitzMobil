@@ -2,6 +2,8 @@
   "navbar": {
     "home": "Accueil",
     "contact": "Contact",
+     "price":"Liste des prix",
+    "gallery":"Gallerie",
     "impressum": "Impressum",
     "privacy": "Politique de confidentialité",
     "about": "Apropos de nous",
@@ -54,10 +56,12 @@
     "errorcharacter": "contient des caractères non valides",
     "messageerror": "doit contenir entre 2 et 500 caractères",
     "sendsucess":"Message envoyé avec succès ✅",
-    "senderror":"Erreur envoi"
+    "senderror":"Erreur envoi",
+    "addresse":"Braunschweig, Wolfsburg, Salzgitter, Gifhorn et environs."
   },
   "service": {
-    "title": "Nos services et  tarifs",
+    "title": "Nos services",
+    "title2":"Nos tarifs",
     "subtitle1": "Frais de déplacement à Braunschweig :",
     "subtitle2": "10€ à 20€",
     "besichtigungstermin": "Rendez-vous de visite gratuit",

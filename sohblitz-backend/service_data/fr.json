@@ -3,17 +3,28 @@
     "id": 1,
     "title": "Nettoyage de bâtiments",
     "description1": "– Nettoyage régulier ou en profondeur pour maisons et appartements.",
-    "description": "Nettoyage 100% sans produits chimiques grâce à la technologie vapeur. Idéal pour les habitations, AirBnB et locations saisonnières.",
-    "pricing": ["25€ – 35€ par heure"],
-    "tags": ["Nettoyage vapeur", "Adapté aux allergiques", "Hygiénique"]
+    "description": "Nettoyage de bâtiments 100 % sans produits chimiques grâce à la technologie vapeur. Idéal pour les ménages, AirBnB, locations de vacances, locaux commerciaux, restaurants, entrepôts et installations industrielles.",
+    "pricing": [
+      "25€ – 35€ par heure"
+    ],
+    "tags": [
+      "Nettoyage vapeur",
+      "Adapté aux allergiques",
+      "Hygiénique"
+    ]
   },
   {
     "id": 2,
     "title": "Nettoyage de bureaux et cabinets",
     "description1": "– Nettoyage hygiénique pour bureaux et cabinets avec désinfection.",
     "description": "Nettoyage professionnel pour bureaux et cabinets afin d’assurer un environnement de travail sain. Désinfection sans produits chimiques.",
-    "pricing": ["30€ – 40€ par heure"],
-    "tags": ["Désinfection", "Hygiène au travail"]
+    "pricing": [
+      "30€ – 40€ par heure"
+    ],
+    "tags": [
+      "Désinfection",
+      "Hygiène au travail"
+    ]
   },
   {
     "id": 3,
@@ -25,7 +36,10 @@
       "Nettoyage fin : 5€ – 9.50€ / m²",
       "Sanitaires, appareils et meubles facturés en supplément"
     ],
-    "tags": ["Construction", "Rénovation"]
+    "tags": [
+      "Construction",
+      "Rénovation"
+    ]
   },
   {
     "id": 4,
@@ -37,20 +51,26 @@
       "+1.45€ par cadre",
       "Selon saleté / hauteur : +20% – 50%"
     ],
-    "tags": ["Sans traces", "Professionnel"]
+    "tags": [
+      "Sans traces",
+      "Professionnel"
+    ]
   },
   {
     "id": 5,
     "title": "Nettoyage intérieur automobile",
     "description1": "– Un intérieur propre et frais pour votre véhicule.",
-    "description": "Nettoyage vapeur de l’intérieur du véhicule sans produits chimiques. Élimine odeurs, germes et saletés.",
+    "description": "Nettoyage intérieur du véhicule à la vapeur sans produits chimiques. Élimine les odeurs, les germes et la saleté. Prestation complète incluant :\n- Aspiration (y compris le coffre) \n- Nettoyage des surfaces plastiques (tableau de bord, aérations) \n- Nettoyage des vitres intérieures \n- Shampouinage des sièges (injecteur-extracteur) \n- Élimination des taches \n- Nettoyage des tapis",
     "pricing": [
       "Nettoyage de base : 40€ – 130€",
       "Nettoyage intensif : 130€ – 250€",
       "Traitement à l’ozone inclus",
       "Élimination des odeurs : 50€ – 80€"
     ],
-    "tags": ["Auto", "Désinfection"]
+    "tags": [
+      "Auto",
+      "Désinfection"
+    ]
   },
   {
     "id": 6,
@@ -62,15 +82,24 @@
       "Fauteuil : 25€ – 40€",
       "Chaise de bureau : 9€ – 20€"
     ],
-    "tags": ["Élimination des acariens", "Nettoyage en profondeur"]
+    "tags": [
+      "Élimination des acariens",
+      "Nettoyage en profondeur"
+    ]
   },
   {
     "id": 7,
     "title": "Nettoyage de tapis",
     "description1": "– Nettoyage en profondeur avec équipement mobile.",
     "description": "Nettoyage vapeur des tapis pour une hygiène optimale et des textiles rafraîchis.",
-    "pricing": ["6€ – 9€ par m²"],
-    "tags": ["Adapté aux allergiques"]
+    "pricing": [
+      "Petit tapis : 20 - 50 €",
+      "Moyen : 50 - 100 €",
+      "Grand : 100 - 200 €"
+    ],
+    "tags": [
+      "Adapté aux allergiques"
+    ]
   },
   {
     "id": 8,
@@ -81,17 +110,51 @@
       "20€ – 55€ par unité",
       "Selon saleté & hauteur : +10% – 45%"
     ],
-    "tags": ["Protection solaire"]
+    "tags": [
+      "Protection solaire"
+    ]
   },
   {
     "id": 9,
-    "title": "Nettoyage de pierres et façades  ",
+    "title": "Nettoyage de pierres  ",
     "description1": "",
-    "description": "Élimination de la mousse, des algues et des saletés sur terrasses et  façades  grâce à la vapeur haute pression.",
+    "description": "Élimination de la mousse, des algues et des saletés sur terrasses   grâce à la vapeur haute pression.",
     "pricing": [
-      "Nettoyage pierre : 6€ – 16€ / m²",
-      "Avec protection : 8€ – 12€ / m²"
+      "Salissure légère (poussière, saleté normale) : 5 - 8 € / m²",
+      "Salissure moyenne (mousse, algues) : 8 - 13 € / m²",
+      "Salissure importante (huile, taches, saleté incrustée) : 15 - 28 € / m²",
+      "Avec imprégnation / protection : 4 - 6 € / m²"
     ],
-    "tags": ["Terrasse", "Façade", "Élimination de mousse"]
-  }
+    "tags": [
+      "Terrasse",
+      "Façade",
+      "Élimination de mousse"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Nettoyage des escaliers",
+    "description1": "- Escaliers propres",
+    "description": "La première impression compte. Nous assurons des cages d’escaliers propres et hygiéniques dans les immeubles résidentiels et commerciaux. Notre service de nettoyage fiable élimine efficacement la saleté, la poussière et les dépôts – des marches jusqu’aux rampes. De manière régulière, flexible et avec le plus grand soin, nous veillons à ce que votre cage d’escalier soit toujours accueillante.",
+    "pricing": [
+      "Petit (2-4 étages) : 20-40 €",
+      "Moyen (5-8 étages) : 40-80 €",
+      "Grand (plus de 8 étages) : 80-150 €"
+    ],
+    "tags": []
+  },
+  {
+  "id": 11,
+  "title": "Nettoyage de maison",
+  "description1": "",
+  "description": "Nettoyage des pièces de vie, cuisines et salles de bain. Aspiration, lavage des sols et dépoussiérage. Nettoyage des fenêtres et surfaces vitrées. Nettoyage en profondeur si nécessaire. Interventions flexibles – ponctuelles ou régulières.",
+  "pricing": [
+    "25 € – 30 € par heure"
+  ],
+  "tags": [
+    "Résidences",
+    "Appartements",
+    "Maisons individuelles"
+  ]
+}
 ]

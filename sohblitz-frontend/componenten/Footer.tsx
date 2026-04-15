@@ -70,9 +70,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
+            <h3 className="font-semibold mb-4">{t.navbar.contact}</h3>
             <ul className="space-y-2 text-sm">
-              <li>📍 Heinrich-Büssing-Ring 22, 38102 Braunschweig</li>
+              <li>📍 {t.contact.addresse}</li>
               <li>📞 +49 176 48082448</li>
               <li>✉️ sohblitz.mobil@web.de</li>
             </ul>
