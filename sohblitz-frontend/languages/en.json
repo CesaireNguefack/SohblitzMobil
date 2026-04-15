@@ -7,7 +7,8 @@
     "gallery":"Gallery",
     "privacy": "Privacy Policy",
     "about": "About us",
-    "agb": "T&C"
+    "agb": "T&C",
+   "reseaux": "Follow us on social media"
   },
   "hero": {
     "title": "Cleanliness \n you can rely on",
@@ -63,7 +64,7 @@
     "title": "Our Services",
      "title2": "Our Prices",
     "subtitle1": "Travel costs within Braunschweig:",
-    "subtitle2": "€10 to €20",
+    "subtitle2": "5€ to 10€",
     "besichtigungstermin": "Free inspection appointment",
     "subtitle22": "Outside Braunschweig:",
     "subtitle3": "0.65€ / km.",
@@ -291,10 +292,10 @@
           "All prices are net plus 19% VAT.",
           "VAT ID: DE458350919.",
           "Payment must be made within 7 days after invoicing by bank transfer.",
-          "Reminder fee: €5.",
-          "Minimum order value: €50.",
-          "Travel costs within Braunschweig: €0.50 per km.",
-          "Travel costs outside Braunschweig: €0.75 per km."
+          "Reminder fee: 5€.",
+          "Minimum order value: 50€.",
+          "Travel costs within Braunschweig: 0.50€ per km.",
+          "Travel costs outside Braunschweig: 0.75€ per km."
         ]
       },
       {

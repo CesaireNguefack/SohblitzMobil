@@ -3,6 +3,8 @@
 import {ButtonContact} from "@/componenten/Cards/KontaktButton";
 import IconCard from "../../../componenten/Cards/IconCard";
 import { useTranslations } from "@/lib/TranslationProvider"
+import { FaWhatsapp } from "react-icons/fa";
+import { Mail, MapPin } from "lucide-react";
 
 export default function ContactSection() {
     const t = useTranslations()
@@ -23,19 +25,23 @@ export default function ContactSection() {
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 items-start text-left md:text-center">
         <IconCard
-          icon="📞"
+          icon={<FaWhatsapp className="text-green-500 text-xl" />}
           title="Hotline"
-          description="0176 48082448"
+          description={
+      <a href="https://wa.me/4917648082448" target="_blank">
+        0176 48082448
+      </a>
+    }
         />
 
         <IconCard
-          icon="📧"
+          icon={<Mail />}
           title="Email"
           description="sohblitz.mobil@web.de" 
         />
 
         <IconCard
-          icon="📍"
+          icon={<MapPin />}
           title= {t.contact.iconLocation}
           description={t.contact.addresse}
         />

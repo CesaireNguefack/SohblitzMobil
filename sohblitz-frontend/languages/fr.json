@@ -7,7 +7,8 @@
     "impressum": "Impressum",
     "privacy": "Politique de confidentialité",
     "about": "Apropos de nous",
-    "agb": "CGV"
+    "agb": "CGV",
+    "reseaux": "Suivez-nous sur les réseaux sociaux"
   },
   "hero": {
     "title": "Une propreté \n sur laquelle vous pouvez compter",
@@ -63,7 +64,7 @@
     "title": "Nos services",
     "title2":"Nos tarifs",
     "subtitle1": "Frais de déplacement à Braunschweig :",
-    "subtitle2": "10€ à 20€",
+    "subtitle2": "5€ à 10€",
     "besichtigungstermin": "Rendez-vous de visite gratuit",
     "subtitle22": "Hors Braunschweig :",
     "subtitle3": "0,65€ / km.",

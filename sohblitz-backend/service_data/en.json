@@ -5,7 +5,7 @@
     "description1": "– Regular maintenance or deep cleaning for houses and apartments.",
     "description": "100% chemical-free building cleaning using steam technology. Ideal for households, AirBnB, holiday rentals, commercial spaces, restaurants, warehouses, and industrial facilities.",
     "pricing": [
-      "€25 – €35 per hour"
+      "25€ – 35€ per hour"
     ],
     "tags": [
       "Steam cleaning",
@@ -19,7 +19,7 @@
     "description1": "– Hygienic cleaning for offices and practices with disinfection.",
     "description": "Professional cleaning for offices and practices to ensure a healthy working environment. Chemical-free disinfection.",
     "pricing": [
-      "€30 – €40 per hour"
+      "30€ – 40€ per hour"
     ],
     "tags": [
       "Disinfection",
@@ -32,8 +32,8 @@
     "description1": "– Final or detailed cleaning after construction or renovation.",
     "description": "Thorough cleaning after construction or renovation. Removes dust, grease and dirt.",
     "pricing": [
-      "Rough cleaning: €4 – €9 / m²",
-      "Fine cleaning: €5 – €9.50 / m²",
+      "Rough cleaning: 4€ – 9€ / m²",
+      "Fine cleaning: 5€ – 9.50€ / m²",
       "Sanitary, equipment and furniture are charged separately"
     ],
     "tags": [
@@ -47,8 +47,8 @@
     "description1": "– Streak-free cleaning of windows, mirrors and glass surfaces, inside and outside including frames.",
     "description": "Streak-free glass and window cleaning for private homes, offices and shops.",
     "pricing": [
-      "€4 – €8 / m² (inside & outside)",
-      "+€1.45 per frame",
+      "4€ – 8€ / m² (inside & outside)",
+      "+1.45€ per frame",
       "Dirt level / height: +20% – 50%"
     ],
     "tags": [
@@ -62,10 +62,10 @@
     "description1": "– A fresh interior for your vehicle.",
     "description": "Chemical-free steam cleaning of the vehicle interior. Removes odors, germs, and dirt.  Full interior service including: \n- Vacuuming (including trunk) \n- Cleaning of plastic surfaces (dashboard, air vents) \n- Interior window cleaning \n- Seat shampooing (extraction machine) \n- Stain removal \n- Floor mat cleaning",
     "pricing": [
-      "Basic cleaning: €40 – €130",
-      "Deep cleaning: €130 – €250",
+      "Basic cleaning: 40€ – 130€",
+      "Deep cleaning: 130€ – 250€",
       "Ozone treatment included",
-      "Odor removal: €50 – €80"
+      "Odor removal: 50€ – 80€"
     ],
     "tags": [
       "Car",
@@ -78,9 +78,9 @@
     "description1": "– Clean sofas, armchairs and mattresses, hygienic and gentle.",
     "description": "Deep cleaning of sofas and upholstery. Removes mites, stains and bacteria.",
     "pricing": [
-      "Sofa: €20 – €40 per seat",
-      "Armchair: €25 – €40",
-      "Office chair: €9 – €20"
+      "Sofa: 20€ – 40€ per seat",
+      "Armchair: 25€ – 40€",
+      "Office chair: 9€ – 20€"
     ],
     "tags": [
       "Mite removal",
@@ -93,9 +93,9 @@
     "description1": "– Deep cleaning with mobile equipment.",
     "description": "Steam cleaning of carpets for hygienic cleanliness and fresh fabrics.",
     "pricing": [
-      "Small carpet: €20 - €50",
-      "Medium: €50 - €100",
-      "Large: €100 - €200"
+      "Small carpet: 20€ - 50€",
+      "Medium: 50€ - 100€",
+      "Large: 100€ - 200€"
     ],
     "tags": [
       "Allergy-friendly"
@@ -107,7 +107,7 @@
     "description1": "",
     "description": "Cleaning of blinds and shutters using gentle steam technology.",
     "pricing": [
-      "€20 – €55 per unit",
+      "20€ – 55€ per unit",
       "Depending on dirt level & height: +10% – 45%"
     ],
     "tags": [
@@ -120,10 +120,10 @@
     "description1": "",
     "description": "Removal of moss, algae and dirt from terraces  using high-pressure steam.",
     "pricing": [
-      "Light soiling (dust, normal dirt): €5 - €8 / m²",
-      "Medium soiling (moss, algae): €8 - €13 / m²",
-      "Heavy soiling (oil, stains, deep dirt): €15 - €28 / m²",
-      "With sealing / protection: €4 - €6 / m²"
+      "Light soiling (dust, normal dirt): 5€ - 8€ / m²",
+      "Medium soiling (moss, algae): 8€ - 13€ / m²",
+      "Heavy soiling (oil, stains, deep dirt): 15€ - 28€ / m²",
+      "With sealing / protection: 4€ - 6€ / m²"
     ],
     "tags": [
       "Terrace",
@@ -137,9 +137,9 @@
     "description1": "- Clean staircases",
     "description": "First impressions matter. We ensure clean and hygienic stairwells in residential and commercial buildings. Our reliable cleaning service thoroughly removes dirt, dust, and buildup – from the steps to the railings. Regularly, flexibly, and with great care, we make sure your stairwell always looks welcoming.",
     "pricing": [
-      "Small (2-4 floors): €20-40",
-      "Medium (5-8 floors): €40-80",
-      "Large (more than 8 floors): €80-150"
+      "Small (2-4 floors): 20-40€",
+      "Medium (5-8 floors): 40-80€",
+      "Large (more than 8 floors): 80-150€"
     ],
     "tags": []
   },
@@ -149,7 +149,7 @@
   "description1": "",
   "description": "Cleaning of living spaces, kitchens, and bathrooms. Vacuuming, mopping, and dusting. Window and glass cleaning. Deep cleaning when needed. Flexible scheduling – one-time or regular service.",
   "pricing": [
-    "€25 – €30 per hour"
+    "25€ – 30€ per hour"
   ],
   "tags": [
     "Residences",

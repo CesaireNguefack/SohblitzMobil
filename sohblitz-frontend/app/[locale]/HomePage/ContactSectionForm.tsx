@@ -6,6 +6,8 @@ import { createContact } from "@/services/contactApi"
 import { getCurentLanguage } from "@/languages/getcurentlanguage"
 import { useTranslations } from "@/lib/TranslationProvider"
 import {ButtonSubmit} from "@/componenten/Cards/KontaktButton"
+import {  Mail, MapPin } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactFormBody() {
   return (
@@ -240,52 +242,60 @@ export function ContactCalendar() {
   return (
     <div className="w-full max-w-xl mx-auto md:mx-0 px-4 sm:px-0">
 
-     
       <div className="w-full max-w-md mx-auto md:mx-0 bg-white p-6 rounded-2xl shadow-xl">
-       
-
          <IconCardForm
-        icon="📞"
-        title="0176 48082448"
+        icon={<FaWhatsapp className="text-green-500 text-xl" />}
+    title={
+      <a href="https://wa.me/4917648082448" target="_blank">
+        0176 48082448
+      </a>
+    }
       />
 
       <IconCardForm
-        icon="📧"
+        icon={<Mail />}
         title="sohblitz.mobil@web.de"
 
       />
 
       <IconCardForm
-        icon="📍"
+        icon={<MapPin />}
         title={t.contact.addresse}
       /> <br></br>
-
-         
       </div>
     </div>
   )
 }
 
 
-export function IconCardForm({
-  icon,
-  title,
-}: Props) {
-  return (
-    <div className="flex flex-col items-start gap-3 cursor-pointer py-3">
+type Props = {
+  icon: React.ReactNode;
+  title: React.ReactNode; // permet aussi lien WhatsApp
+};
 
-      {/* TOP ROW */}
+export function IconCardForm({ icon, title }: Props) {
+  return (
+    <div className="flex flex-col items-start gap-3 cursor-pointer py-3 group">
+
       <div className="flex items-center gap-3">
 
         {/* ICON */}
-        <div className="w-10 h-10 md:w-12 md:h-12 min-w-[2.5rem] md:min-w-[3rem] flex items-center justify-center rounded-full bg-blue-100 text-lg md:text-xl shadow">
+        <div
+          className="w-10 h-10 md:w-12 md:h-12 min-w-[2.5rem] md:min-w-[3rem]
+          flex items-center justify-center rounded-full
+          bg-gray-100 text-[var(--foreground2)] shadow
+          group-hover:bg-[var(--foreground2)] group-hover:text-white transition duration-300"
+        >
           {icon}
         </div>
 
         {/* TITLE */}
-        <label className="text-sm md:text-base font-medium text-gray-700">
+        <span
+          className="text-sm md:text-base font-medium text-gray-700
+          group-hover:text-[var(--foreground)] transition duration-300"
+        >
           {title}
-        </label>
+        </span>
 
       </div>
 
@@ -293,7 +303,4 @@ export function IconCardForm({
   );
 }
 
-type Props = {
-  icon: string;
-  title: string;
-};
+ 
