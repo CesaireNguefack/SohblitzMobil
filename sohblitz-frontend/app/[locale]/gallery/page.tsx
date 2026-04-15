@@ -5,6 +5,10 @@ import HeaderPages from "@/componenten/headerPages";
 import { API_URL, Service, getServices } from "@/services/dienstApi";
 import { getCurentLanguage, Lang } from "@/languages/getcurentlanguage";
 
+// 👇 IMPORTANT
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
+
 const defaultImage = "/service_data/images/personel.jpeg";
 
 export default function Page() {
@@ -25,7 +29,6 @@ export default function Page() {
     return `${API_URL}${path}`;
   };
 
-  // 🔥 Extraire + random toutes les images
   const allImages = useMemo(() => {
     const images = services.flatMap((service) =>
       service.images && service.images.length > 0
@@ -33,7 +36,6 @@ export default function Page() {
         : [defaultImage]
     );
 
-    // shuffle (random)
     return images.sort(() => Math.random() - 0.5);
   }, [services]);
 
@@ -46,33 +48,35 @@ export default function Page() {
         image="appointment1.png"
       />
 
-      {/* 🔥 Section images */}
-      <section className=" bg-gray-50 px-6 md:px-16 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+      {/* 🔥 PHOTO PROVIDER */}
+      <PhotoProvider>
+        <section className="bg-gray-50 px-6 md:px-16 py-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
 
-          {allImages.map((img, index) => {
-            const isLarge = index % 5 === 0; // effet chic (random big tiles)
+            {allImages.map((img, index) => {
+              const isLarge = index % 5 === 0;
 
-            return (
-              <div
-                key={index}
-                className={`relative overflow-hidden rounded-2xl group cursor-pointer
-                ${isLarge ? "row-span-2" : ""}`}
-              >
-                <img
-                  src={getFullUrl(img)}
-                  alt="service"
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                />
+              return (
+                <PhotoView key={index} src={getFullUrl(img)}>
+                  <div
+                    className={`relative overflow-hidden rounded-2xl group cursor-pointer
+                    ${isLarge ? "row-span-2" : ""}`}
+                  >
+                    <img
+                      src={getFullUrl(img)}
+                      alt="service"
+                      className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                    />
 
-                {/* overlay effet premium */}
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition" />
-              </div>
-            );
-          })}
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition" />
+                  </div>
+                </PhotoView>
+              );
+            })}
 
-        </div>
-      </section>
+          </div>
+        </section>
+      </PhotoProvider>
     </main>
   );
 }

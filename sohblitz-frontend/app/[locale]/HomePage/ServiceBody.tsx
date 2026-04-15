@@ -21,7 +21,7 @@ export default function ServiceBody({ services }: { services: Service[] }) {
 
   return (
     <section
-      className="relative py-24 bg-cover bg-center"
+      className="relative py-14 bg-cover bg-center"
       style={{ backgroundImage: "url('/images/price-background.png')" }}
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6">
