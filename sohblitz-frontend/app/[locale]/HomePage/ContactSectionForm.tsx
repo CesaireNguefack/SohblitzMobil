@@ -243,10 +243,10 @@ export function ContactCalendar() {
     <div className="w-full max-w-xl mx-auto md:mx-0 px-4 sm:px-0">
 
       <div className="w-full max-w-md mx-auto md:mx-0 bg-white p-6 rounded-2xl shadow-xl">
-         <IconCardForm
+         <IconCardForm  onClick={handleWhatsAppClick}
         icon={<FaWhatsapp className="text-green-500 text-xl" />}
     title={
-      <a href="https://wa.me/4917648082448" target="_blank">
+      <a href="">
         0176 48082448
       </a>
     }
@@ -270,17 +270,18 @@ export function ContactCalendar() {
 
 type Props = {
   icon: React.ReactNode;
-  title: React.ReactNode; // permet aussi lien WhatsApp
+  title: React.ReactNode;
+  onClick?: () => void; // permet aussi lien WhatsApp
 };
 
-export function IconCardForm({ icon, title }: Props) {
+export function IconCardForm({ icon, title, onClick }: Props) {
   return (
     <div className="flex flex-col items-start gap-3 cursor-pointer py-3 group">
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3" onClick={onClick}>
 
         {/* ICON */}
-        <div
+        <div 
           className="w-10 h-10 md:w-12 md:h-12 min-w-[2.5rem] md:min-w-[3rem]
           flex items-center justify-center rounded-full
           bg-gray-100 text-[var(--foreground2)] shadow
@@ -302,5 +303,8 @@ export function IconCardForm({ icon, title }: Props) {
     </div>
   );
 }
+const handleWhatsAppClick = () => {
+  window.open("https://wa.me/4917648082448", "_blank");
+};
 
  

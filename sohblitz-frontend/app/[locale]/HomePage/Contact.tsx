@@ -6,6 +6,10 @@ import { useTranslations } from "@/lib/TranslationProvider"
 import { FaWhatsapp } from "react-icons/fa";
 import { Mail, MapPin } from "lucide-react";
 
+const handleWhatsAppClick = () => {
+  window.open("https://wa.me/4917648082448", "_blank");
+};
+
 export default function ContactSection() {
     const t = useTranslations()
 
@@ -32,6 +36,7 @@ export default function ContactSection() {
         0176 48082448
       </a>
     }
+    onClick={handleWhatsAppClick}
         />
 
         <IconCard
