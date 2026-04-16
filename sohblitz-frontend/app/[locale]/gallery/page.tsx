@@ -30,14 +30,17 @@ export default function Page() {
   };
 
   const allImages = useMemo(() => {
-    const images = services.flatMap((service) =>
+  return services.flatMap((service) => {
+    const imgs =
       service.images && service.images.length > 0
         ? service.images
-        : [defaultImage]
-    );
+        : [defaultImage];
 
-    return images.sort(() => Math.random() - 0.5);
-  }, [services]);
+    return imgs.filter((img) => {
+      return !img.includes("cov");
+    });
+  });
+}, [services]);
 
   return (
     <main className="bg-white min-h-screen">
