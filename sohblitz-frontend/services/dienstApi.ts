@@ -65,7 +65,7 @@ export async function uploadServiceImage(
 export async function deleteServiceImage(
   imagePath: string,
   serviceId: number
-): Promise<boolean> {
+): Promise<UploadResponse> {
   try {
     const res = await fetch(`${API_URL}/services/deleteImage`, {
       method: "POST",
@@ -82,10 +82,10 @@ export async function deleteServiceImage(
       throw new Error("Failed to delete image");
     }
 
-    return true;
+    return res.json();
   } catch (error) {
     console.error("deleteServiceImage error:", error);
-    return false;
+    return {success:false, data:" "+error};
   }
 }
 

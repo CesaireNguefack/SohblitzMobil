@@ -84,7 +84,7 @@ export class ServicesService {
 
     return {
       cover: files.includes("cover.png")
-        ? `/service_data/images/${serviceId}/cover.png`
+        ? `service_data/images/${serviceId}/cover.png`
         : "",
       images: images.map(file => `/service_data/images/${serviceId}/${file}`)
     }

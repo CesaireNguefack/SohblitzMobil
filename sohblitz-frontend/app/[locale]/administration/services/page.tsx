@@ -68,11 +68,10 @@ export function BodyImages() {
   const handleDelete = async () => {
     if (!selectedImage || selectedImage.serviceId === null) return;
 
+     
+    const res = await deleteServiceImage(selectedImage.img, selectedImage.serviceId!)
 
-
-    const success = await deleteServiceImage(selectedImage.img, selectedImage.serviceId!)
-
-    if (success) {
+    if (res.success) {
       alert("✅ Image supprimé avec succès");
       setServices((prev) =>
         prev.map((s) =>
@@ -85,8 +84,9 @@ export function BodyImages() {
       setShowDelete(false);
       setSelectedImage(null);
     } else {
-      alert("❌ Erreur lors de la suppression");
-    }
+      alert("❌ Erreur lors de la suppression "+res.data);
+    } 
+    
   };
 
   const handleUpload = async () => {

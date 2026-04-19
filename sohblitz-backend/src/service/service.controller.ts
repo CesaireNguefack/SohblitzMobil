@@ -1,4 +1,4 @@
-import { Controller,UseFilters, Delete, Body, UploadedFile, Param, Post, Query, Get, ExceptionFilter, Catch,  ArgumentsHost, } from '@nestjs/common';
+import { Controller, UseFilters, Delete, Body, UploadedFile, Param, Post, Query, Get, ExceptionFilter, Catch, ArgumentsHost, } from '@nestjs/common';
 import { ServicesService } from './service.service';
 import * as path from 'path';
 import { FileInterceptor } from '@nestjs/platform-express';
@@ -116,7 +116,7 @@ export class ServicesController {
         };
       }
 
-      const pathResult = `service_data/images/${serviceId}/${file.filename}`;
+      const pathResult = `/service_data/images/${serviceId}/${file.filename}`;
 
       return {
         success: true,
@@ -131,43 +131,47 @@ export class ServicesController {
   }
 
 
-  @Post('deleteImage')
-  async deleteServiceImage(
-    @Body() body: { path: string; serviceId: number }
-  ) {
-    const { path: imagePath, serviceId } = body;
+ @Post('deleteImage')
+async deleteServiceImage(
+  @Body() body: { path: string; serviceId: number }
+) {
+  const { path: imagePath, serviceId } = body;
 
-    if (!imagePath || !serviceId) {
-      return {
-        success: false,
-        message: 'Missing data'
-      };
-    }
-
-    // 🔒 sécurité: éviter suppression hors dossier
-    const fullPath = path.join(process.cwd(), imagePath);
-
-    if (!fullPath.includes(`service_data${path.sep}images${path.sep}${serviceId}`)) {
-
-      return {
-        success: false,
-        message: 'Invalid path'
-      };
-    }
-
-    if (!fs.existsSync(fullPath)) {
-      return {
-        success: false,
-        message: 'File not found'
-      };
-    }
-
-    fs.unlinkSync(fullPath);
-
-    return {
-      success: true,
-    };
+  if (!imagePath || serviceId === undefined) {
+    return { success: false, message: 'Missing data' };
   }
+
+  // 🔧 normaliser le path (très important)
+  const safeImagePath = imagePath.replace(/^\/+/, '');
+
+  const baseDir = path.resolve(
+    process.cwd(),
+    `service_data/images/${serviceId}`
+  );
+
+  const fullPath = path.resolve(process.cwd(), safeImagePath);
+
+  console.log('baseDir:', baseDir);
+  console.log('fullPath:', fullPath);
+
+  // 🔒 sécurité réelle
+  if (!fullPath.startsWith(baseDir)) {
+    return { success: false, message: 'Invalid path' };
+  }
+
+  if (fullPath.endsWith('personel.jpeg')) {
+    return { success: false, message: 'Protected file' };
+  }
+
+  try {
+    await fs.promises.access(fullPath);
+    await fs.promises.unlink(fullPath);
+  } catch {
+    return { success: false, message: 'File not found or delete failed' };
+  }
+
+  return { success: true };
+}
 
 
 }
