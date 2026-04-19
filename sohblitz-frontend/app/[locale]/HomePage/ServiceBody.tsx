@@ -58,7 +58,7 @@ export default function ServiceBody({ services }: { services: Service[] }) {
                     <div className="overflow-hidden">
                       <img
                         src={service.cover
-                          ? `${API_URL}${service.cover}`
+                          ? `${API_URL}/${service.cover}`
                           : "/images/appointment0.png"}
                         alt={service.title}
                         className="w-full h-52 object-cover transition duration-500 group-hover:scale-110"
