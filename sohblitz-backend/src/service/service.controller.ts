@@ -116,7 +116,7 @@ export class ServicesController {
         };
       }
 
-      const pathResult = `/service_data/images/${serviceId}/${file.filename}`;
+      const pathResult = `service_data/images/${serviceId}/${file.filename}`;
 
       return {
         success: true,
