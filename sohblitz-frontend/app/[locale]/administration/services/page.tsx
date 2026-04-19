@@ -68,7 +68,7 @@ export function BodyImages() {
   const handleDelete = async () => {
     if (!selectedImage || selectedImage.serviceId === null) return;
 
-     
+
     const res = await deleteServiceImage(selectedImage.img, selectedImage.serviceId!)
 
     if (res.success) {
@@ -84,9 +84,9 @@ export function BodyImages() {
       setShowDelete(false);
       setSelectedImage(null);
     } else {
-      alert("❌ Erreur lors de la suppression "+res.data);
-    } 
-    
+      alert("❌ Erreur lors de la suppression " + res.data);
+    }
+
   };
 
   const handleUpload = async () => {
@@ -126,17 +126,21 @@ export function BodyImages() {
         <section className="bg-gray-50 px-6 md:px-16 py-16">
 
           {/* HEADER */}
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-6">
+
+            <div className="flex gap-2 w-full sm:w-auto">
               <button
                 onClick={() => setViewMode("sections")}
-                className={`px-4 py-2 rounded ${viewMode === "sections" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+                className={`flex-1 sm:flex-none text-sm sm:text-base px-3 sm:px-4 py-1.5 sm:py-2 rounded ${viewMode === "sections" ? "bg-blue-500 text-white" : "bg-gray-200"
+                  }`}
               >
                 {t.adminPage.btn_section_view}
               </button>
+
               <button
                 onClick={() => setViewMode("global")}
-                className={`px-4 py-2 rounded ${viewMode === "global" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
+                className={`flex-1 sm:flex-none text-sm sm:text-base px-3 sm:px-4 py-1.5 sm:py-2 rounded ${viewMode === "global" ? "bg-blue-500 text-white" : "bg-gray-200"
+                  }`}
               >
                 {t.adminPage.btn_global_view}
               </button>
@@ -144,11 +148,11 @@ export function BodyImages() {
 
             <button
               onClick={() => setShowUpload(true)}
-              className="px-4 py-2 bg-green-500 text-white rounded"
+              className="w-full sm:w-auto text-sm sm:text-base px-3 sm:px-4 py-1.5 sm:py-2 bg-green-500 text-white rounded"
             >
-
               {t.adminPage.btn_add_image}
             </button>
+
           </div>
 
           {/* GLOBAL VIEW */}
