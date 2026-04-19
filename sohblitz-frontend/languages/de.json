@@ -10,11 +10,30 @@
     "agb": "AGB",
     "reseaux":"Folgen Sie uns in den sozialen Medien"
   },
-  
   "hero": {
     "title": "Sauberkeit \n  auf die Sie sich verlassen können",
     "subtitle": "Sohblitz-Mobil bietet schnelle, zuverlässige und gründliche Reinigungsdienste direkt vor Ort in Braunschweig und Umgebung"
   },
+  "adminPage": {
+  "btn_section_view": "Nach Service anzeigen",
+  "btn_global_view": "Globale Ansicht",
+  "btn_add_image": "+ Bild hinzufügen",
+  "form_add_image_title": "Bild hinzufügen",
+  "btn_cancel": "Abbrechen",
+  "btn_save": "Speichern",
+  "alert_success": "Vorgang erfolgreich abgeschlossen",
+  "alert_error": "Vorgang fehlgeschlagen",
+  "availability_title": "Verfügbarkeitsverwaltung",
+  "btn_drown_d": "Verfügbar",
+  "btn_drown_b": "Blockiert",
+  "btn_today": "Heute",
+  "title_reservation": "Reservierung",
+  "contact_title": "Kontakte",
+  "btn_delete": "Löschen",
+  "btn_choose_img":"Wählen Sie das Bild aus",
+  "title_delete_form":"Dieses Bild löschen ?"
+},
+
   "footer": {
     "title": "Professionelle Reinigungsdienste in Deutschland. Schnelle, zuverlässige und 100 % chemiefreie Lösungen für Ihr Zuhause und Ihr Unternehmen.",
     "navigation": "Navigation",

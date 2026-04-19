@@ -36,6 +36,60 @@ export async function getServices(lang: Lang = "de"): Promise<Service[]> {
 }
 
 
+type UploadResponse = {
+  success: boolean;
+  data: string | null;
+};
+
+export async function uploadServiceImage(
+  file: File,
+  serviceId: number
+): Promise<UploadResponse> {
+  try {
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const res = await fetch(`${API_URL}/services/upload/${serviceId}`, {
+      method: "POST",
+      body: formData,
+    });
+
+    return await res.json();
+  } catch (error) {
+    console.error("uploadServiceImage error:", error);
+    return { success: false, data: null };
+  }
+}
+
+export async function deleteServiceImage(
+  imagePath: string,
+  serviceId: number
+): Promise<boolean> {
+  try {
+    const res = await fetch(`${API_URL}/services/deleteImage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        path: imagePath,
+        serviceId,
+      }),
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to delete image");
+    }
+
+    return true;
+  } catch (error) {
+    console.error("deleteServiceImage error:", error);
+    return false;
+  }
+}
+
+
 // 🔥 Get one service by ID + language
 export async function getServiceById(
   id: number,

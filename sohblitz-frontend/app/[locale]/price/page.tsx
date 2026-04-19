@@ -23,7 +23,9 @@ export default   function Page(){
 
 useEffect(() => {
   async function loadServices() {
-    const data = await getServices(lang as Lang)
+    const data = (await getServices(lang as Lang)).filter(
+        (service) => service.id !== 0
+      );
     setServices(data)
   }
 

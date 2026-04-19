@@ -97,6 +97,25 @@
     "contact": "Messages",
     "logout": "Déconnexion"
   },
+  "adminPage":{
+    "btn_section_view":"Afficher par service",
+    "btn_global_view":"Afficher View Global",
+    "btn_add_image":"+ Ajouter image",
+    "form_add_image_title":"Ajouter une image",
+    "btn_cancel": "Annuler",
+    "btn_save":"Sauvegarder",
+    "alert_success":"Operation effectué avec succès",
+    "alert_error":"Operation échoué",
+    "availability_title":"Gestion des disponibilités",
+    "btn_drown_d":"Disponible",
+    "btn_drown_b":"Bloqué",
+    "btn_today":"Aujourd'hui",
+    "title_reservation":"Reservation",
+    "contact_title":"Contacts",
+    "btn_delete":"Supprimer",
+    "btn_choose_img":"Choisir une image",
+    "title_delete_form":"Supprimer cette image ?"
+  },
   "dashboard": {
     "title": "Tableau de bord",
     "addService": "Ajouter un service"

@@ -3,6 +3,7 @@
 import AdminNavbar from "@/componenten/AdminNavbar"
 import { deleteContact, getContacts } from "@/services/contactApi"
 import { useEffect, useState } from "react"
+import { useTranslations } from "@/lib/TranslationProvider"
 
 type Contact = {
   id: number
@@ -26,6 +27,7 @@ export default function Page() {
 export function ContactList() {
   const [contacts, setContacts] = useState<Contact[]>([])
   const [loading, setLoading] = useState(true)
+    const t = useTranslations()
 
   const fetchContacts = async () => {
     try {
@@ -95,7 +97,7 @@ export function ContactList() {
             onClick={() => handleDelete(c.id)}
             className="w-full sm:w-auto px-4 py-2 bg-red-600 text-white rounded-lg hover:scale-105 transition"
           >
-            Supprimer
+            {t.adminPage.btn_delete}
           </button>
         </div>
       </div>
@@ -104,7 +106,7 @@ export function ContactList() {
 
   return (
     <div className="px-4 sm:px-6 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Contacts</h1>
+      <h1 className="text-3xl font-bold mb-6">{t.adminPage.contact_title}</h1>
 
       {/* GRID RESPONSIVE 🔥 */}
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

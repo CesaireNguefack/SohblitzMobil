@@ -509,12 +509,22 @@ export function ReservationForm() {
     </div>
   );
 }
+
 function AvailabilityCalendar() {
   const [availabilities, setAvailabilities] = useState<Availability[]>([]);
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
-    getAvailabilitiesByType(AvailabilityType.AVAILABLE).then(setAvailabilities);
+     getAvailabilitiesByType(AvailabilityType.AVAILABLE).then((data) => {
+    const now = new Date();
+
+    const filtered = data.filter((a) => {
+      const endDate = new Date(a.end);
+      return endDate >= now; // 🔥 garde présent + futur
+    });
+
+    setAvailabilities(filtered);
+  });
   }, []);
 
   if (expanded) {

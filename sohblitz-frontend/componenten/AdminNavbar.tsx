@@ -78,9 +78,9 @@ export default function AdminNavbar({ navState }: Props) {
           {/* Menu */}
           <nav className="hidden md:flex gap-8 text-slate-700">
 
-            {/* <Link href={`/${locale}/administration/services`} className={linkClass("/services")}>
+           <Link href={`/${locale}/administration/services`} className={linkClass("/services")}>
               {t.adminNavbar.services}
-            </Link> */}
+            </Link> 
 
             <Link href={`/${locale}/administration/availability`} className={linkClass("/services")}>
               {t.adminNavbar.availability}
@@ -145,9 +145,9 @@ export default function AdminNavbar({ navState }: Props) {
         {open && (
           <div className="md:hidden bg-white shadow-lg flex flex-col items-center gap-6 py-6 text-lg">
 
-              {/* <Link href={`/${locale}/administration/services`} className={linkClass("/services")}>
+             <Link href={`/${locale}/administration/services`} className={linkClass("/services")}>
               {t.adminNavbar.services}
-            </Link> */}
+            </Link> 
 
             <Link href={`/${locale}/administration/availability`} className={linkClass("/services")}>
               {t.adminNavbar.availability}

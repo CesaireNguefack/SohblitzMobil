@@ -5,6 +5,7 @@ import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import { useTranslations } from "@/lib/TranslationProvider"
 
 import {
   getAvailabilities,
@@ -24,13 +25,13 @@ const overlaps = (a: Availability, b: Availability) => {
 export default function Page() {
   return (
     <main className="bg-white bg-slate-50 min-h-screen">
-                <AdminNavbar navState="gradient" /> <br /> <br />
-                <AdminAvailability />
-                <br />
-            </main>
+      <AdminNavbar navState="gradient" /> <br /> <br />
+      <AdminAvailability />
+      <br />
+    </main>
   )
 }
-export  function AdminAvailability() {
+export function AdminAvailability() {
   const [availabilities, setAvailabilities] = useState<Availability[]>([]);
 
   const [startDate, setStartDate] = useState(new Date().toISOString().split("T")[0]);
@@ -42,6 +43,7 @@ export  function AdminAvailability() {
   const [mode, setMode] = useState<AvailabilityType.AVAILABLE | AvailabilityType.BLOCKED>(AvailabilityType.AVAILABLE);
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [showModal, setShowModal] = useState(false);
+  const t = useTranslations()
 
   // ================= LOAD =================
   useEffect(() => {
@@ -260,7 +262,7 @@ export  function AdminAvailability() {
   // ================= RENDER =================
   return (
     <div className="p-6 bg-white rounded-2xl shadow-xl max-w-6xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6">Gestion des disponibilités</h2>
+      <h2 className="text-2xl font-bold mb-6">{t.adminPage.availability_title}</h2>
 
       {/* Controls */}
       <div className="grid grid-cols-2 md:grid-cols-6 gap-4 mb-6 items-end">
@@ -270,12 +272,12 @@ export  function AdminAvailability() {
         <input type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} className="border px-2 py-1" />
 
         <select value={mode} onChange={(e) => setMode(e.target.value as any)} className="border px-2 py-1">
-          <option value="available">Disponible</option>
-          <option value="blocked">Bloqué</option>
+          <option value="available">{t.adminPage.btn_drown_d}</option>
+          <option value="blocked">{t.adminPage.btn_drown_b}</option>
         </select>
 
         <button onClick={handleApply} className="bg-blue-600 text-white px-4 py-2 rounded">
-          OK
+          {t.adminPage.btn_save}
         </button>
       </div>
 
@@ -300,55 +302,54 @@ export  function AdminAvailability() {
         height="auto"
       />
       {/* Modal inchangé */}
-{showModal && selectedId && (() => {
-  const current = availabilities.find(a => a.id === selectedId);
-  if (!current) return null;
+      {showModal && selectedId && (() => {
+        const current = availabilities.find(a => a.id === selectedId);
+        if (!current) return null;
 
-  return (
-    <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-xl shadow-xl w-[300px]">
-        <h3 className="font-semibold mb-4">Action</h3>
+        return (
+          <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+            <div className="bg-white p-6 rounded-xl shadow-xl w-[300px]">
+              <h3 className="font-semibold mb-4">Action</h3>
 
-        <div className="flex flex-col gap-3">
-          <button
-            onClick={() => handleToggle(selectedId)}
-            className={`text-white py-2 rounded-lg ${
-              current.type === "available"
-                ? "bg-red-500 hover:bg-red-600"
-                : "bg-green-500 hover:bg-green-600"
-            }`}
-          >
-            {current.type === "available" ? "Bloquer" : "Activer"}
-          </button>
+              <div className="flex flex-col gap-3">
+                <button
+                  onClick={() => handleToggle(selectedId)}
+                  className={`text-white py-2 rounded-lg ${current.type === "available"
+                      ? "bg-red-500 hover:bg-red-600"
+                      : "bg-green-500 hover:bg-green-600"
+                    }`}
+                >
+                  {current.type === "available" ? "Bloquer" : "Activer"}
+                </button>
 
-          <button
-            onClick={() => setShowModal(false)}
-            className="bg-yellow-400 py-2 rounded-lg"
-          >
-            Modifier
-          </button>
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="bg-yellow-400 py-2 rounded-lg"
+                >
+                  Modifier
+                </button>
 
-          <button
-            onClick={() => handleDelete(selectedId)}
-            className="bg-red-500 text-white py-2 rounded-lg"
-          >
-            Supprimer
-          </button>
+                <button
+                  onClick={() => handleDelete(selectedId)}
+                  className="bg-red-500 text-white py-2 rounded-lg"
+                >
+                  Supprimer
+                </button>
 
-          <button
-            onClick={() => {
-              setShowModal(false);
-              resetForm();
-            }}
-            className="mt-2 text-gray-500 underline"
-          >
-            Annuler
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-})()}
+                <button
+                  onClick={() => {
+                    setShowModal(false);
+                    resetForm();
+                  }}
+                  className="mt-2 text-gray-500 underline"
+                >
+                  Annuler
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
 
     </div>
   );

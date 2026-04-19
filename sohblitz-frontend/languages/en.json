@@ -19,6 +19,25 @@
     "navigation": "Navigation",
     "sublime": "All rights reserved. Designed and developed by "
   },
+  "adminPage": {
+  "btn_section_view": "View by service",
+  "btn_global_view": "Global view",
+  "btn_add_image": "+ Add image",
+  "form_add_image_title": "Add an image",
+  "btn_cancel": "Cancel",
+  "btn_save": "Save",
+  "alert_success": "Operation completed successfully",
+  "alert_error": "Operation failed",
+  "availability_title": "Availability management",
+  "btn_drown_d": "Available",
+  "btn_drown_b": "Blocked",
+  "btn_today": "Today",
+  "title_reservation": "Reservation",
+  "contact_title": "Contacts",
+  "btn_delete": "Delete",
+  "btn_choose_img":"Choose a picture",
+  "title_delete_form":"Delete this Image ?"
+},
   "contact": {
     "title": "Contact",
     "subtitle": "We are available 24/7. Get in touch with us to discuss your needs!",

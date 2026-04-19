@@ -3,6 +3,8 @@
 import AdminNavbar from "@/componenten/AdminNavbar"
 import { cancelReservation, confirmReservation, deleteReservation, getReservation } from "@/services/reservationApi"
 import { useEffect, useState } from "react"
+import { useTranslations } from "@/lib/TranslationProvider"
+
 type Reservation = {
     id: number
     name: string
@@ -42,7 +44,6 @@ const statusConfig = {
 } as const
 
 
-
 export default function Page() {
     return (
         <main className="bg-white bg-slate-50 min-h-screen">
@@ -57,6 +58,7 @@ export default function Page() {
 export function ReservationList() {
   const [reservations, setReservations] = useState<Reservation[]>([])
   const [loading, setLoading] = useState(true)
+  const t = useTranslations()
 
   const fetchReservations = async () => {
     try {
@@ -185,14 +187,15 @@ export function ReservationList() {
                 : "bg-yellow-600 hover:scale-105"
             }`}
           >
-            Cancel
+            
+          {t.adminPage.btn_cancel}
           </button>
 
           <button
             onClick={() => handleDelete(r.id)}
             className="w-full sm:w-auto px-4 py-2 bg-red-600 text-white rounded-lg hover:scale-105 transition"
           >
-            Delete
+            {t.adminPage.btn_delete}
           </button>
         </div>
       </div>
@@ -201,7 +204,7 @@ export function ReservationList() {
 
   return (
     <div className="px-4 sm:px-6 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Reservations</h1>
+      <h1 className="text-3xl font-bold mb-6">{t.adminPage.title_reservation}</h1>
 
       {/* GRID RESPONSIVE 🔥 */}
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
